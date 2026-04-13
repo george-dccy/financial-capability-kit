@@ -1,0 +1,16 @@
+[
+  {
+    "id": "pack.banks.ceb.public-basics",
+    "institution": "ceb",
+    "title": "CEB Public Basics",
+    "display_name_zh": "光大银行公开基础知识包",
+    "visibility": "public",
+    "path": "knowledge-packs/banks/ceb/public-basics",
+    "summary": "首期覆盖对公基础结算、阳光 e 付通、阳光电费证等公开基础知识。",
+    "relations": [
+      "role.corp-relationship-manager",
+      "workflow.market-corporate-client",
+      "workflow.accompany-corporate-client"
+    ]
+  }
+]

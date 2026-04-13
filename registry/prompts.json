@@ -1,0 +1,58 @@
+[
+  {
+    "id": "prompt.role.corp-relationship-manager",
+    "kind": "role",
+    "title": "Corp Relationship Manager Prompt",
+    "display_name_zh": "对公客户经理 Prompt",
+    "path": "prompts/roles/corp-relationship-manager.md",
+    "summary": "把对公客户经理的方法论变成可直接复制使用的轻量 prompt。",
+    "target_skill": "role.corp-relationship-manager",
+    "relations": [
+      "pack.banks.ceb.public-basics"
+    ]
+  },
+  {
+    "id": "prompt.workflow.report-to-leader",
+    "kind": "workflow",
+    "title": "Report To Leader Prompt",
+    "display_name_zh": "向领导汇报 Prompt",
+    "path": "prompts/workflows/report-to-leader.md",
+    "summary": "帮助快速整理汇报口径、结构和关键诉求。",
+    "target_skill": "workflow.report-to-leader",
+    "relations": []
+  },
+  {
+    "id": "prompt.workflow.market-corporate-client",
+    "kind": "workflow",
+    "title": "Market Corporate Client Prompt",
+    "display_name_zh": "对公客户营销 Prompt",
+    "path": "prompts/workflows/market-corporate-client.md",
+    "summary": "帮助构造营销前判断框架、切入口和拜访目标。",
+    "target_skill": "workflow.market-corporate-client",
+    "relations": [
+      "pack.banks.ceb.public-basics"
+    ]
+  },
+  {
+    "id": "prompt.workflow.accompany-corporate-client",
+    "kind": "workflow",
+    "title": "Accompany Corporate Client Prompt",
+    "display_name_zh": "对公客户陪伴 Prompt",
+    "path": "prompts/workflows/accompany-corporate-client.md",
+    "summary": "帮助持续跟进客户、整理问题清单并维护推进节奏。",
+    "target_skill": "workflow.accompany-corporate-client",
+    "relations": [
+      "pack.banks.ceb.public-basics"
+    ]
+  },
+  {
+    "id": "prompt.knowledge-pack.ceb-public-basics",
+    "kind": "knowledge-pack",
+    "title": "CEB Public Basics Prompt",
+    "display_name_zh": "光大银行公开基础知识包 Prompt",
+    "path": "prompts/knowledge-packs/ceb-public-basics.md",
+    "summary": "让通用模型只基于公开知识包内容进行保守、可引用的回答。",
+    "target_pack": "pack.banks.ceb.public-basics",
+    "relations": []
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "id": "pack.banks.ceb.public-basics",
+  "institution": "ceb",
+  "title": "CEB Public Basics",
+  "display_name_zh": "光大银行公开基础知识包",
+  "visibility": "public",
+  "summary": "首期围绕光大银行公开基础知识整理对公基础结算、阳光 e 付通、阳光电费证的前期理解材料。",
+  "modules": [
+    "modules/corp-settlement.md",
+    "modules/e-payment.md",
+    "modules/electricity-certificate.md"
+  ],
+  "source_index": "sources.md"
+}

@@ -1,0 +1,16 @@
+.DS_Store
+Thumbs.db
+
+.idea/
+.vscode/
+.claude/
+.agents/
+.tmp/
+
+node_modules/
+dist/
+coverage/
+
+.env
+.env.*
+!.env.example
