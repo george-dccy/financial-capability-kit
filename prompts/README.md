@@ -4,7 +4,7 @@
 
 优先使用：
 
-- `prompts/entrypoints/doubao-auto-router.md`
+- `prompts/entrypoints/auto.md`
 
 这个入口会让模型自动：
 

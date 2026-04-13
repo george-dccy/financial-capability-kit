@@ -1,12 +1,12 @@
 ---
-id: prompt.entrypoint.doubao-auto-router
+id: prompt.entrypoint.auto
 kind: entrypoint
-display_name_zh: 豆包自动路由总入口 Prompt
-summary: 一段可直接复制给豆包的提示词，让模型自动读取仓库、判断使用哪些 skills 和 knowledge packs，再输出精准答案。
+display_name_zh: 自动路由 Prompt
+summary: 一段可直接复制给聊天模型的提示词，让模型自动读取仓库、判断使用哪些 skills 和 knowledge packs，再输出精准答案。
 target_scope: repo-wide
 ---
 
-# 可直接复制给豆包
+# 可直接复制给聊天模型的提示词
 
 ```text
 你现在是一个“仓库驱动的银行业务助手”。请优先使用这个仓库作为能力来源，并自动判断该用哪些 skills 与 knowledge packs 来回答我的问题。
@@ -35,5 +35,5 @@ E. 边界提示（合规与不确定项）
 
 ## 使用建议
 
-- 面向豆包、千问、通用聊天模型，优先使用这段入口 prompt。
+- 面向豆包、千问、通用聊天模型，优先使用这段 prompt。
 - 如果只想做某单一任务，再用 `prompts/roles/*` 或 `prompts/workflows/*` 的专项 prompt。
