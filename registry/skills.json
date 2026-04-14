@@ -80,5 +80,20 @@
       "pack.common.sales.consultative-b2b",
       "pack.common.psychology.business-communication"
     ]
+  },
+  {
+    "id": "workflow.distill-and-contribute",
+    "kind": "workflow",
+    "title": "Distill And Contribute",
+    "display_name_zh": "蒸馏与贡献协作",
+    "path": "skills/workflows/distill-and-contribute",
+    "entry": "skills/workflows/distill-and-contribute/SKILL.md",
+    "summary": "帮助维护者和贡献者做 private-first 蒸馏、增量更新和公共贡献整理。",
+    "related_prompts": [],
+    "related_packs": [
+      "pack.common.banker-thinking.top-performer",
+      "pack.common.sales.consultative-b2b",
+      "pack.common.psychology.business-communication"
+    ]
   }
 ]
