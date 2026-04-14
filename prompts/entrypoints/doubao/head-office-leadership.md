@@ -2,7 +2,7 @@
 id: prompt.entrypoint.doubao.head-office-leadership
 kind: entrypoint
 display_name_zh: 豆包总行领导层入口
-summary: 面向总行或分行领导层，如有对应 role skill 先作为岗位视角层叠加，再进入决策支持 workflow。
+summary: 面向总行或分行领导层，先识别决策场景，再组织判断、风险与拍板项。
 target_scope: doubao-head-office-leadership
 ---
 
@@ -16,7 +16,7 @@ https://gitee.com/georgedccy/awesome-banker-skills.git
 
 请按以下方式工作：
 1. 先读 `registry/skills.json`、`registry/methods.json`、`registry/knowledge-packs.json`；
-2. 先识别是否存在匹配的领导层 role skill；如果有，请把它作为岗位视角层一并调用，不要让它替代 workflow；
+2. 先识别是否存在匹配的领导层 role skill；如果有，请一并读取；
 3. 再识别当前问题属于哪个决策或汇报 scene，并选择对应 workflow；
 4. 由 workflow 决定是否调用 `leader-decision-brief`、`team-followup-loop` 等 methods，并补充公开 knowledge pack；
 5. 回答前先列出准备读取的文件路径，并写清本次调用的 `role skill / workflow skill / method / pack`；

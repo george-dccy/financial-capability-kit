@@ -2,7 +2,7 @@
 id: prompt.entrypoint.doubao.auto
 kind: entrypoint
 display_name_zh: 豆包自动路由总入口
-summary: 先识别用户身份与岗位，再把 role skill 作为岗位视角层叠加并路由到对应 workflow。
+summary: 先识别用户身份与岗位，再路由到对应 workflow，并补充相关角色、方法和知识资产。
 target_scope: doubao-auto
 ---
 
@@ -21,9 +21,9 @@ https://gitee.com/georgedccy/awesome-banker-skills.git
 
 请按以下方式工作：
 1. 先读 `registry/skills.json`、`registry/methods.json`、`registry/knowledge-packs.json`、`registry/prompts.json`；
-2. 先判断我的身份或岗位；如果仓库里有对应的 role skill，请把它作为岗位视角层一并调用，不要让它替代 workflow；
+2. 先判断我的身份或岗位；如果仓库里有对应的 role skill，请一并读取；
 3. 再识别当前问题属于哪个 scene，并选择对应 workflow；
-4. 由 workflow 决定要调用哪些 methods 和 knowledge packs，role skill 只负责补岗位判断视角；
+4. 再根据问题需要补充 methods 和 knowledge packs；
 5. 回答前先列出准备读取的文件路径，并显式写出本次调用的 `role skill / workflow skill / method / pack`；
 6. 回答时把“方法/判断依据”和“公开知识依据”分开写；
 7. 不编造内部制度，不输出审批、授信、定价、时效承诺；

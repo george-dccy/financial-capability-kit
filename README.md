@@ -2,7 +2,7 @@
 
 面向银行人、聊天大模型和 Agent 的能力基础，也同步支持公开咨询类问答。
 
-它把银行人的共识技能、可公开知识和可复用方法沉淀下来，直接给豆包或 Agent 使用。目标不是做标准银行客服，而是做银行人的 skill 底座。
+它把银行人的共识技能、可公开知识和可复用方法沉淀下来，直接给豆包或 Agent 使用。
 
 ## 项目背景
 
@@ -26,7 +26,7 @@
 - `prompts/entrypoints/doubao/public-consulting.md`
   面向公开咨询用户，优先读取公开 knowledge packs
 - `prompts/entrypoints/doubao/bank-staff.md`
-  面向银行员工，先识别岗位；如有对应 role skill 则作为岗位视角层一并调用，再由 workflow 调用 methods 和 knowledge packs
+  面向银行员工，先识别岗位；如有对应 role skill 就一并读取，再由 workflow 调用 methods 和 knowledge packs
 - `prompts/entrypoints/doubao/frontline-manager.md`
   面向基层管理者，先叠加管理者角色视角，再进入管理或汇报 workflow
 - `prompts/entrypoints/doubao/head-office-leadership.md`
@@ -37,7 +37,7 @@
 这些入口要求模型：
 
 - 先读取 `registry/*.json`
-- 先识别身份或岗位，如有对应 `role skill` 则作为岗位视角层一并调用，但不替代 workflow
+- 先识别身份或岗位，如有对应 `role skill` 就一并读取
 - 回答前先列出准备读取的文件路径
 - 先识别 `scene`，再选择 `workflow`
 - 显式写出调用了哪些 `role skill / workflow skill / method / pack`
@@ -57,9 +57,9 @@
 2. 读取 `registry/skills.json`、`registry/methods.json`、`registry/knowledge-packs.json`、`registry/prompts.json`。
 3. 如果你的运行环境支持 skill 安装，就把本轮需要的 skill 安装到本地；如果不支持，就直接按仓库里的 `SKILL.md`、`README.md`、`frameworks.md` 使用。
 4. 如果存在 `workspace/private/registry/*.json`，一并作为 private overlay 读取。
-5. 先识别我的身份或岗位；如果仓库里有对应 role skill，请把它作为岗位视角层一并调用，不要用它替代 workflow。
+5. 先识别我的身份或岗位；如果仓库里有对应 role skill，请一并读取。
 6. 再识别我的问题属于哪个 scene，并选择对应 workflow。
-7. 由 workflow 决定需要调用哪些 methods 和 knowledge packs，role skill 只负责补岗位判断视角。
+7. 再根据问题需要补充 methods 和 knowledge packs。
 8. 回答前先列出准备读取的文件路径。
 9. 回答时明确写出：调用的 role skill / workflow skill / method / pack、方法判断依据、公开知识依据、下一步建议、边界提示。
 10. 如果仓库没有覆盖，直接写“当前仓库未覆盖”。
@@ -112,8 +112,8 @@
 
 结构解释：
 
-- `skills/roles`：岗位视角层，回答“这个岗位通常先看什么、先判断什么、先避开什么、该调什么资产”
-- `skills/workflows`：workflow skills，场景化编排层，负责组织输入、调用 methods 和 knowledge packs
+- `skills/roles`：岗位 skill，沉淀这个岗位常见的判断方式、关注重点和沟通习惯
+- `skills/workflows`：workflow skills，沉淀具体场景下的输入、动作、输出和推进顺序
 - `knowledge-packs`：公开、稳定、可引用的知识事实
 - `methods`：可复用判断与推进框架
 
@@ -121,12 +121,7 @@
 
 `scene -> workflow -> method -> knowledge pack`
 
-如果身份明确，可叠加对应 `role skill` 作为岗位视角层。
-
-补充边界：
-
-- `role skill` 不应承载 workflow 的最低输入、动作顺序和输出结构
-- `method` 不应被写回 role skill 里充当岗位专属套路
+如果身份明确，也可以同时读取对应 `role skill`。
 
 ## 支持公开和私有内容
 

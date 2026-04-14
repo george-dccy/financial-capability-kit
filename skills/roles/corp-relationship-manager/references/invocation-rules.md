@@ -1,29 +1,33 @@
-# Invocation Rules
+# Common Asset References
 
-推荐主路由：
+## 客户首访与切入口
 
-`role overlay -> workflow -> method -> knowledge pack`
+- `workflow.market-corporate-client`
+- 适合用在开场、首访、找切入口、判断客户是否值得继续推进
 
-role skill 只负责提供岗位视角，不替代 workflow 的场景编排。
+## 跟进与关系推进
 
-## 先决定是否调用 workflow
+- `workflow.accompany-corporate-client`
+- 适合用在会后跟进、跨团队协同、问题闭环、持续关系推进
 
-- 首访、开场、找切入口、初步判断客户价值 -> `workflow.market-corporate-client`
-- 会后跟进、跨团队协同、问题闭环、持续关系推进 -> `workflow.accompany-corporate-client`
-- 对内汇报、同步风险、提请拍板、梳理上提事项 -> `workflow.report-to-leader`
+## 对内汇报与提请拍板
 
-## 再决定是否补 method
+- `workflow.report-to-leader`
+- 适合用在同步风险、组织汇报、梳理上提事项
 
-- 识别真实卡点、机会点、优先级 -> `method.business-operations.problem-opportunity-scan`
-- 设计下一步最小推进动作、协同链和时间点 -> `method.business-operations.client-advance-map`
+## 判断客户卡点与机会
 
-## 最后再补 knowledge pack
+- `method.business-operations.problem-opportunity-scan`
+- 适合用在识别真实卡点、机会点和优先级
 
-- 结算、账户、收付、回单、对账、权限 -> `pack.banks.ceb.corporate-settlement.basic-settlement`
-- e付通、订单、账单、开票、线上协同 -> `pack.banks.ceb.transaction-banking.yangguang-e-pay`
-- 电费证、电费、电网、国内证、福费廷 -> `pack.banks.ceb.trade-finance.yangguang-electricity-certificate`
+## 设计下一步推进动作
 
-## 一条硬规则
+- `method.business-operations.client-advance-map`
+- 适合用在安排下一步动作、协同链和时间点
 
-如果问题主要是“这个岗位通常先看什么、先判断什么、先怎么和不同对象沟通”，优先用 role skill。  
-如果问题主要是“这个场景要收什么输入、按什么顺序推进、输出什么”，优先进入 workflow。
+## 补充公开业务资料
+
+- `pack.banks.ceb.corporate-settlement.basic-settlement`
+- `pack.banks.ceb.transaction-banking.yangguang-e-pay`
+- `pack.banks.ceb.trade-finance.yangguang-electricity-certificate`
+- 适合用在结算、交易银行、电费证等公开业务说明场景

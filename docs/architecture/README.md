@@ -48,18 +48,18 @@ workspace/private/
 
 ## 四层资产边界
 
-- `skills/roles`：岗位视角层，回答“这个岗位通常先看什么、先判断什么、先避开什么、该调用什么资产”
-- `skills/workflows`：场景编排层，负责组织输入、步骤、输出和资产调用
+- `skills/roles`：岗位 skill，沉淀岗位常见判断、关注重点和沟通方式
+- `skills/workflows`：workflow skill，沉淀具体场景下的步骤、输出和推进方式
 - `knowledge-packs`：公开、稳定、可引用的知识事实
 - `methods`：跨岗位、跨流程复用的判断与推进框架
 
 这三层必须保持分离，不互相混写。
 
-推荐主路由：
+推荐读取顺序：
 
 `scene -> workflow -> method -> knowledge pack`
 
-如果身份明确，可额外叠加 `role skill` 作为 `role overlay`，但它不替代 workflow。
+如果身份明确，也可以同时读取对应 `role skill`。
 
 ## 设计原则
 

@@ -49,7 +49,7 @@ metadata:
 至少明确以下信息：
 
 - 输入材料来源
-- 目标内容更像岗位视角层 / workflow / knowledge pack / method 哪一类
+- 目标内容更像角色 skill / workflow / knowledge pack / method 哪一类
 - 目标是 `private-first` 还是 `public-candidate`
 - 是新建、补全、修订，还是 private 转 public
 
@@ -61,8 +61,6 @@ metadata:
 - 输入、动作、输出、检查点、失败场景 -> `skills/workflows`
 - 公开事实、公开产品、公开来源 -> `knowledge-packs/banks` 或 `knowledge-packs/common`
 - 跨岗位复用的判断与推进框架 -> `methods`
-
-`role skill` 是岗位视角层，不负责承载 workflow 的动作顺序和输出结构，也不负责承载可跨岗位复用的方法框架。
 
 ## Default Flow
 

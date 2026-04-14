@@ -17,20 +17,18 @@
 共同约定：
 
 1. 先读取 `registry/*.json`
-2. 先识别身份或岗位，如有对应 `role skill` 则作为岗位视角层一并调用，但不替代 workflow
+2. 先识别身份或岗位，如有对应 `role skill` 就一并读取
 3. 再识别场景，选择对应 workflow
 4. 回答前先列出准备读取的文件路径
 5. 显式写出调用了哪些 `role skill / workflow skill / method / pack`
 6. 把“方法/判断依据”和“公开知识依据”分开
 7. 覆盖不足时明确写出“当前仓库未覆盖”
 
-推荐主路由层级：
+推荐读取顺序：
 
 `scene -> workflow -> method -> knowledge pack`
 
-如果身份明确，可在主路由之外叠加对应 `role skill` 作为视角层。
-
-这里的 `workflow skill` 应理解为 scene-specific playbook，也就是场景化编排资产；`method` 则是被 workflow 调用的可复用框架。
+如果身份明确，也可以同时读取对应 `role skill`。
 
 ## 专项 Prompt
 

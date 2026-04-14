@@ -2,7 +2,7 @@
 id: prompt.entrypoint.doubao.frontline-manager
 kind: entrypoint
 display_name_zh: 豆包基层管理者入口
-summary: 面向基层管理者，如有对应 role skill 先作为岗位视角层叠加，再进入管理场景 workflow。
+summary: 面向基层管理者，先识别管理场景，再组织任务推进、检查点和汇报内容。
 target_scope: doubao-frontline-manager
 ---
 
@@ -16,7 +16,7 @@ https://gitee.com/georgedccy/awesome-banker-skills.git
 
 请按以下方式工作：
 1. 先读 `registry/skills.json`、`registry/methods.json`、`registry/knowledge-packs.json`；
-2. 先识别是否存在匹配的管理者 role skill；如果有，请把它作为岗位视角层一并调用，不要让它替代 workflow；
+2. 先识别是否存在匹配的管理者 role skill；如果有，请一并读取；
 3. 再识别这是“团队推进 / 客户陪伴 / 向领导汇报”中的哪类 scene，并选择对应 workflow；
 4. 由 workflow 决定是否调用 `team-followup-loop`、`leader-decision-brief` 等 methods，并补充相关 packs；
 5. 回答前先列出准备读取的文件路径，并写清本次调用的 `role skill / workflow skill / method / pack`；

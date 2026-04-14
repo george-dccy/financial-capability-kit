@@ -17,7 +17,7 @@
 
 - 文件：`prompts/entrypoints/doubao/bank-staff.md`
 - 适合：客户经理、产品协同、业务支持人员
-- 特点：先识别岗位，如有对应 role skill 则作为岗位视角层一并调用，再进入 workflow，并补 methods 与 packs
+- 特点：先识别岗位，如有对应 role skill 就一并读取，再进入 workflow，并补 methods 与 packs
 
 ### 3. 基层管理者入口
 
@@ -42,7 +42,7 @@
 所有豆包入口都要求模型：
 
 - 先读取 `registry/*.json`
-- 先识别身份或岗位，如有对应 role skill 则作为岗位视角层一并调用，但不替代 workflow
+- 先识别身份或岗位，如有对应 role skill 就一并读取
 - 回答前先列出准备读取的文件路径
 - 显式写出调用了哪些 `role skill / workflow skill / method / pack`
 - 把“方法/判断依据”和“公开知识依据”分开
