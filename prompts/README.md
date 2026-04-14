@@ -1,18 +1,29 @@
 # Prompts Usage
 
-## 推荐入口（给豆包/千问/通用模型）
+## 推荐入口
 
-优先使用：
+当前仓库优先推荐豆包专项入口：
 
-- `prompts/entrypoints/ceb-customer-consulting.md`（面向银行客户咨询）
-- `prompts/entrypoints/auto.md`（面向银行工作人员）
+- `prompts/entrypoints/doubao/public-consulting.md`
+- `prompts/entrypoints/doubao/bank-staff.md`
+- `prompts/entrypoints/doubao/frontline-manager.md`
+- `prompts/entrypoints/doubao/head-office-leadership.md`
+- `prompts/entrypoints/doubao/auto.md`
 
-这个入口会让模型自动：
+这些入口会要求模型：
 
-1. 读取 `registry/*.json`
-2. 选择最匹配的 `skills/*`
-3. 关联并读取对应 `knowledge-packs/*`
-4. 输出路由决策 + 结论 + 依据 + 下一步 + 边界
+1. 先读取 `registry/*.json`
+2. 回答前先列出准备读取的文件路径
+3. 显式说明调用了哪些 `skills / methods / knowledge packs`
+4. 把“方法/判断依据”和“公开知识依据”分层表达
+5. 在覆盖不足时明确写出“当前仓库未覆盖”
+
+## 兼容入口
+
+以下入口仍然保留，适合已有使用习惯：
+
+- `prompts/entrypoints/ceb-customer-consulting.md`
+- `prompts/entrypoints/auto.md`
 
 ## 专项 Prompt
 

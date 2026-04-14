@@ -1,5 +1,81 @@
 [
   {
+    "id": "prompt.entrypoint.doubao.auto",
+    "kind": "entrypoint",
+    "title": "Doubao Auto Prompt",
+    "display_name_zh": "豆包自动路由总入口",
+    "path": "prompts/entrypoints/doubao/auto.md",
+    "summary": "先判断使用者身份，再自动选择豆包对应入口逻辑。",
+    "relations": [
+      "method.business-operations.problem-opportunity-scan",
+      "method.business-operations.client-advance-map",
+      "method.communication-reporting.leader-decision-brief",
+      "method.management.team-followup-loop",
+      "role.corp-relationship-manager",
+      "workflow.report-to-leader",
+      "workflow.market-corporate-client",
+      "workflow.accompany-corporate-client"
+    ]
+  },
+  {
+    "id": "prompt.entrypoint.doubao.public-consulting",
+    "kind": "entrypoint",
+    "title": "Doubao Public Consulting Prompt",
+    "display_name_zh": "豆包公开咨询入口",
+    "path": "prompts/entrypoints/doubao/public-consulting.md",
+    "summary": "面向公开咨询，优先读取公开 knowledge packs 并保守回答。",
+    "relations": [
+      "pack.banks.ceb.corporate-settlement.basic-settlement",
+      "pack.banks.ceb.transaction-banking.yangguang-e-pay",
+      "pack.banks.ceb.trade-finance.yangguang-electricity-certificate"
+    ]
+  },
+  {
+    "id": "prompt.entrypoint.doubao.bank-staff",
+    "kind": "entrypoint",
+    "title": "Doubao Bank Staff Prompt",
+    "display_name_zh": "豆包银行员工入口",
+    "path": "prompts/entrypoints/doubao/bank-staff.md",
+    "summary": "面向银行员工，路由 skills、methods 与公开知识资产。",
+    "relations": [
+      "role.corp-relationship-manager",
+      "workflow.market-corporate-client",
+      "workflow.accompany-corporate-client",
+      "workflow.report-to-leader",
+      "method.business-operations.problem-opportunity-scan",
+      "method.business-operations.client-advance-map",
+      "method.communication-reporting.leader-decision-brief"
+    ]
+  },
+  {
+    "id": "prompt.entrypoint.doubao.frontline-manager",
+    "kind": "entrypoint",
+    "title": "Doubao Frontline Manager Prompt",
+    "display_name_zh": "豆包基层管理者入口",
+    "path": "prompts/entrypoints/doubao/frontline-manager.md",
+    "summary": "面向基层管理者，优先调用管理与汇报 methods。",
+    "relations": [
+      "method.communication-reporting.leader-decision-brief",
+      "method.management.team-followup-loop",
+      "workflow.report-to-leader",
+      "workflow.accompany-corporate-client"
+    ]
+  },
+  {
+    "id": "prompt.entrypoint.doubao.head-office-leadership",
+    "kind": "entrypoint",
+    "title": "Doubao Head Office Leadership Prompt",
+    "display_name_zh": "豆包总行领导层入口",
+    "path": "prompts/entrypoints/doubao/head-office-leadership.md",
+    "summary": "面向总行或分行领导层，强调判断、风险、取舍与拍板项。",
+    "relations": [
+      "method.communication-reporting.leader-decision-brief",
+      "method.management.team-followup-loop",
+      "workflow.report-to-leader",
+      "pack.common.banker-thinking.top-performer"
+    ]
+  },
+  {
     "id": "prompt.entrypoint.auto",
     "kind": "entrypoint",
     "title": "Auto Router Prompt",
