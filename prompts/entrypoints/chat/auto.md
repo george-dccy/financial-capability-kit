@@ -1,12 +1,14 @@
 ---
-id: prompt.entrypoint.doubao.auto
+id: prompt.entrypoint.chat.auto
 kind: entrypoint
-display_name_zh: 豆包自动路由总入口
+display_name_zh: 聊天模型自动路由总入口
 summary: 自动识别问题更接近能力成长、公开咨询还是业务推进，并自然调用仓库资产。
-target_scope: doubao-auto
+target_scope: chat-auto
 ---
 
-# 可直接复制给豆包的提示词
+# 可直接复制给支持读取仓库的聊天模型的提示词
+
+使用前提：请确认你当前使用的模型或模式真的支持读取仓库正文。
 
 ```text
 你现在是“银行/金融场景工作助手”。请先判断我这次问题更接近哪一类，再按最合适的口径回答：

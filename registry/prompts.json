@@ -1,10 +1,10 @@
 [
   {
-    "id": "prompt.entrypoint.doubao.financial-capability",
+    "id": "prompt.entrypoint.chat.financial-capability",
     "kind": "entrypoint",
-    "title": "Doubao Financial Capability Prompt",
-    "display_name_zh": "豆包金融能力成长入口",
-    "path": "prompts/entrypoints/doubao/financial-capability.md",
+    "title": "Chat Financial Capability Prompt",
+    "display_name_zh": "聊天模型金融能力成长入口",
+    "path": "prompts/entrypoints/chat/financial-capability.md",
     "summary": "面向想系统提升金融能力的个人，优先调用 reference skill、action skill 和 knowledge 形成更专业的视角与结果。",
     "relations": [
       "skill.reference.problem-opportunity-framework",
@@ -16,11 +16,11 @@
     ]
   },
   {
-    "id": "prompt.entrypoint.doubao.auto",
+    "id": "prompt.entrypoint.chat.auto",
     "kind": "entrypoint",
-    "title": "Doubao Auto Prompt",
-    "display_name_zh": "豆包自动路由总入口",
-    "path": "prompts/entrypoints/doubao/auto.md",
+    "title": "Chat Auto Prompt",
+    "display_name_zh": "聊天模型自动路由总入口",
+    "path": "prompts/entrypoints/chat/auto.md",
     "summary": "自动识别问题更接近能力成长、公开咨询还是业务推进，并自然调用仓库资产。",
     "relations": [
       "skill.reference.corporate-client-coverage-lens",
@@ -35,11 +35,11 @@
     ]
   },
   {
-    "id": "prompt.entrypoint.doubao.public-consulting",
+    "id": "prompt.entrypoint.chat.public-consulting",
     "kind": "entrypoint",
-    "title": "Doubao Public Consulting Prompt",
-    "display_name_zh": "豆包公开咨询入口",
-    "path": "prompts/entrypoints/doubao/public-consulting.md",
+    "title": "Chat Public Consulting Prompt",
+    "display_name_zh": "聊天模型公开咨询入口",
+    "path": "prompts/entrypoints/chat/public-consulting.md",
     "summary": "面向公开咨询，优先读取 knowledge 并输出简明结论与公开依据。",
     "relations": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
@@ -48,11 +48,11 @@
     ]
   },
   {
-    "id": "prompt.entrypoint.doubao.bank-staff",
+    "id": "prompt.entrypoint.chat.bank-staff",
     "kind": "entrypoint",
-    "title": "Doubao Bank Staff Prompt",
-    "display_name_zh": "豆包银行员工入口",
-    "path": "prompts/entrypoints/doubao/bank-staff.md",
+    "title": "Chat Bank Staff Prompt",
+    "display_name_zh": "聊天模型银行员工入口",
+    "path": "prompts/entrypoints/chat/bank-staff.md",
     "summary": "面向银行员工，优先调用行动型 skill 和专业视角型 skill，输出判断与推进建议。",
     "relations": [
       "skill.reference.corporate-client-coverage-lens",
@@ -65,11 +65,11 @@
     ]
   },
   {
-    "id": "prompt.entrypoint.doubao.frontline-manager",
+    "id": "prompt.entrypoint.chat.frontline-manager",
     "kind": "entrypoint",
-    "title": "Doubao Frontline Manager Prompt",
-    "display_name_zh": "豆包基层管理者入口",
-    "path": "prompts/entrypoints/doubao/frontline-manager.md",
+    "title": "Chat Frontline Manager Prompt",
+    "display_name_zh": "聊天模型基层管理者入口",
+    "path": "prompts/entrypoints/chat/frontline-manager.md",
     "summary": "面向基层管理者，优先调用团队跟进和拍板简报类 skill。",
     "relations": [
       "skill.reference.decision-brief-framework",
@@ -79,11 +79,11 @@
     ]
   },
   {
-    "id": "prompt.entrypoint.doubao.head-office-leadership",
+    "id": "prompt.entrypoint.chat.head-office-leadership",
     "kind": "entrypoint",
-    "title": "Doubao Head Office Leadership Prompt",
-    "display_name_zh": "豆包总行领导层入口",
-    "path": "prompts/entrypoints/doubao/head-office-leadership.md",
+    "title": "Chat Head Office Leadership Prompt",
+    "display_name_zh": "聊天模型领导层入口",
+    "path": "prompts/entrypoints/chat/head-office-leadership.md",
     "summary": "面向领导层，强调一句话判断、关键变量、风险边界与拍板动作。",
     "relations": [
       "skill.reference.decision-brief-framework",

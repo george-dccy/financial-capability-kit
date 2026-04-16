@@ -1,10 +1,24 @@
-# 豆包入口说明
+# 聊天模型入口说明
 
-## 为什么单独做豆包入口
+## 为什么单独做聊天模型入口
 
-这个仓库重点适配豆包的使用方式。
+这个仓库重点适配“支持读取仓库内容的聊天模型”的使用方式。
 它的定位是一个面向银行/金融场景的专业知识与方法集合，致力于为金融人的职场助力，甚至可以不断成长为金融人面对客户时的分身。
 目标不是给出一个很长的万能 prompt，而是提供几张“可直接复制、可多轮持续使用、口径清楚”的入口卡片。
+
+## 使用前提
+
+当前这组聊天模型入口，默认前提是：
+
+- 你当前使用的模型或应用，确实支持读取仓库内容
+- 如果在豆包中使用，建议使用 **豆包电脑版超能模式**
+
+如果只是普通聊天模式，不要默认它已经成功读取仓库正文。
+基于 2026-04-16 的当前实测，不少普通聊天模式存在“看起来像用了仓库，实际仍在自由发挥”的风险。
+
+如需看不同模型和模式的适配情况，见：
+
+- [模型与模式兼容性说明](./model-compatibility.md)
 
 这类 prompt 的关键是同时满足两点：
 
@@ -20,43 +34,43 @@
 
 ### 1. 金融能力成长入口
 
-- 文件：`prompts/entrypoints/doubao/financial-capability.md`
+- 文件：`prompts/entrypoints/chat/financial-capability.md`
 - 适合：想系统提升金融能力的个人
 - 特点：强调专业视角、分析框架、表达方式和下一步动作
 
 ### 2. 公开咨询入口
 
-- 文件：`prompts/entrypoints/doubao/public-consulting.md`
+- 文件：`prompts/entrypoints/chat/public-consulting.md`
 - 适合：客户、公开咨询用户、非专业用户
 - 特点：优先读取公开 knowledge，支持围绕同一产品连续追问
 
 ### 3. 银行员工入口
 
-- 文件：`prompts/entrypoints/doubao/bank-staff.md`
+- 文件：`prompts/entrypoints/chat/bank-staff.md`
 - 适合：客户经理、产品协同、业务支持人员
 - 特点：强调判断、推进顺序、话术建议和多轮推进
 
 ### 4. 基层管理者入口
 
-- 文件：`prompts/entrypoints/doubao/frontline-manager.md`
+- 文件：`prompts/entrypoints/chat/frontline-manager.md`
 - 适合：团队负责人、支行长、基层管理者
 - 特点：强调拆任务、盯进度、做闭环和向上提请支持
 
 ### 5. 领导层入口
 
-- 文件：`prompts/entrypoints/doubao/head-office-leadership.md`
+- 文件：`prompts/entrypoints/chat/head-office-leadership.md`
 - 适合：总行或分行中高层
 - 特点：强调一句话判断、关键事实、风险取舍和拍板建议
 
 ### 6. 自动路由入口
 
-- 文件：`prompts/entrypoints/doubao/auto.md`
+- 文件：`prompts/entrypoints/chat/auto.md`
 - 适合：不确定该用哪个入口时
 - 特点：自动识别是能力成长、公开咨询还是业务推进
 
 ## 统一要求
 
-所有豆包入口都要求模型：
+所有聊天模型入口都要求模型：
 
 - 先读取 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`
 - 先判断更需要 `skills/reference`、`skills/action` 还是 `knowledge`

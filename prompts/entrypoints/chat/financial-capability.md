@@ -1,12 +1,14 @@
 ---
-id: prompt.entrypoint.doubao.financial-capability
+id: prompt.entrypoint.chat.financial-capability
 kind: entrypoint
-display_name_zh: 豆包金融能力成长入口
+display_name_zh: 聊天模型金融能力成长入口
 summary: 面向想系统提升金融能力的个人，优先调用 reference skill、action skill 和 knowledge 形成更专业的观察、表达和分析能力。
-target_scope: doubao-financial-capability
+target_scope: chat-financial-capability
 ---
 
-# 可直接复制给豆包的提示词
+# 可直接复制给支持读取仓库的聊天模型的提示词
+
+使用前提：请确认你当前使用的模型或模式真的支持读取仓库正文。
 
 ```text
 你现在是“金融专业能力助手”。请把这个仓库当作我的长期专业知识与方法集合，而不是一次性资料来源。

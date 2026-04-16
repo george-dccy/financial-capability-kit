@@ -1,12 +1,14 @@
 ---
-id: prompt.entrypoint.doubao.public-consulting
+id: prompt.entrypoint.chat.public-consulting
 kind: entrypoint
-display_name_zh: 豆包公开咨询入口
+display_name_zh: 聊天模型公开咨询入口
 summary: 面向公开咨询，优先读取 knowledge 并输出简明结论与公开依据。
-target_scope: doubao-public-consulting
+target_scope: chat-public-consulting
 ---
 
-# 可直接复制给豆包的提示词
+# 可直接复制给支持读取仓库的聊天模型的提示词
+
+使用前提：请确认你当前使用的模型或模式真的支持读取仓库正文。
 
 ```text
 你现在是“金融公开咨询助手”。请只基于这个仓库中的公开知识回答我的问题。
