@@ -1,13 +1,18 @@
 # Sources
 
-## 官方来源
+## 一手公开来源
 
-1. 中国光大银行，贸易融资/交易银行相关公开页面
-   - https://www.cebbank.com/site/gsyw/myrz/myrzcp/29481197/29481447/index.html
+1. 中国光大银行，阳光融e链概述
+   - https://www.cebbank.com/site/gsyw/myrz/myrzcp/125530760/125530761/index.html
+   - 用途：支持“通过网银、第三方平台或银企直连获取贸易背景信息，并提供全流程电子化综合金融服务”的公开表述。
+2. 国家金融监督管理总局陕西监管局相关公开转载页面
+   - https://jrj.wuhan.gov.cn/ztzl_57/xyrd/dfljr/202404/t20240408_2385819.shtml
+   - 用途：支持“光大银行西安分行在原有 1+N 保理基础上推出 1+N(e付通) 模式”的公开表述。
+3. 海马汽车股份有限公司 2025 年半年度报告全文
+   - https://static.cninfo.com.cn/finalpage/2025-08-26/1224564227.PDF
+   - 用途：支持公开披露中存在《1+N 保理/e付通业务合作协议》及应收账款转让安排的市场案例。
 
-## 二手公开来源（仅辅助解释）
+## 使用说明
 
-1. 新浪财经，阳光交易+相关公开报道
-   - https://finance.sina.com.cn/stock/relnews/hk/2025-09-10/doc-infpyyfi2604630.shtml
-2. 人民网，阳光交易+相关公开报道
-   - https://finance.people.com.cn/n1/2025/0910/c1004-40568273.html
+本知识包优先依据一手公开来源组织内容。
+如果后续补充媒体报道，只作为辅助理解，不替代正式公开来源。

@@ -1,9 +1,9 @@
 ---
 id: prompt.knowledge.ceb-yangguang-e-pay
 kind: knowledge
-display_name_zh: 光大银行 e 付通 Prompt
+display_name_zh: 光大银行 e付通 Prompt
 target_knowledge: knowledge.banks.ceb.transaction-banking.yangguang-e-pay
-summary: 让模型只基于 e 付通相关公开知识回答。
+summary: 让模型只基于 e付通相关公开知识回答。
 ---
 
 请只基于 `knowledge/banks/ceb/transaction-banking/yangguang-e-pay/` 回答。

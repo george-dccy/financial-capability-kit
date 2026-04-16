@@ -3,9 +3,9 @@
   "institution": "ceb",
   "category": "trade-finance",
   "title": "CEB Yangguang Electricity Certificate",
-  "display_name_zh": "光大银行-阳光电费证包",
+  "display_name_zh": "光大银行-电费通（电费证）知识包",
   "visibility": "public",
-  "summary": "覆盖阳光电费证场景定位、前期判断和准备事项。",
+  "summary": "覆盖电费通（电费证）场景定位、结构理解和前期准备事项。",
   "modules": [
     "modules/scenario-positioning.md",
     "modules/preparation-checklist.md",

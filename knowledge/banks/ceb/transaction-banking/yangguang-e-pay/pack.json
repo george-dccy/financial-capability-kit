@@ -3,9 +3,9 @@
   "institution": "ceb",
   "category": "transaction-banking",
   "title": "CEB Yangguang E-Pay",
-  "display_name_zh": "光大银行-交易银行e付通包",
+  "display_name_zh": "光大银行-e付通知识包",
   "visibility": "public",
-  "summary": "覆盖阳光 e 付通的公开定位、适用场景与前期准备项。",
+  "summary": "覆盖 e付通与 1+N 保理线上化场景的公开定位、适用场景与前期判断项。",
   "modules": [
     "modules/product-positioning.md",
     "modules/sales-discovery-questions.md",
