@@ -64,6 +64,11 @@
 
 如果模型做不到这三步，就不要把它当成“已接入仓库”的模式。
 
+更短的接入方式见：
+
+- [INSTALL_FOR_CHAT_MODELS](../../INSTALL_FOR_CHAT_MODELS.md)
+- [INSTALL_FOR_AGENTS](../../INSTALL_FOR_AGENTS.md)
+
 ## 推荐写法
 
 可在 prompt 前面加一段简单校验：

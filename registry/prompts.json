@@ -10,6 +10,7 @@
       "skill.reference.problem-opportunity-framework",
       "skill.reference.client-advance-framework",
       "skill.reference.decision-brief-framework",
+      "skill.action.interpret-financial-signal",
       "skill.action.report-decision-brief",
       "knowledge.common.economics.business-basics",
       "knowledge.common.banker-thinking.top-performer"
@@ -31,6 +32,7 @@
       "skill.action.market-corporate-client",
       "skill.action.accompany-corporate-client",
       "skill.action.report-decision-brief",
+      "skill.action.interpret-financial-signal",
       "skill.action.distill-and-curate"
     ]
   },
@@ -61,6 +63,7 @@
       "skill.reference.decision-brief-framework",
       "skill.action.market-corporate-client",
       "skill.action.accompany-corporate-client",
+      "skill.action.interpret-financial-signal",
       "skill.action.report-decision-brief"
     ]
   },
@@ -108,6 +111,7 @@
       "skill.action.market-corporate-client",
       "skill.action.accompany-corporate-client",
       "skill.action.report-decision-brief",
+      "skill.action.interpret-financial-signal",
       "skill.action.distill-and-curate"
     ]
   },
@@ -165,6 +169,23 @@
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
       "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
       "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate"
+    ]
+  },
+  {
+    "id": "prompt.skill.action.interpret-financial-signal",
+    "kind": "skill",
+    "title": "Interpret Financial Signal Prompt",
+    "display_name_zh": "金融信息解读与落地 Prompt",
+    "path": "prompts/skills/action/interpret-financial-signal.md",
+    "summary": "将政策、新闻、产品、竞品、客户变化等新信息解读成影响路径和落地参考方向。",
+    "target_skill": "skill.action.interpret-financial-signal",
+    "relations": [
+      "skill.reference.problem-opportunity-framework",
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.reference.client-advance-framework",
+      "skill.action.distill-and-curate",
+      "knowledge.common.banker-thinking.top-performer",
+      "knowledge.common.economics.business-basics"
     ]
   },
   {

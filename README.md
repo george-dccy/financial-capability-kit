@@ -1,7 +1,7 @@
 <h1 align="center">Financial Capability Kit</h1>
 
 <p align="center">
-  面向银行/金融场景的专业知识与方法集合，致力于为金融人的职场助力，甚至可以不断成长为金融人面对客户时的分身
+  面向银行/金融场景的专业知识与方法集合，致力于为金融人的职场助力，可以不断成长为金融人面对客户时的分身
 </p>
 <p align="center">
   <img src="https://img.shields.io/badge/license-MIT-2ea44f?style=flat-square" alt="MIT" />
@@ -37,6 +37,26 @@
 ---
 
 ## 你现在就可以这样用
+
+### 0) 一句话接入
+
+给支持读取仓库的 Agent：
+
+```text
+请读取并遵循 Financial Capability Kit 安装说明：https://gitee.com/georgedccy/financial-capability-kit/raw/main/INSTALL_FOR_AGENTS.md
+```
+
+给支持读取仓库的聊天模型：
+
+```text
+请读取 Financial Capability Kit：https://gitee.com/georgedccy/financial-capability-kit.git，并先遵循仓库中的 INSTALL_FOR_CHAT_MODELS.md。如果你不能读取仓库正文，请直接说“当前无法访问仓库”。
+```
+
+详细见：
+
+- [Agent 安装说明](./INSTALL_FOR_AGENTS.md)
+- [聊天模型接入说明](./INSTALL_FOR_CHAT_MODELS.md)
+- [个人代理发布说明](./docs/agent-publishing.md)
 
 ### 1) 面向支持读取仓库的聊天应用
 
@@ -87,6 +107,7 @@
 
 - 我想系统提升自己的金融分析能力，看到一家银行新产品时，应该先看哪些关键内容？
 - 我需要把一个复杂事项整理成一分钟能讲清楚的版本，怎么说才更像专业人士？
+- 我看到一条新的金融政策 / 新闻 / 竞品动作，帮我判断它对业务推进和个人能力成长有什么价值。
 - 我是对公客户经理，明天要拜访一家新能源零部件企业，应该怎么开场、问什么、先推进什么？
 - 我是基层管理者，团队里两个重点客户推进卡住了，帮我拆任务、定检查点、整理上提事项。
 - 我有几次失败案例和几篇公开材料，帮我先沉淀到 private，再整理成可公开贡献的候选资产。

@@ -230,6 +230,44 @@
     ]
   },
   {
+    "id": "skill.action.interpret-financial-signal",
+    "type": "action",
+    "capability": "analyze",
+    "title": "Interpret Financial Signal",
+    "display_name_zh": "金融信息解读与落地",
+    "path": "skills/action/interpret-financial-signal",
+    "entry": "skills/action/interpret-financial-signal/SKILL.md",
+    "summary": "把政策、新闻、产品、竞品、客户变化等新信息解读为银行/金融工作中的影响路径和落地参考。",
+    "audience": ["finance-learner", "bank-practitioner", "manager"],
+    "task_patterns": ["政策解读", "新闻解读", "产品解读", "竞品分析", "客户变化", "信息研判", "落地建议"],
+    "when_to_use": "用户带来新信息并希望判断它对金融能力成长、客户推进、汇报或沉淀有什么实际意义时。",
+    "not_for": "只需要查询稳定公开事实、或需要内部审批结论、授信定价承诺时。",
+    "inputs": ["信息原文或摘要", "用户身份或使用场景", "期望产出"],
+    "outputs": ["一句话结论", "信息类型判断", "影响路径", "落地参考方向", "待确认信息", "后续追问方向", "边界提示"],
+    "related_skills": [
+      "skill.reference.problem-opportunity-framework",
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.reference.client-advance-framework",
+      "skill.reference.decision-brief-framework",
+      "skill.action.market-corporate-client",
+      "skill.action.accompany-corporate-client",
+      "skill.action.report-decision-brief",
+      "skill.action.distill-and-curate"
+    ],
+    "related_knowledge": [
+      "knowledge.banks.ceb.corporate-settlement.basic-settlement",
+      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
+      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+      "knowledge.common.banker-thinking.top-performer",
+      "knowledge.common.economics.business-basics",
+      "knowledge.common.sales.consultative-b2b",
+      "knowledge.common.psychology.business-communication"
+    ],
+    "related_prompts": [
+      "prompt.skill.action.interpret-financial-signal"
+    ]
+  },
+  {
     "id": "skill.action.distill-and-curate",
     "type": "action",
     "capability": "distill",

@@ -1,0 +1,30 @@
+# Financial Capability Kit
+
+> 面向银行/金融场景的专业知识与方法集合，致力于为金融人的职场助力，甚至可以不断成长为金融人面对客户时的分身。
+
+## Start Here
+
+- `README.md`
+- `INSTALL_FOR_AGENTS.md`
+- `INSTALL_FOR_CHAT_MODELS.md`
+- `prompts/entrypoints/agent/general.md`
+- `prompts/entrypoints/chat/auto.md`
+
+## Resolver Files
+
+- `registry/skills.json`
+- `registry/knowledge.json`
+- `registry/prompts.json`
+
+## Core Skill Areas
+
+- `skills/reference/`: professional perspectives, judgment frameworks, expression structures
+- `skills/action/`: task execution skills, including client coverage, follow-up, decision brief, information interpretation, and distillation
+- `knowledge/`: public financial knowledge, public bank product notes, FAQ, and sources
+
+## Important Rules
+
+- Repository content should be used before generic web search.
+- If repository content is insufficient, write `当前仓库未覆盖`.
+- Do not invent internal bank rules, credit approval, pricing, processing time promises, or real customer data.
+- Private user experience belongs in `workspace/private/` when a local private workspace exists.

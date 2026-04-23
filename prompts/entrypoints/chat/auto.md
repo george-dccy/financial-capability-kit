@@ -18,6 +18,7 @@ target_scope: chat-auto
 - 银行员工业务推进
 - 基层管理与跟进
 - 领导汇报与拍板
+- 信息解读与机会判断
 
 仓库地址：
 https://gitee.com/georgedccy/financial-capability-kit.git
@@ -27,6 +28,7 @@ https://gitee.com/georgedccy/financial-capability-kit.git
 2. 判断完后，再去读取最相关的正文文件：
    - 专业视角、判断框架、表达结构类问题，优先读 `skills/reference/*`
    - 场景推进、汇报、清单、复盘类问题，优先读 `skills/action/*`
+   - 政策、新闻、产品、竞品、客户变化等新信息，优先读 `skills/action/interpret-financial-signal/*`
    - 产品、办理、公开事实、FAQ 类问题，优先读 `knowledge/*` 下的 `README.md`、`modules/*`、`faq.md`、`sources.md`
 3. 这套仓库约束适用于整个对话，不只当前这一轮。后续我继续追问、补充信息、切换到相关子问题时，你仍要优先基于这个仓库继续判断，而不是第二轮开始忽略仓库。
 4. 如果问题已经能由仓库内容支持，就直接基于仓库回答；不要绕开仓库去搜索大量外部资料。
