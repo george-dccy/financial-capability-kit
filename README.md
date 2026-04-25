@@ -23,7 +23,7 @@
 
 - 把公开金融知识、公开产品资料、FAQ 和来源整理成可稳定复用的 `knowledge`
 - 把专业视角、判断框架、表达结构沉淀成 `skills/reference`
-- 把首访推进、持续跟进、汇报拍板、蒸馏整理等任务沉淀成 `skills/action`
+- 把首访推进、持续跟进、汇报拍板、提炼整理等任务沉淀成 `skills/action`
 - 支持每个用户在 clone 后，把自己的经验、偏好、案例和复盘继续沉淀到 `workspace/private/`
 
 你可以把它理解成：
@@ -124,8 +124,9 @@ python .\fincap\install\fincap_agent_skill.py --target all
 ## 仓库地图
 
 - `skills/reference/`：专业视角、判断框架、表达结构
-- `skills/action/`：首访推进、持续跟进、汇报拍板、蒸馏整理等任务型 skill
+- `skills/action/`：首访推进、持续跟进、汇报拍板、提炼整理等任务型 skill
 - `knowledge/`：公开知识、公开产品资料、FAQ、来源
+- `inbox/`：公共素材摄入层，接收文件/链接/文本，经解读后提炼为 knowledge 或 skill
 - `prompts/`：给支持读取仓库的聊天模型 / Agent 直接复制使用
 - `workspace/private/`：你的私有增长层，包含 private skills、knowledge、memories、case-notes、registry
 - `registry/`：让 Agent 知道该读什么、何时触发、怎么关联
@@ -209,6 +210,7 @@ workspace/private/
 - private 的长期记忆与偏好沉淀
 - 触发条件更明确的 registry
 - 更贴近个人 LLM Wiki 的增长体验
+- inbox 素材摄入与提炼流水线
 
 ## License
 

@@ -28,12 +28,20 @@ Agent 统一按以下顺序读取：
 
 ## 自进化规则
 
-任何“学到的新偏好、新案例、新经验”都要先走 private：
+任何”学到的新偏好、新案例、新经验”都要先走 private：
 
 1. 先写入 `workspace/private/memories/` 或 patch proposal
 2. 给用户看候选变更摘要
 3. 经用户确认后，再更新 private 资产
 4. 如用户愿意公开，再整理成 public contribution candidate
+
+公共素材的摄入可通过 `inbox/` 进入：
+
+1. 用户将文件/链接/文本放入 `inbox/raw/{category}/`
+2. 运行 `python inbox/tools/scan-inbox.py` 生成初步分类元数据
+3. 使用 `prompts/skills/action/inbox-intake.md` 引导 agent 逐条解读
+4. 经用户确认后，蒸馏为 public knowledge pack 或 skill
+5. 私有 inbox（`workspace/private/inbox/`）中的去敏感化内容可转入 public inbox
 
 如果内容已经不只是提醒，而是可稳定复用的专业视角、行动套路或知识专题，应优先整理成：
 

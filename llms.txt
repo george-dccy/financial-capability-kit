@@ -22,6 +22,7 @@
 - `skills/reference/`：专业视角、判断框架、表达结构
 - `skills/action/`：任务执行 skill，包括客户经营、持续跟进、拍板简报、信息解读和蒸馏整理
 - `knowledge/`：公开金融知识、公开银行产品资料、FAQ 和来源
+- `inbox/`：公共素材摄入层，接收文件/链接/文本，经半自动解读后蒸馏为 knowledge 或 skill
 
 ## 重要规则
 

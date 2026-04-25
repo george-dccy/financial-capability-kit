@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Inbox Entry",
+  "description": "单条 inbox 素材的元数据记录",
+  "type": "object",
+  "required": ["id", "filename", "category", "source_type", "created_at", "status"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "唯一标识，格式：inbox-{category}-{YYYYMMDD}-{seq}",
+      "pattern": "^inbox-[a-z]+-\\d{8}-\\d{3}$"
+    },
+    "filename": {
+      "type": "string",
+      "description": "原始文件名（含扩展名）"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["regulatory", "industry", "products", "markets", "cases", "professional", "tech-digital"],
+      "description": "素材类别"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": ["file", "url", "text"],
+      "description": "素材来源形式：本地文件 / URL 链接 / 文本片段"
+    },
+    "source_url": {
+      "type": ["string", "null"],
+      "description": "原始 URL（source_type 为 url 时填写，否则为 null）"
+    },
+    "signal_type": {
+      "type": ["string", "null"],
+      "description": "初步信号类型判断（由扫描器生成），取值参考 interpret-financial-signal 的分类",
+      "enum": ["policy", "news", "product", "competitor", "client", "market", "risk", "capability", "other", null]
+    },
+    "text_preview": {
+      "type": ["string", "null"],
+      "description": "提取文本的前 500 字符预览"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "入库时间，ISO 8601 格式"
+    },
+    "scanned_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "扫描器处理时间"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["raw", "scanned", "interpreted", "distilling", "distilled", "archived"],
+      "description": "处理状态"
+    },
+    "distill_target": {
+      "type": ["string", "null"],
+      "enum": ["knowledge-pack", "reference-skill", "action-skill", "memory", null],
+      "description": "蒸馏目标类型（人工确认后填写）"
+    },
+    "distill_visibility": {
+      "type": ["string", "null"],
+      "enum": ["public", "private", null],
+      "description": "蒸馏产出的可见性"
+    },
+    "distill_output_path": {
+      "type": ["string", "null"],
+      "description": "蒸馏产出的仓库路径"
+    },
+    "source_verified": {
+      "type": "boolean",
+      "default": true,
+      "description": "来源是否可核实"
+    },
+    "notes": {
+      "type": ["string", "null"],
+      "description": "人工备注"
+    }
+  }
+}

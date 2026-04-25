@@ -217,5 +217,35 @@
     "summary": "只基于电费通（电费证）相关公开知识回答。",
     "target_knowledge": "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
     "relations": []
+  },
+  {
+    "id": "prompt.skill.action.inbox-intake",
+    "kind": "skill",
+    "title": "Inbox Intake Prompt",
+    "display_name_zh": "Inbox 素材摄入与蒸馏 Prompt",
+    "path": "prompts/skills/action/inbox-intake.md",
+    "summary": "引导 agent 处理 inbox 中的待解读素材，逐条解读并给出蒸馏建议，等待用户确认后执行蒸馏。",
+    "target_skill": "skill.action.interpret-financial-signal",
+    "relations": [
+      "skill.action.interpret-financial-signal",
+      "skill.action.distill-and-curate",
+      "knowledge.common.banker-thinking.top-performer",
+      "knowledge.common.economics.business-basics"
+    ]
+  },
+  {
+    "id": "prompt.skill.action.inbox-intake-unattended",
+    "kind": "skill",
+    "title": "Inbox Intake Unattended Prompt",
+    "display_name_zh": "Inbox 素材摄入与蒸馏（无人值守）",
+    "path": "prompts/skills/action/inbox-intake-unattended.md",
+    "summary": "无人值守 agent loop 专用：自动扫描 inbox、解读素材、自主判断类别并执行蒸馏，全流程无需用户确认。",
+    "target_skill": "skill.action.interpret-financial-signal",
+    "relations": [
+      "skill.action.interpret-financial-signal",
+      "skill.action.distill-and-curate",
+      "knowledge.common.banker-thinking.top-performer",
+      "knowledge.common.economics.business-basics"
+    ]
   }
 ]
