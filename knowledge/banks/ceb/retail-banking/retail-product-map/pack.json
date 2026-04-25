@@ -1,0 +1,16 @@
+{
+  "id": "pack.banks.ceb.retail-banking.retail-product-map",
+  "institution": "ceb",
+  "category": "retail-banking",
+  "title": "CEB Retail Product Map",
+  "display_name_zh": "光大银行-零售产品谱系地图知识包",
+  "visibility": "public",
+  "summary": "覆盖光大银行零售业务产品谱系（个人贷款、投资理财、出国金融、贵金属、阳光卡、信用卡、网络贷款）的公开知识。",
+  "modules": [
+    "modules/product-spectrum.md",
+    "modules/key-categories.md",
+    "modules/digital-channels.md"
+  ],
+  "faq": "faq.md",
+  "source_index": "sources.md"
+}

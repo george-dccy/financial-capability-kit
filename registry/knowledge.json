@@ -121,5 +121,90 @@
       "skill.action.report-decision-brief",
       "skill.action.distill-and-curate"
     ]
+  },
+  {
+    "id": "knowledge.banks.ceb.corporate-settlement.yangguang-cash-management",
+    "institution": "ceb",
+    "category": "corporate-settlement",
+    "title": "CEB Yangguang Cash Management",
+    "display_name_zh": "光大银行-阳光金管家现金管理",
+    "path": "knowledge/banks/ceb/corporate-settlement/yangguang-cash-management",
+    "summary": "阳光金管家现金管理品牌体系、四大子产品（标准版/直通式/跨行通/云财资）与六大功能模块的公开知识。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "when_to_use": "需要解释光大银行现金管理业务、阳光金管家品牌体系、标准版/直通式/跨行通/云财资子产品定位、六大功能模块时。",
+    "related_skills": [
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.action.market-corporate-client",
+      "skill.action.accompany-corporate-client",
+      "skill.action.report-decision-brief"
+    ]
+  },
+  {
+    "id": "knowledge.banks.ceb.corporate-settlement.corporate-settlement-card",
+    "institution": "ceb",
+    "category": "corporate-settlement",
+    "title": "CEB Corporate Settlement Card",
+    "display_name_zh": "光大银行-单位结算卡",
+    "path": "knowledge/banks/ceb/corporate-settlement/corporate-settlement-card",
+    "summary": "光大银行单位结算卡（易卡）产品定义、核心功能、适用场景与申办条件的公开知识。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "when_to_use": "需要解释光大银行单位结算卡产品定义、免验印鉴凭密支付、一卡多户一户多卡、精细权限控制、申办条件时。",
+    "related_skills": [
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.action.market-corporate-client",
+      "skill.action.accompany-corporate-client",
+      "skill.action.report-decision-brief"
+    ]
+  },
+  {
+    "id": "knowledge.banks.ceb.transaction-banking.yangguang-supply-chain",
+    "institution": "ceb",
+    "category": "transaction-banking",
+    "title": "CEB Yangguang Supply Chain",
+    "display_name_zh": "光大银行-阳光供应链",
+    "path": "knowledge/banks/ceb/transaction-banking/yangguang-supply-chain",
+    "summary": "阳光供应链产品族（阳光资财、供应链云平台、阳光保理、阳光自贸通、阳光保函、阳光国际结算）及与 e付通、电费通关联的公开知识。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "when_to_use": "需要解释光大银行阳光供应链产品族、各子产品定位、场景匹配、e付通与电费通关联时。",
+    "related_skills": [
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.action.market-corporate-client",
+      "skill.action.accompany-corporate-client",
+      "skill.action.report-decision-brief"
+    ]
+  },
+  {
+    "id": "knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map",
+    "institution": "ceb",
+    "category": "inclusive-finance",
+    "title": "CEB Inclusive Finance Scenario Map",
+    "display_name_zh": "光大银行-普惠金融场景地图",
+    "path": "knowledge/banks/ceb/inclusive-finance/inclusive-finance-scenario-map",
+    "summary": "光大银行普惠金融产品体系（阳光普惠系列、阳光兴农系列）与重点场景（灵工通、安居通、数字政务等）的公开知识。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "when_to_use": "需要解释光大银行普惠金融产品体系、阳光普惠/阳光兴农系列分类、灵工通等场景产品、政策背景时。",
+    "related_skills": [
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.action.market-corporate-client",
+      "skill.action.accompany-corporate-client",
+      "skill.action.report-decision-brief"
+    ]
+  },
+  {
+    "id": "knowledge.banks.ceb.retail-banking.retail-product-map",
+    "institution": "ceb",
+    "category": "retail-banking",
+    "title": "CEB Retail Product Map",
+    "display_name_zh": "光大银行-零售产品谱系地图",
+    "path": "knowledge/banks/ceb/retail-banking/retail-product-map",
+    "summary": "光大银行零售业务产品谱系（个人贷款、投资理财、出国金融、贵金属、阳光卡、信用卡、网络贷款）的公开知识。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "when_to_use": "需要解释光大银行零售业务产品线、个人贷款产品、出国金融、贵金属投资、阳光借记卡、信用卡、数字渠道时。",
+    "related_skills": [
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.action.market-corporate-client",
+      "skill.action.accompany-corporate-client",
+      "skill.action.report-decision-brief"
+    ]
   }
 ]

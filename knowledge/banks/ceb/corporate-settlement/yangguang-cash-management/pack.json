@@ -1,0 +1,16 @@
+{
+  "id": "pack.banks.ceb.corporate-settlement.yangguang-cash-management",
+  "institution": "ceb",
+  "category": "corporate-settlement",
+  "title": "CEB Yangguang Cash Management",
+  "display_name_zh": "光大银行-阳光金管家现金管理知识包",
+  "visibility": "public",
+  "summary": "覆盖阳光金管家现金管理品牌体系、四大子产品（标准版/直通式/跨行通/云财资）与六大功能模块的公开知识。",
+  "modules": [
+    "modules/overview.md",
+    "modules/sub-products.md",
+    "modules/functions.md"
+  ],
+  "faq": "faq.md",
+  "source_index": "sources.md"
+}

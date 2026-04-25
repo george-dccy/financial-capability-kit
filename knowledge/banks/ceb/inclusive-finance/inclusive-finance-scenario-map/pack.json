@@ -1,0 +1,16 @@
+{
+  "id": "pack.banks.ceb.inclusive-finance.inclusive-finance-scenario-map",
+  "institution": "ceb",
+  "category": "inclusive-finance",
+  "title": "CEB Inclusive Finance Scenario Map",
+  "display_name_zh": "光大银行-普惠金融场景地图知识包",
+  "visibility": "public",
+  "summary": "覆盖光大银行普惠金融产品体系（阳光普惠系列、阳光兴农系列）与重点场景（灵工通、安居通、数字政务等）的公开知识。",
+  "modules": [
+    "modules/scenario-overview.md",
+    "modules/key-products.md",
+    "modules/policy-background.md"
+  ],
+  "faq": "faq.md",
+  "source_index": "sources.md"
+}

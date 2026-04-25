@@ -1,0 +1,16 @@
+{
+  "id": "pack.banks.ceb.transaction-banking.yangguang-supply-chain",
+  "institution": "ceb",
+  "category": "transaction-banking",
+  "title": "CEB Yangguang Supply Chain",
+  "display_name_zh": "光大银行-阳光供应链知识包",
+  "visibility": "public",
+  "summary": "覆盖光大银行阳光供应链产品族（阳光资财、供应链云平台、阳光保理、阳光自贸通、阳光保函、阳光国际结算）及与 e付通、电费通关联的公开知识。",
+  "modules": [
+    "modules/product-family.md",
+    "modules/scenarios.md",
+    "modules/existing-packs.md"
+  ],
+  "faq": "faq.md",
+  "source_index": "sources.md"
+}

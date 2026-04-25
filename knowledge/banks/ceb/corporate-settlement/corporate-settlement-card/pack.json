@@ -1,0 +1,15 @@
+{
+  "id": "pack.banks.ceb.corporate-settlement.corporate-settlement-card",
+  "institution": "ceb",
+  "category": "corporate-settlement",
+  "title": "CEB Corporate Settlement Card",
+  "display_name_zh": "光大银行-单位结算卡知识包",
+  "visibility": "public",
+  "summary": "覆盖光大银行单位结算卡（易卡）产品定义、核心功能、适用场景与申办条件的公开知识。",
+  "modules": [
+    "modules/overview.md",
+    "modules/features.md"
+  ],
+  "faq": "faq.md",
+  "source_index": "sources.md"
+}
