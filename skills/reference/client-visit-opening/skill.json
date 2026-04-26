@@ -1,0 +1,15 @@
+{
+  "id": "skill.reference.client-visit-opening",
+  "type": "reference",
+  "capability": "analyze",
+  "display_name_zh": "客户拜访开场框架",
+  "visibility": "public",
+  "summary": "判断何时、如何开场，如何快速评估客户状态，决定用哪种提问策略。",
+  "triggers": [
+    "客户拜访怎么开场",
+    "开场用什么策略",
+    "怎么判断客户状态",
+    "第一次见客户怎么提问",
+    "拜访开场框架"
+  ]
+}
