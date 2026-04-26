@@ -11,19 +11,19 @@
 先发送：
 
 ```text
-请读取 Financial Capability Kit：https://gitee.com/georgedccy/financial-capability-kit.git，并先遵循仓库中的 INSTALL_FOR_CHAT_MODELS.md。如果你不能读取仓库正文，请直接说“当前无法访问仓库”，不要按通用金融常识补全。
+请读取 Financial Capability Kit：https://gitee.com/georgedccy/financial-capability-kit.git， 并先遵循仓库中的 INSTALL_FOR_CHAT_MODELS.md。如果你不能读取仓库正文，请直接说“当前无法访问仓库”，不要按通用金融常识补全。
 ```
 
 如果该应用更容易访问 GitHub：
 
 ```text
-请读取 Financial Capability Kit：https://github.com/george-dccy/financial-capability-kit.git，并先遵循仓库中的 INSTALL_FOR_CHAT_MODELS.md。如果你不能读取仓库正文，请直接说“当前无法访问仓库”，不要按通用金融常识补全。
+请读取 Financial Capability Kit：https://github.com/george-dccy/financial-capability-kit.git， 并先遵循仓库中的 INSTALL_FOR_CHAT_MODELS.md。如果你不能读取仓库正文，请直接说“当前无法访问仓库”，不要按通用金融常识补全。
 ```
 
 ## 推荐模式
 
 - MiniMax 全能模式：优先推荐，可克隆或读取仓库时效果最好
-- 豆包电脑版超能模式：可用；普通聊天模式不保证读取正文
+- 豆包专家模式：可用；普通聊天模式不保证读取正文
 - DeepSeek：建议开启深度思考并关闭智能搜索，避免绕开仓库
 - 普通聊天模式：不要默认相信它已经读取仓库
 
