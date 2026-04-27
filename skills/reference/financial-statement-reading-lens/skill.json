@@ -1,0 +1,20 @@
+{
+  "id": "skill.reference.financial-statement-reading-lens",
+  "type": "reference",
+  "capability": "analyze",
+  "display_name_zh": "财报阅读专业视角",
+  "visibility": "public",
+  "summary": "从银行对公业务视角，帮助建立财报阅读的专业判断框架，强调先看什么、怎么看、如何避免误判。",
+  "triggers": [
+    "财报阅读",
+    "财务报表分析",
+    "财务判断",
+    "企业财务状况",
+    "资产负债表",
+    "现金流量表",
+    "利润表",
+    "财务指标",
+    "客户财务评估",
+    "怎么看财报"
+  ]
+}

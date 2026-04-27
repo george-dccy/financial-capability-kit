@@ -33,8 +33,7 @@
 
 ## 待建立 Asset（不在当前仓库）
 
-- `skill.reference.financial-statement-reading-lens`（尚未建立）
-  财报阅读通用镜头，现金流判断是其核心子模块，未来应与本 skill 建立联动关系
+- 暂无（`skill.reference.financial-statement-reading-lens` 已建立，与本 skill 形成上下层联动关系）
 
 ## Trigger Word Mapping
 
