@@ -17,15 +17,23 @@
 
 | 工具 / 模式 | 当前结论 | 建议 |
 |---|---|---|
+| `本地 Agent / CLI Agent / 可读本地仓库的 Agent` | 直接读取本地文件最稳定 | 强烈推荐 |
 | `MiniMax 全能模式` | 可以克隆仓库后读取内容并回答，当前效果最好 | 优先推荐 |
 | `豆包电脑版超能模式` | 可以读取仓库内容 | 推荐 |
+| `Kimi Agent / MiniMax Agent 等上传文件型平台` | 上传 skill + registry + 目标正文，按上下文触发 | 可用 |
+| `OpenClaw / Hermes 等长期记忆型 Agent` | 克隆仓库后绑定 resolver skill 到启动流程 | 可用 |
 | `DeepSeek + 深度思考 + 关闭智能搜索` | 更容易按仓库内容回答 | 可用 |
 | `千问等普通聊天模式` | 容易绕开仓库自由发挥 | 不建议作为主入口 |
-| `本地 Agent / 可读本地仓库的 Agent` | 直接读取本地文件最稳定 | 强烈推荐 |
 
 ## 各模式说明
 
-### MiniMax
+### 本地 Agent / CLI Agent / 能读仓库的 Agent
+
+- 如果 Agent 能直接 clone 仓库、读取本地文件或通过 CLI 命令调用，是最稳定的方式
+- CLI Agent 通过 `FINCAP_AGENT_COMMAND` 接入本地循环器，输出到 stdout/stderr
+- 这也是当前仓库最优先支持的长期形态
+
+### MiniMax 全能模式
 
 - 当前优先推荐 `全能模式`
 - 优点是可以先克隆仓库，再读取具体文件内容
@@ -36,6 +44,18 @@
 - 目前建议只在 **电脑版 `超能模式`** 中使用本仓库 prompt
 - 普通聊天模式不保证会真实读取仓库正文
 - 如果模型没有明确命中 `registry/*.json` 和相关正文文件，就不要相信它已经按仓库回答
+
+### Kimi Agent / MiniMax Agent 等上传文件型平台
+
+- 上传 `agent-skills/financial-capability-kit/SKILL.md`、registry 文件和目标 skill/knowledge
+- 将 `prompts/entrypoints/agent/general.md` 设为系统指令
+- 优先保留 SKILL.md、registry 和 Agent 入口 prompt
+
+### OpenClaw / Hermes 等长期记忆型 Agent
+
+- 克隆仓库后把 resolver skill 绑定到 Agent 启动流程
+- 让新 session 能按上下文自动触发 Fincap
+- 私有层经验默认不发布，通过 queue item 和 run report 交接
 
 ### DeepSeek
 
@@ -48,11 +68,6 @@
 - 不少聊天应用会把仓库链接当作普通背景信息
 - 结果往往是：看似“理解了仓库”，实际上还是按通用金融常识自由发挥
 - 这类模式适合闲聊，不适合作为本仓库的主工作入口
-
-### 本地 Agent / 能读仓库的 Agent
-
-- 如果 Agent 能直接 clone 仓库，或读取本地文件，是最稳定的方式
-- 这也是当前仓库最优先支持的长期形态
 
 ## 使用前如何自检
 
