@@ -206,5 +206,22 @@
       "skill.action.accompany-corporate-client",
       "skill.action.report-decision-brief"
     ]
+  },
+  {
+    "id": "knowledge.banks.ceb.digital-finance.cloud-payment-map",
+    "institution": "ceb",
+    "category": "digital-finance",
+    "title": "CEB Cloud Payment Platform Map",
+    "display_name_zh": "光大银行-云缴费平台目录地图",
+    "path": "knowledge/banks/ceb/digital-finance/cloud-payment-map",
+    "summary": "光大云缴费平台缴费场景（水电煤、社保、公积金、交通等）、平台能力、渠道输出及与统一支付、综合收单关系的公开知识。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "when_to_use": "需要解释光大云缴费覆盖场景、平台规模、渠道接入、与统一支付和综合收单的关系时。",
+    "related_skills": [
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.action.market-corporate-client",
+      "skill.action.accompany-corporate-client",
+      "skill.action.report-decision-brief"
+    ]
   }
 ]

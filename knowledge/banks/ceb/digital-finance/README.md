@@ -87,7 +87,7 @@ digital-finance/
 
 ### P0（首批建包）
 
-- `cloud-payment-platform-map`：光大云缴费平台完整地图（水电煤、社保、公积金等场景）
+- `cloud-payment-platform-map` ✅ 已完成：光大云缴费平台目录地图（水电煤、社保、公积金等场景）
 - `digital-channel-overview`：数字渠道总览与用户旅程
 
 ### P1（第二批）
