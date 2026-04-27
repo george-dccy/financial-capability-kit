@@ -12,5 +12,10 @@
     "modules/digital-channels.md"
   ],
   "faq": "faq.md",
-  "source_index": "sources.md"
+  "source_index": "sources.md",
+  "sub_packs": [
+    "knowledge/banks/ceb/retail-banking/personal-loans",
+    "knowledge/banks/ceb/retail-banking/cards-and-payments",
+    "knowledge/banks/ceb/retail-banking/pension-and-wealth"
+  ]
 }
