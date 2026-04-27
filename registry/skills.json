@@ -496,5 +496,34 @@
       "knowledge.banks.ceb.inclusive-finance.scenario-map.modules.key-products"
     ],
     "related_prompts": []
+  },
+  {
+    "id": "skill.reference.industry-analysis-basics",
+    "type": "reference",
+    "capability": "analyze",
+    "title": "Industry Analysis Basics",
+    "display_name_zh": "行业分析基础",
+    "path": "skills/reference/industry-analysis-basics",
+    "entry": "skills/reference/industry-analysis-basics/SKILL.md",
+    "summary": "从银行对公业务视角，提供接触企业客户前或贷后管理中的行业分析判断框架，聚焦信用风险、周期位置和监管影响。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "task_patterns": ["行业分析", "行业判断", "行业风险", "行业周期", "生命周期判断", "波特五力", "行业结构", "竞争格局", "行业政策影响", "贷后行业跟踪", "首次接触看行业", "行业背景判断"],
+    "when_to_use": "客户拜访前需要快速建立行业信用风险判断、贷后管理中需要判断行业周期变化对企业的影响、或撰写信审报告行业分析段落时。",
+    "not_for": "需要具体行业深度知识（水泥、光伏等）、最新监管政策即时解读、或投资建议时。",
+    "inputs": ["客户所处行业名称（精确到二级分类）", "客户主营业务描述", "近期公开行业政策或监管动态（可选）"],
+    "outputs": ["行业生命周期位置", "波特五力风险权重", "监管敏感度评估", "周期位置判断", "信用风险评级（低/中/高）", "待验证事项"],
+    "related_skills": [
+      "skill.reference.enterprise-cash-flow-judgment",
+      "skill.reference.financial-statement-reading-lens",
+      "skill.action.client-needs-diagnosis",
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.reference.problem-opportunity-framework",
+      "skill.action.product-matching-boundary"
+    ],
+    "related_knowledge": [
+      "knowledge.common.economics.business-basics",
+      "knowledge.banks.ceb.corporate-settlement.basic-settlement"
+    ],
+    "related_prompts": []
   }
 ]

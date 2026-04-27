@@ -1,0 +1,22 @@
+{
+  "id": "skill.reference.industry-analysis-basics",
+  "type": "reference",
+  "capability": "analyze",
+  "display_name_zh": "行业分析基础",
+  "visibility": "public",
+  "summary": "从银行对公业务视角，提供接触企业客户前或贷后管理中的行业分析判断框架，聚焦信用风险、周期位置和监管影响。",
+  "triggers": [
+    "行业分析",
+    "行业判断",
+    "行业风险",
+    "行业周期",
+    "生命周期",
+    "波特五力",
+    "行业结构",
+    "竞争格局",
+    "行业政策影响",
+    "贷后行业跟踪",
+    "首次接触看行业",
+    "行业背景判断"
+  ]
+}
