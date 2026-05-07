@@ -223,5 +223,21 @@
       "skill.action.accompany-corporate-client",
       "skill.action.report-decision-brief"
     ]
+  },
+  {
+    "id": "knowledge.common.online-credit-solution-outline-basics",
+    "institution": "common",
+    "category": "online-credit",
+    "title": "Online Credit Solution Outline Basics",
+    "display_name_zh": "线上授信自动化审批方案基础提纲包",
+    "path": "knowledge/common/online-credit-solution-outline-basics",
+    "summary": "线上授信自动化审批业务方案常见的公开模块、补数清单和边界提示，帮助问答补数和章节草拟。",
+    "audience": ["bank-practitioner", "manager"],
+    "when_to_use": "需要起草线上授信自动化审批方案，并希望先对齐公开稳定的提纲、补数方向和边界提示时。",
+    "related_skills": [
+      "skill.reference.online-credit-solution-lens",
+      "skill.reference.online-credit-admission-strategy-patterns",
+      "skill.action.online-credit-approval-solution-drafting"
+    ]
   }
 ]
