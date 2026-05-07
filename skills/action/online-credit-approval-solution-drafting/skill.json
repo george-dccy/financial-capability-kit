@@ -1,0 +1,32 @@
+{
+  "id": "skill.action.online-credit-approval-solution-drafting",
+  "type": "action",
+  "capability": "execute",
+  "title": "Online Credit Approval Solution Drafting",
+  "display_name_zh": "线上授信自动化审批业务方案辅助撰写",
+  "path": "skills/action/online-credit-approval-solution-drafting",
+  "entry": "skills/action/online-credit-approval-solution-drafting/SKILL.md",
+  "summary": "通过问答补数、识别缺口并草拟线上授信自动化审批业务方案，重点输出“授信方案”章节。",
+  "audience": ["bank-practitioner", "manager"],
+  "task_patterns": [
+    "线上授信方案撰写",
+    "自动化审批业务方案",
+    "授信方案章节怎么写",
+    "准入策略建议",
+    "方案缺口清单",
+    "分行方案草拟"
+  ],
+  "when_to_use": "需要通过问答方式收集信息并辅助起草线上授信自动化审批业务方案时。",
+  "not_for": "直接代替内部审批、授信政策、定价或最终结论，或在没有任何基础事实时输出确定判断。",
+  "inputs": ["展业场景", "目标客群", "核心企业或平台基本情况", "初步授信模式或还款来源"],
+  "outputs": ["当前已掌握信息", "缺口清单", "需追问问题", "授信方案章节草稿", "准入策略建议草稿", "待人工确认项"],
+  "related_skills": [
+    "skill.reference.online-credit-solution-lens",
+    "skill.reference.online-credit-admission-strategy-patterns",
+    "skill.reference.executive-briefing-decision-support"
+  ],
+  "related_knowledge": [],
+  "related_prompts": [
+    "prompt.skill.action.online-credit-approval-solution-drafting"
+  ]
+}

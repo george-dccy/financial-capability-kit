@@ -525,5 +525,72 @@
       "knowledge.banks.ceb.corporate-settlement.basic-settlement"
     ],
     "related_prompts": []
+  },
+  {
+    "id": "skill.reference.online-credit-solution-lens",
+    "type": "reference",
+    "capability": "analyze",
+    "title": "Online Credit Solution Lens",
+    "display_name_zh": "线上授信自动化审批方案视角",
+    "path": "skills/reference/online-credit-solution-lens",
+    "entry": "skills/reference/online-credit-solution-lens/SKILL.md",
+    "summary": "为线上授信自动化审批业务方案提供判断框架，尤其聚焦“授信方案”章节与信息缺口识别。",
+    "audience": ["bank-practitioner", "manager"],
+    "task_patterns": [
+      "线上授信方案怎么写",
+      "自动化审批业务方案",
+      "授信方案章节",
+      "准入策略怎么想",
+      "还缺什么资料",
+      "场景金融方案草拟"
+    ],
+    "when_to_use": "起草或审阅线上授信自动化审批业务方案前，需要先判断场景、客群、授信方案主干和边界时。",
+    "not_for": "直接给审批结论、内部制度口径、定价或时效承诺，或在没有基础事实时硬写完整方案。",
+    "inputs": ["展业场景", "目标客群", "核心企业或平台情况", "已知风控和管理要求"],
+    "outputs": ["判断框架", "信息缺口清单方向", "授信方案主干提醒", "人工确认边界"],
+    "related_skills": [
+      "skill.reference.online-credit-admission-strategy-patterns",
+      "skill.action.online-credit-approval-solution-drafting",
+      "skill.action.product-matching-boundary",
+      "skill.action.client-needs-diagnosis"
+    ],
+    "related_knowledge": [],
+    "related_prompts": [],
+    "boundary": {
+      "vs.online-credit-approval-solution-drafting": "判断框架 vs. 问答补数和章节草拟",
+      "vs.online-credit-admission-strategy-patterns": "总框架 vs. 准入策略专项建议"
+    }
+  },
+  {
+    "id": "skill.action.online-credit-approval-solution-drafting",
+    "type": "action",
+    "capability": "execute",
+    "title": "Online Credit Approval Solution Drafting",
+    "display_name_zh": "线上授信自动化审批业务方案辅助撰写",
+    "path": "skills/action/online-credit-approval-solution-drafting",
+    "entry": "skills/action/online-credit-approval-solution-drafting/SKILL.md",
+    "summary": "通过问答补数、识别缺口并草拟线上授信自动化审批业务方案，重点输出“授信方案”章节。",
+    "audience": ["bank-practitioner", "manager"],
+    "task_patterns": [
+      "线上授信方案撰写",
+      "自动化审批业务方案",
+      "授信方案章节怎么写",
+      "准入策略建议",
+      "方案缺口清单",
+      "分行方案草拟"
+    ],
+    "when_to_use": "需要通过问答方式收集信息并辅助起草线上授信自动化审批业务方案时。",
+    "not_for": "直接代替内部审批、授信政策、定价或最终结论，或在没有任何基础事实时输出确定判断。",
+    "inputs": ["展业场景", "目标客群", "核心企业或平台基本情况", "初步授信模式或还款来源"],
+    "outputs": ["当前已掌握信息", "缺口清单", "需追问问题", "授信方案章节草稿", "准入策略建议草稿", "待人工确认项"],
+    "related_skills": [
+      "skill.reference.online-credit-solution-lens",
+      "skill.reference.online-credit-admission-strategy-patterns",
+      "skill.reference.executive-briefing-decision-support"
+    ],
+    "related_knowledge": [],
+    "related_prompts": [
+      "prompt.skill.action.online-credit-approval-solution-drafting"
+    ]
   }
 ]
