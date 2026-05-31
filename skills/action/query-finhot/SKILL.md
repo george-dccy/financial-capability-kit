@@ -93,13 +93,13 @@ curl "$FINHOT_PUBLIC_BASE_URL/api/public/context?q=供应链金融&days=2&take=1
 curl "$FINHOT_PUBLIC_BASE_URL/api/public/items/{slug}"
 ```
 
-`/api/public/context` 会返回每条内容的使用规则：动态线索保留来源链接，人工整理内容可继续读取详情 API。
+`/api/public/context` 会返回每条内容的使用规则：动态线索保留来源链接，人工整理内容可继续读取详情 API。`/api/public/items/{slug}` 会返回 `agent_context`，其中 `content_markdown`、`use_rule`、`answer_boundary` 是给 Agent 读取的稳定字段。
 
 ## 使用规则
 
 1. 如果用户问“最新”“动态”“近期”“同业”“政策变化”“新产品”“案例”，先查 Finhot，再结合 Fincap skill 解读。
 2. `content_type=dynamic` 是发现层，点击或引用时应保留 `source_url`，不要把它当成站内知识定稿。
-3. 人工整理内容的 `link_mode=detail`，可以作为站内沉淀内容读取和复用。
+3. 人工整理内容的 `link_mode=detail`，可以作为站内沉淀内容读取和复用；优先读取详情 API 的 `agent_context.content_markdown`，再结合 `use_rule` 和 `answer_boundary` 回答。
 4. 回答时区分：
    - Finhot 原始动态：来源线索，适合进一步核验
    - Finhot 人工整理：可作为 Fincap 的内容依据
