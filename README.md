@@ -95,10 +95,12 @@ python .\fincap\install\fincap_agent_skill.py --target all
 如果你有自己的 Agent，建议直接使用这个独立入口文件：
 
 - 通用 Agent 入口 → [点这里](prompts/entrypoints/agent/general.md)
+- Finhot 联动入口 → [点这里](prompts/entrypoints/agent/finhot-aware.md)
 
 它会让你的 Agent：
 
 - 遇到类似问题时优先复用仓库里的专业视角、行动 skill 和公开知识
+- 遇到最新公开动态、同业动作、产品案例和经营线索时，先查询 Finhot
 - 默认先解当前问题，再判断是否值得沉淀
 - 把你确认过的经验、偏好、案例和复盘优先写进 `workspace/private/`
 
@@ -138,6 +140,7 @@ python .\fincap\install\fincap_agent_skill.py --target all
 
 擅长把公开资料组织成稳定的能力底座。
 不会拿泛金融资料或不贴题产品来拼答案。
+涉及最新公开动态、同业动作、政策变化、产品案例和经营线索时，优先使用 Finhot 作为动态信号和内容来源；Fincap 负责把这些信号解读成判断框架、客户经营动作、产品设计启发、汇报材料或沉淀建议。
 它除了给答案，还能帮助你慢慢长出更像专业人士的看法、说法和分析方式。
 public 提供公共骨架，private 负责个人长期增长。
 你确认过的经验、偏好、表达方式和案例，不需要每次重新讲一遍。

@@ -34,6 +34,7 @@ metadata:
 ## When To Use
 
 - 想从文档、链接、说明材料中提炼新资产
+- 想从 Finhot 动态、人工整理内容或管理员提炼草稿中判断是否沉淀为 Fincap 资产
 - 想补全已有 skill 或 knowledge
 - 想把 private 内容整理成 public contribution candidate
 - 想先给出 patch proposal，再由用户确认落库
@@ -51,6 +52,7 @@ metadata:
 至少明确以下信息：
 
 - 输入材料来源
+- 如果来源是 Finhot，标明是 `dynamic/external`、`manual/detail` 还是管理员生成的 `fincap_analysis`
 - 目标内容更像 reference skill、action skill 还是 knowledge
 - 目标是 `private-first` 还是 `public-candidate`
 - 是新建、补全、修订，还是 private 转 public
@@ -62,6 +64,9 @@ metadata:
 - 专业视角、判断框架、表达结构、复盘框架 -> `skills/reference`
 - 面向具体任务的输入、步骤、输出、检查点 -> `skills/action`
 - 公开事实、公开产品、公开来源、FAQ -> `knowledge/*`
+- Finhot `dynamic/external` 默认只是线索，不能直接写入 public knowledge；先核验原文和来源日期
+- Finhot `manual/detail` 可作为站内材料，但进入 public 仍要补来源、边界和 registry
+- Finhot `fincap_analysis` 可作为结构化草稿，不等于最终结论
 
 ## Default Flow
 
@@ -69,8 +74,9 @@ metadata:
 2. 判断更适合落到 `reference`、`action` 还是 `knowledge`
 3. 先决定是 `create`、`extend`、`revise` 还是 `promote-private-to-public`
 4. 默认生成 `private-first` 草稿
-5. 输出 patch proposal 和 change summary
-6. 用户确认后再真正更新正文与 registry
+5. 如果来自 Finhot，输出建议目标路径、资产类型、增量摘要、公开边界和待核验事实
+6. 输出 patch proposal 和 change summary
+7. 用户确认后再真正更新正文与 registry
 
 ## Output Contract
 

@@ -706,12 +706,14 @@
       "政策变化",
       "产品案例",
       "交易银行动态",
-      "供应链金融动态"
+      "供应链金融动态",
+      "产品能力地图",
+      "客户经营线索"
     ],
     "when_to_use": "问题涉及最新公开信息、Finhot 已沉淀内容、或需要把 Fincap 判断框架与 Finhot 内容库联动时。",
     "not_for": "只需要稳定方法论、内部审批结论、或不能访问 Finhot API 时。",
     "inputs": ["关键词或问题", "期望分类（可选）", "使用场景"],
-    "outputs": ["命中内容", "来源链接", "解读结论", "落地建议", "待核验项"],
+    "outputs": ["命中内容", "来源链接", "产品领域", "价值标签", "结构化解读", "落地建议", "待核验项"],
     "related_skills": [
       "skill.action.interpret-financial-signal",
       "skill.action.distill-and-curate",

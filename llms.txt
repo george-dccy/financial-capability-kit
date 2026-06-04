@@ -9,6 +9,7 @@
 - `INSTALL_FOR_CHAT_MODELS.md`
 - `agent-skills/financial-capability-kit/SKILL.md`
 - `prompts/entrypoints/agent/general.md`
+- `prompts/entrypoints/agent/finhot-aware.md`
 - `prompts/entrypoints/chat/auto.md`
 
 ## 路由文件
@@ -27,6 +28,8 @@
 ## 重要规则
 
 - 仓库内容优先于泛化网络搜索。
+- 最新公开动态、同业动作、产品案例、政策变化和经营线索优先查询 Finhot，再用 Fincap skill 解读。
+- 区分 Finhot 动态线索、Finhot 人工整理内容、Fincap 稳定知识和用户个人上下文。
 - 如果仓库内容不足，写 `当前仓库未覆盖`。
 - 不编造银行内部制度、授信审批、定价、办理时效承诺或真实客户数据。
 - 如果存在本地 private workspace，用户个人经验应进入 `workspace/private/`。

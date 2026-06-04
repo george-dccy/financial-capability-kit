@@ -58,6 +58,14 @@ curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?mode=selected&take=10"
 curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?q=现金管理&take=10"
 ```
 
+按产品能力或价值标签：
+
+```bash
+curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?product_domain=供应链金融&take=10"
+curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?value_tag=客户经营线索&take=10"
+curl "$FINHOT_PUBLIC_BASE_URL/api/public/product-domains"
+```
+
 最近 2 天某关键词：
 
 ```bash
@@ -93,7 +101,7 @@ curl "$FINHOT_PUBLIC_BASE_URL/api/public/context?q=供应链金融&days=2&take=1
 curl "$FINHOT_PUBLIC_BASE_URL/api/public/items/{slug}"
 ```
 
-`/api/public/context` 会返回每条内容的使用规则：动态线索保留来源链接，人工整理内容可继续读取详情 API。`/api/public/items/{slug}` 会返回 `agent_context`，其中 `content_markdown`、`use_rule`、`answer_boundary` 是给 Agent 读取的稳定字段。
+`/api/public/context` 会返回每条内容的使用规则：动态线索保留来源链接，人工整理内容可继续读取详情 API。`/api/public/items/{slug}` 会返回 `agent_context`，其中 `content_markdown`、`product_domain`、`value_tags`、`fincap_analysis`、`use_rule`、`answer_boundary` 是给 Agent 读取的稳定字段。
 
 ## 使用规则
 
@@ -103,8 +111,12 @@ curl "$FINHOT_PUBLIC_BASE_URL/api/public/items/{slug}"
 4. 回答时区分：
    - Finhot 原始动态：来源线索，适合进一步核验
    - Finhot 人工整理：可作为 Fincap 的内容依据
+   - Finhot 产品领域 `product_domain`：表示业务能力归属，如供应链金融、现金管理、跨境金融
+   - Finhot 价值标签 `value_tags`：表示这条内容可用于客户经营、产品设计、风险识别、政策跟踪、汇报材料等用途
    - Fincap skill：负责判断框架、执行流程和表达结构
-5. 如果 Finhot 无结果，写明“Finhot 当前未覆盖”，再回到 Fincap 仓库稳定知识或提示需要外部检索。
+5. 如果返回 `fincap_analysis`，先把它当作结构化解读草稿，再用 `interpret-financial-signal` 校正事实、推论、建议和边界。
+6. 如果 Finhot 无结果，写明“Finhot 当前未覆盖”，再回到 Fincap 仓库稳定知识或提示需要外部检索。
+7. 如果命中内容有长期价值，继续用 `distill-and-curate` 判断是否进入 private-first 或 public candidate。
 
 ## 输出建议
 

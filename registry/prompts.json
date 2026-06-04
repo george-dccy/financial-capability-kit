@@ -113,7 +113,23 @@
       "skill.action.accompany-corporate-client",
       "skill.action.report-decision-brief",
       "skill.action.interpret-financial-signal",
+      "skill.action.query-finhot",
       "skill.action.distill-and-curate"
+    ]
+  },
+  {
+    "id": "prompt.entrypoint.agent.finhot-aware",
+    "kind": "entrypoint",
+    "title": "Finhot Aware Agent Prompt",
+    "display_name_zh": "Finhot-aware Agent 入口",
+    "path": "prompts/entrypoints/agent/finhot-aware.md",
+    "summary": "面向需要把 Finhot 最新公开信号与 Fincap 专业 skill 联动使用的 Agent。",
+    "relations": [
+      "skill.action.query-finhot",
+      "skill.action.interpret-financial-signal",
+      "skill.action.distill-and-curate",
+      "skill.action.market-corporate-client",
+      "skill.action.report-decision-brief"
     ]
   },
   {
