@@ -88,6 +88,31 @@
     "related_prompts": []
   },
   {
+    "id": "skill.reference.client-visit-opening",
+    "type": "reference",
+    "capability": "analyze",
+    "title": "Client Visit Opening",
+    "display_name_zh": "客户拜访开场框架",
+    "path": "skills/reference/client-visit-opening",
+    "entry": "skills/reference/client-visit-opening/SKILL.md",
+    "summary": "提供客户拜访开场时机、信任建立策略和客户状态快速评估的判断框架。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "task_patterns": ["客户拜访开场", "首访开场", "开场策略", "客户配合度", "开场提问方向"],
+    "when_to_use": "准备或复盘对公客户拜访开场，需要判断用哪种开场策略、第一问往哪里走时。",
+    "not_for": "需要完整拜访场景编排、具体话术模板或首次拜访后的持续跟进设计时。",
+    "inputs": ["客户关系基础", "会谈对象", "当前拜访目标", "已知客户状态"],
+    "outputs": ["开场策略", "第一个问题方向", "客户配合度预判", "使用边界提示"],
+    "related_skills": [
+      "skill.action.market-corporate-client",
+      "skill.reference.problem-opportunity-framework",
+      "skill.reference.client-advance-framework"
+    ],
+    "related_knowledge": [
+      "knowledge.common.sales.consultative-b2b"
+    ],
+    "related_prompts": []
+  },
+  {
     "id": "skill.reference.decision-brief-framework",
     "type": "reference",
     "capability": "communicate",
@@ -434,6 +459,33 @@
       "knowledge.banks.ceb.corporate-settlement.yangguang-cash-management",
       "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
       "knowledge.banks.ceb.transaction-banking.yangguang-e-pay"
+    ],
+    "related_prompts": []
+  },
+  {
+    "id": "skill.reference.financial-statement-reading-lens",
+    "type": "reference",
+    "capability": "analyze",
+    "title": "Financial Statement Reading Lens",
+    "display_name_zh": "财报阅读专业视角",
+    "path": "skills/reference/financial-statement-reading-lens",
+    "entry": "skills/reference/financial-statement-reading-lens/SKILL.md",
+    "summary": "从银行对公业务视角阅读财报，判断先看什么、如何看质量、如何表达发现。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "task_patterns": ["财报阅读", "财务分析", "现金流判断", "偿债能力", "客户评估报告", "财务风险识别"],
+    "when_to_use": "客户拜访、客户评估或会议表达前，需要快速建立企业财务状况的专业判断框架时。",
+    "not_for": "需要直接输出授信、定价、审批结论，或需要精确财务预测模型时。",
+    "inputs": ["近三年资产负债表", "近三年现金流量表", "近三年利润表"],
+    "outputs": ["优先阅读顺序", "财务质量判断", "风险信号", "缺失信息提示"],
+    "related_skills": [
+      "skill.reference.enterprise-cash-flow-judgment",
+      "skill.reference.industry-analysis-basics",
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.action.client-needs-diagnosis",
+      "skill.action.report-decision-brief"
+    ],
+    "related_knowledge": [
+      "knowledge.common.economics.business-basics"
     ],
     "related_prompts": []
   },

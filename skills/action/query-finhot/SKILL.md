@@ -44,6 +44,13 @@ http://localhost:3801
 FINHOT_PUBLIC_BASE_URL
 ```
 
+## 踩坑与正确调用姿势
+
+- `/api/public/context` 已与 `/api/public/items` 对齐，支持 `q`、`category`、`content_type`、`source_category`、`product_domain`、`value_tag`、`days`、`take` 等同一组查询参数。
+- 中文参数必须 URL encode。命令行调用时使用 `curl --get --data-urlencode`；不要把 `?q=供应链金融&days=2` 这类中文 query 直接拼进 URL。
+- `product_domain` 是产品能力归属字段，不是主搜索路径。它只返回已经完成产品域打标的内容；打标不足时，主路径仍然是 `/api/public/items` + `q` + `category` + `days` + `take`。
+- `dynamic/external` 是动态线索，必须保留 `source_url` 并提示核验原文；`manual/detail` 是人工整理内容，可继续读取详情 API。
+
 ## 查询方式
 
 最新精选：
@@ -55,21 +62,30 @@ curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?mode=selected&take=10"
 按关键词：
 
 ```bash
-curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?q=现金管理&take=10"
+curl --get "$FINHOT_PUBLIC_BASE_URL/api/public/items" \
+  --data-urlencode "q=现金管理" \
+  --data-urlencode "take=10"
 ```
 
 按产品能力或价值标签：
 
 ```bash
-curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?product_domain=供应链金融&take=10"
-curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?value_tag=客户经营线索&take=10"
+curl --get "$FINHOT_PUBLIC_BASE_URL/api/public/items" \
+  --data-urlencode "product_domain=供应链金融" \
+  --data-urlencode "take=10"
+curl --get "$FINHOT_PUBLIC_BASE_URL/api/public/items" \
+  --data-urlencode "value_tag=客户经营线索" \
+  --data-urlencode "take=10"
 curl "$FINHOT_PUBLIC_BASE_URL/api/public/product-domains"
 ```
 
 最近 2 天某关键词：
 
 ```bash
-curl "$FINHOT_PUBLIC_BASE_URL/api/public/items?q=现金管理&days=2&take=10"
+curl --get "$FINHOT_PUBLIC_BASE_URL/api/public/items" \
+  --data-urlencode "q=现金管理" \
+  --data-urlencode "days=2" \
+  --data-urlencode "take=10"
 ```
 
 按内容分类：
@@ -97,7 +113,10 @@ curl "$FINHOT_PUBLIC_BASE_URL/api/public/sources"
 Agent 读取上下文：
 
 ```bash
-curl "$FINHOT_PUBLIC_BASE_URL/api/public/context?q=供应链金融&days=2&take=10"
+curl --get "$FINHOT_PUBLIC_BASE_URL/api/public/context" \
+  --data-urlencode "q=供应链金融" \
+  --data-urlencode "days=2" \
+  --data-urlencode "take=10"
 curl "$FINHOT_PUBLIC_BASE_URL/api/public/items/{slug}"
 ```
 
