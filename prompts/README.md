@@ -46,16 +46,16 @@
 6. 每个入口末尾都保留问题占位，方便直接复制使用
 7. 覆盖不足时明确写出“当前仓库未覆盖”
 
-Finhot 是 Fincap 的内容库和动态库：
+Finhot 是 Fincap 的公开信号雷达：
 
 - 生产地址：`https://finhot.boluomi.ren`
-- 最新动态、同业动作、政策变化、产品、案例/模式、观察和打法，优先使用 `skills/action/query-finhot`
-- Fincap 仓库继续负责稳定的判断框架、执行流程、边界规则和 prompt
-- Finhot 的 `dynamic` 是来源线索，人工整理内容才作为站内沉淀知识使用
+- 最新动态、同业动作、政策变化、产品案例和经营线索，优先使用 `skills/action/query-finhot`
+- Fincap 仓库继续负责稳定知识、产品地图、判断框架、执行流程、边界规则和 prompt
+- Finhot 的 `dynamic` 是来源线索，人工校准信号只是解读上下文，不替代 Fincap knowledge
 
 推荐读取顺序：
 
-`question -> Finhot if latest/content needed -> reference/action/knowledge -> answer -> private distill if valuable`
+`question -> Finhot if latest signal needed -> reference/action/knowledge -> answer -> private distill if valuable`
 
 其中：
 

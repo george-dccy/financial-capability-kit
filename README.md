@@ -30,6 +30,16 @@
 
 > **公开层提供专业骨架，私有层负责长期成长。**
 
+当前系统分成三块：
+
+- `financial-capability-kit / fincap`：主功能和公开能力底座，放稳定知识、产品地图、从业者能力、reference/action skill。
+- `fincap-workspace`：个人沉淀层，放个人资讯、参考材料、案例复盘、偏好、不便公开内容和未成熟草稿。
+- `finhot`：动态雷达，发现新政策、新产品、新项目案例、新同业动作和客户经营线索。
+
+推荐流转方式：
+
+`Finhot 发现信号 -> Fincap 解读和沉淀方法 -> workspace 记录个人经验和私有案例`
+
 它摒弃不精准的临时搜索结果，也不透露银行内部资料。
 它是一个会持续增长的金融能力集合，帮助你越来越像专业人士那样看问题、说问题、推进问题。
 甚至支持你直接发给客户，成为你面对客户时的分身。
@@ -64,6 +74,7 @@ python .\fincap\install\fincap_agent_skill.py --target all
 - [Agent 安装说明](./INSTALL_FOR_AGENTS.md)
 - [聊天模型接入说明](./INSTALL_FOR_CHAT_MODELS.md)
 - [个人代理发布说明](./docs/agent-publishing.md)
+- [三仓操作模型](./docs/operating-model.md)
 
 ### 1) 面向支持读取仓库的聊天应用
 
@@ -100,7 +111,7 @@ python .\fincap\install\fincap_agent_skill.py --target all
 它会让你的 Agent：
 
 - 遇到类似问题时优先复用仓库里的专业视角、行动 skill 和公开知识
-- 遇到最新公开动态、同业动作、产品案例和经营线索时，先查询 Finhot
+- 遇到最新公开动态、同业动作、产品案例和经营线索时，先查询 Finhot 雷达
 - 默认先解当前问题，再判断是否值得沉淀
 - 把你确认过的经验、偏好、案例和复盘优先写进 `workspace/private/`
 
@@ -140,7 +151,7 @@ python .\fincap\install\fincap_agent_skill.py --target all
 
 擅长把公开资料组织成稳定的能力底座。
 不会拿泛金融资料或不贴题产品来拼答案。
-涉及最新公开动态、同业动作、政策变化、产品案例和经营线索时，优先使用 Finhot 作为动态信号和内容来源；Fincap 负责把这些信号解读成判断框架、客户经营动作、产品设计启发、汇报材料或沉淀建议。
+涉及最新公开动态、同业动作、政策变化、产品案例和经营线索时，优先使用 Finhot 作为公开信号雷达；Fincap 负责把这些信号解读成判断框架、客户经营动作、产品设计启发、汇报材料或沉淀建议。稳定知识和产品地图继续沉淀在 Fincap，个人材料继续沉淀在 workspace。
 它除了给答案，还能帮助你慢慢长出更像专业人士的看法、说法和分析方式。
 public 提供公共骨架，private 负责个人长期增长。
 你确认过的经验、偏好、表达方式和案例，不需要每次重新讲一遍。
@@ -174,6 +185,7 @@ workspace/private/
 - [架构说明](./docs/architecture/README.md)
 - [Overlay 规则](./docs/architecture/overlay.md)
 - [Skill 分类说明](./docs/architecture/skill-taxonomy.md)
+- [三仓操作模型](./docs/operating-model.md)
 
 ---
 

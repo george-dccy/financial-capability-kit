@@ -34,7 +34,7 @@ metadata:
 ## When To Use
 
 - 想从文档、链接、说明材料中提炼新资产
-- 想从 Finhot 动态、人工整理内容或管理员提炼草稿中判断是否沉淀为 Fincap 资产
+- 想从 Finhot 动态、人工校准信号或管理员提炼草稿中判断是否沉淀为 Fincap 资产
 - 想补全已有 skill 或 knowledge
 - 想把 private 内容整理成 public contribution candidate
 - 想先给出 patch proposal，再由用户确认落库

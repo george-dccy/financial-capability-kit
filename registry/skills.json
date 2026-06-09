@@ -294,6 +294,30 @@
     ]
   },
   {
+    "id": "skill.action.management-news-brief",
+    "type": "action",
+    "capability": "communicate",
+    "title": "Management News Brief",
+    "display_name_zh": "管理信息简报",
+    "path": "skills/action/management-news-brief",
+    "entry": "skills/action/management-news-brief/SKILL.md",
+    "summary": "把政策、新闻、同业动作、产品案例或 Finhot 信号转成面向管理者的简短影响判断和建议动作。",
+    "audience": ["bank-practitioner", "manager"],
+    "task_patterns": ["政策汇报", "新闻简报", "同业动作解读", "产品案例汇报", "一分钟汇报", "Finhot 动态解读"],
+    "when_to_use": "看到外部动态或 Finhot 信号后，需要快速形成领导能听懂、能判断、能安排动作的简报时。",
+    "not_for": "替代原文核验、内部政策结论、授信审批、定价或办理时效承诺。",
+    "inputs": ["Finhot 查询结果或原文链接", "使用场景", "需要汇报的对象"],
+    "outputs": ["一句话结论", "信号类型", "影响判断", "建议动作", "一分钟汇报版", "来源与边界"],
+    "related_skills": [
+      "skill.action.query-finhot",
+      "skill.action.interpret-financial-signal",
+      "skill.action.report-decision-brief",
+      "skill.reference.executive-briefing-decision-support"
+    ],
+    "related_knowledge": [],
+    "related_prompts": []
+  },
+  {
     "id": "skill.action.distill-and-curate",
     "type": "action",
     "capability": "distill",
@@ -742,14 +766,38 @@
     ]
   },
   {
+    "id": "skill.action.operating-recommendation-brief",
+    "type": "action",
+    "capability": "execute",
+    "title": "Operating Recommendation Brief",
+    "display_name_zh": "经营建议简报",
+    "path": "skills/action/operating-recommendation-brief",
+    "entry": "skills/action/operating-recommendation-brief/SKILL.md",
+    "summary": "把经营分析中的亮点、短板和归因转成优先动作、协同需求、上提事项和检查点。",
+    "audience": ["bank-practitioner", "manager"],
+    "task_patterns": ["经营建议", "下一步怎么抓", "经营动作", "团队检查点", "短板整改", "经营汇报建议"],
+    "when_to_use": "已经有经营初判，需要把诊断结果转成一周内能执行和检查的经营动作时。",
+    "not_for": "替代内部经营系统、正式考核结论，或在缺少关键事实时硬下完整经营判断。",
+    "inputs": ["经营目标", "亮点", "短板", "关键数据或现场信号"],
+    "outputs": ["一句话判断", "经营抓手", "本周动作", "协同需求", "上提事项", "待补数项"],
+    "related_skills": [
+      "skill.action.branch-operating-diagnosis",
+      "skill.reference.branch-operating-diagnosis-lens",
+      "skill.action.report-decision-brief",
+      "skill.reference.executive-briefing-decision-support"
+    ],
+    "related_knowledge": [],
+    "related_prompts": []
+  },
+  {
     "id": "skill.action.query-finhot",
     "type": "action",
     "capability": "retrieve",
     "title": "Query Finhot",
-    "display_name_zh": "查询 Finhot 内容库",
+    "display_name_zh": "查询 Finhot 信号雷达",
     "path": "skills/action/query-finhot",
     "entry": "skills/action/query-finhot/SKILL.md",
-    "summary": "从 Finhot 读取最新动态、产品、案例/模式、政策、观察和打法，并结合 Fincap skill 输出解读。",
+    "summary": "从 Finhot 读取最新动态、产品案例、政策变化、同业动作和经营线索，并结合 Fincap skill 输出解读。",
     "audience": ["finance-learner", "bank-practitioner", "manager"],
     "task_patterns": [
       "最新动态",
@@ -759,10 +807,10 @@
       "产品案例",
       "交易银行动态",
       "供应链金融动态",
-      "产品能力地图",
+      "产品信号归属",
       "客户经营线索"
     ],
-    "when_to_use": "问题涉及最新公开信息、Finhot 已沉淀内容、或需要把 Fincap 判断框架与 Finhot 内容库联动时。",
+    "when_to_use": "问题涉及最新公开信息、Finhot 公开信号、或需要把 Fincap 判断框架与 Finhot 信号雷达联动时。",
     "not_for": "只需要稳定方法论、内部审批结论、或不能访问 Finhot API 时。",
     "inputs": ["关键词或问题", "期望分类（可选）", "使用场景"],
     "outputs": ["命中内容", "来源链接", "产品领域", "价值标签", "结构化解读", "落地建议", "待核验项"],

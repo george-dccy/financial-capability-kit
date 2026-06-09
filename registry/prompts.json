@@ -293,12 +293,51 @@
     ]
   },
   {
+    "id": "prompt.skill.reference.executive-briefing-decision-support",
+    "kind": "skill",
+    "title": "Executive Briefing Decision Support Prompt",
+    "display_name_zh": "向上汇报与决策支持判断框架 Prompt",
+    "path": "prompts/skills/reference/executive-briefing-decision-support.md",
+    "summary": "帮助判断汇报类型、决策点、风险和表达结构。",
+    "target_skill": "skill.reference.executive-briefing-decision-support",
+    "relations": [
+      "skill.action.report-decision-brief",
+      "skill.reference.decision-brief-framework"
+    ]
+  },
+  {
+    "id": "prompt.skill.action.client-followup-systematic",
+    "kind": "skill",
+    "title": "Client Followup Systematic Prompt",
+    "display_name_zh": "客户事项系统跟进 Prompt",
+    "path": "prompts/skills/action/client-followup-systematic.md",
+    "summary": "把客户事项拆成状态、优先级、推动动作和风险信号。",
+    "target_skill": "skill.action.client-followup-systematic",
+    "relations": [
+      "skill.reference.client-advance-framework",
+      "skill.reference.team-followup-framework"
+    ]
+  },
+  {
+    "id": "prompt.skill.action.product-matching-boundary",
+    "kind": "skill",
+    "title": "Product Matching Boundary Prompt",
+    "display_name_zh": "产品匹配与边界提示 Prompt",
+    "path": "prompts/skills/action/product-matching-boundary.md",
+    "summary": "根据客户需求定型结论，输出产品候选、边界提示、协同需求和下一步动作。",
+    "target_skill": "skill.action.product-matching-boundary",
+    "relations": [
+      "skill.action.client-needs-diagnosis",
+      "skill.action.market-corporate-client"
+    ]
+  },
+  {
     "id": "prompt.skill.action.query-finhot",
     "kind": "skill",
     "title": "Query Finhot Prompt",
-    "display_name_zh": "查询 Finhot 内容库 Prompt",
+    "display_name_zh": "查询 Finhot 信号雷达 Prompt",
     "path": "prompts/skills/action/query-finhot.md",
-    "summary": "查询 Finhot 最新动态、产品、案例/模式、政策、观察和打法，并结合 Fincap 输出解读。",
+    "summary": "查询 Finhot 最新动态、产品案例、政策变化、同业动作和经营线索，并结合 Fincap 输出解读。",
     "target_skill": "skill.action.query-finhot",
     "relations": [
       "skill.action.query-finhot",

@@ -17,7 +17,7 @@ target_scope: general-agent
 
 请按以下原则工作：
 1. 初次使用或仓库更新时，先同步仓库并读取 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`。
-2. 把 Finhot 作为 Fincap 的内容库和动态库：默认生产地址是 `https://finhot.boluomi.ren`，如环境变量 `FINHOT_PUBLIC_BASE_URL` 存在则优先使用。
+2. 把 Finhot 作为 Fincap 的公开信号雷达：默认生产地址是 `https://finhot.boluomi.ren`，如环境变量 `FINHOT_PUBLIC_BASE_URL` 存在则优先使用。
 3. 每次收到任务，先判断这次问题更需要：
    - `skills/reference/*` 提供专业视角、判断框架、表达结构
    - `skills/action/*` 直接组织任务、方案、汇报、清单
@@ -25,8 +25,8 @@ target_scope: general-agent
    - `skills/action/query-finhot/*` 查询 Finhot 最新动态、产品、案例/模式、政策、观察和打法
    - `knowledge/*` 提供公开事实、FAQ、来源
 4. 如果用户问“最新、近期、动态、同业、政策变化、新产品、案例、供应链金融、交易银行、现金管理、支付结算、跨境金融”，先查 Finhot，再用 Fincap skill 解读。
-5. 读取 Finhot 时要区分：`dynamic/external` 是动态线索，必须保留来源链接并提示核验原文；`manual/detail` 是人工整理内容，可作为站内知识材料；`fincap_analysis` 是结构化解读草稿，需要再区分事实、推论和建议。
-6. Finhot 的 `product_domain` 表示产品能力归属，`value_tags` 表示内容用途；不要把它们和 `content_type`、`source_category` 混淆。
+5. 读取 Finhot 时要区分：`dynamic/external` 是动态线索，必须保留来源链接并提示核验原文；`manual/detail` 是人工校准信号，可作为解读上下文，但不能替代 Fincap knowledge；`fincap_analysis` 是结构化解读草稿，需要再区分事实、推论和建议。
+6. Finhot 的 `product_domain` 表示信号业务归属，`value_tags` 表示内容用途；不要把它们和 `content_type`、`source_category` 混淆。
 7. 如果仓库或 Finhot 中已经有答案依据，就直接基于这些内容回答；不要绕开仓库和 Finhot 先去网络上搜一堆泛化内容。
 8. 除非我明确要求补充最新公开信息，或者仓库与 Finhot 都未覆盖且我同意外部补充，否则不要默认使用外部搜索替代仓库。
 9. 如果仓库没有对应内容或证据不足，直接写“当前仓库未覆盖”；如果 Finhot 没有命中，写“Finhot 当前未覆盖”，并说明缺什么。
