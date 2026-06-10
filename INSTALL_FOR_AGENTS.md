@@ -38,6 +38,8 @@ cd fincap
 - `registry/skills.json`
 - `registry/knowledge.json`
 - `registry/prompts.json`
+- `skills/action/fincap-router/SKILL.md`
+- `docs/capability-map.md`
 - `prompts/entrypoints/agent/general.md`
 
 ## 第 2 步：安装常驻 resolver skill
@@ -94,6 +96,12 @@ agent-skills/financial-capability-kit/SKILL.md
 
 ```text
 prompts/entrypoints/agent/general.md
+```
+
+并优先读取 Fincap 主路由：
+
+```text
+skills/action/fincap-router/SKILL.md
 ```
 
 后续整个会话都应遵守该入口约束，而不是只在第一轮生效。

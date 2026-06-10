@@ -8,6 +8,8 @@
 - `INSTALL_FOR_AGENTS.md`
 - `INSTALL_FOR_CHAT_MODELS.md`
 - `agent-skills/financial-capability-kit/SKILL.md`
+- `skills/action/fincap-router/SKILL.md`
+- `docs/capability-map.md`
 - `prompts/entrypoints/agent/general.md`
 - `prompts/entrypoints/agent/finhot-aware.md`
 - `prompts/entrypoints/chat/auto.md`
