@@ -546,6 +546,38 @@
     "related_prompts": []
   },
   {
+    "id": "skill.action.customer-analysis-for-trade-finance",
+    "type": "action",
+    "capability": "analyze",
+    "title": "Customer Analysis For Trade Finance",
+    "display_name_zh": "贸易与供应链客户资料分析",
+    "path": "skills/action/customer-analysis-for-trade-finance",
+    "entry": "skills/action/customer-analysis-for-trade-finance/SKILL.md",
+    "summary": "面向贸易融资、供应链、单证和跨境场景，把客户资料整理成经营判断、交易链条假设、现金流线索、可能切入口和报告章节草稿。",
+    "audience": ["bank-practitioner"],
+    "task_patterns": ["客户资料分析", "报表分析", "经营数据分析", "贸易融资客户", "供应链客户", "单证业务", "跨境业务", "客户调查报告"],
+    "when_to_use": "用户手里有客户报表、经营数据、拜访记录或公开资料，需要先判断能看出什么、后续如何推进时。",
+    "not_for": "授信审批结论、额度定价承诺、内部制度口径或完整信用审查报告。",
+    "inputs": ["客户基本情况", "客户材料或公开线索", "用户当前目标"],
+    "outputs": ["材料盘点", "客户经营初判", "交易链条梳理", "现金流与回款压力线索", "可能业务切入口", "待核验清单", "下一步工具链"],
+    "related_skills": [
+      "skill.reference.problem-opportunity-framework",
+      "skill.reference.corporate-client-coverage-lens",
+      "skill.reference.financial-statement-reading-lens",
+      "skill.reference.enterprise-cash-flow-judgment",
+      "skill.reference.industry-analysis-basics",
+      "skill.action.client-needs-diagnosis",
+      "skill.action.product-matching-boundary",
+      "skill.action.report-decision-brief",
+      "skill.action.client-followup-systematic"
+    ],
+    "related_knowledge": [
+      "knowledge.common.economics.business-basics",
+      "knowledge.common.sales.consultative-b2b"
+    ],
+    "related_prompts": []
+  },
+  {
     "id": "skill.action.inclusive-finance-scenario-judgment",
     "type": "action",
     "capability": "analyze",
