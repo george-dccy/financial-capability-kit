@@ -73,6 +73,7 @@ metadata:
 2. 如果用户只给关键词或问最新情况，先查 Finhot；如果 Finhot 无命中，写明“Finhot 当前未覆盖”
 3. 如果输入来自 Finhot，先区分：
    - `dynamic/external`：动态线索，必须保留 `source_url`，提示核验原文，不把摘要当作完整事实
+   - `product/detail`：公开产品集合或特色产品信号，可作为同业产品入口；读取详情正文和官方链接后再比较或解读
    - `manual/detail`：人工校准信号，可作为解读上下文；稳定知识仍以 Fincap knowledge 为准
    - `fincap_analysis`：结构化解读草稿，要再核对事实、推论、建议是否分层
 4. 再判断工作相关性：能力成长、公开咨询、业务推进、管理跟进、领导汇报

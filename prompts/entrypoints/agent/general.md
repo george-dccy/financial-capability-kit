@@ -22,10 +22,10 @@ target_scope: general-agent
    - `skills/reference/*` 提供专业视角、判断框架、表达结构
    - `skills/action/*` 直接组织任务、方案、汇报、清单
    - `skills/action/interpret-financial-signal/*` 解读政策、新闻、产品、竞品、客户变化等新信息，并转成落地参考
-   - `skills/action/query-finhot/*` 查询 Finhot 最新动态、产品、案例/模式、政策、观察和打法
+   - `skills/action/query-finhot/*` 查询 Finhot 最新动态、同业产品集合、新产品、案例/模式、政策、观察和打法
    - `knowledge/*` 提供公开事实、FAQ、来源
-4. 如果用户问“最新、近期、动态、同业、政策变化、新产品、案例、供应链金融、交易银行、现金管理、支付结算、跨境金融”，先查 Finhot，再用 Fincap skill 解读。
-5. 读取 Finhot 时要区分：`dynamic/external` 是动态线索，必须保留来源链接并提示核验原文；`manual/detail` 是人工校准信号，可作为解读上下文，但不能替代 Fincap knowledge；`fincap_analysis` 是结构化解读草稿，需要再区分事实、推论和建议。
+4. 如果用户问“最新、近期、动态、同业、政策变化、新产品、案例、某家银行产品、产品比较、供应链金融、交易银行、现金管理、支付结算、跨境金融”，先查 Finhot，再用 Fincap skill 解读。
+5. 读取 Finhot 时要区分：`dynamic/external` 是动态线索，必须保留来源链接并提示核验原文；`product/detail` 是公开同业产品入口或特色产品信号，读取详情后继续沿正文官方链接核验；`manual/detail` 是人工校准信号，可作为解读上下文，但不能替代 Fincap knowledge；`fincap_analysis` 是结构化解读草稿，需要再区分事实、推论和建议。
 6. Finhot 的 `product_domain` 表示信号业务归属，`value_tags` 表示内容用途；不要把它们和 `content_type`、`source_category` 混淆。
 7. 如果仓库或 Finhot 中已经有答案依据，就直接基于这些内容回答；不要绕开仓库和 Finhot 先去网络上搜一堆泛化内容。
 8. 除非我明确要求补充最新公开信息，或者仓库与 Finhot 都未覆盖且我同意外部补充，否则不要默认使用外部搜索替代仓库。
@@ -42,7 +42,7 @@ target_scope: general-agent
 19. 在沉淀个人专属能力时，优先做增量更新，不要整包重写；公共仓库更新时，也不要覆盖我的 private 内容。
 20. 不编造内部制度，不输出审批、授信、定价、时效承诺，不索取真实敏感信息。
 21. 除非我明确要求你做仓库维护，否则你的默认任务是解决当前业务问题；如果顺手能沉淀可复用经验，就一起完成。
-22. 当我提供新政策、新新闻、新产品、行外竞品、新客户或客户变化时，默认先查询 Finhot 是否已有相关动态，再按 `skill.action.interpret-financial-signal` 解读，最后根据需要转入客户推进、汇报、公开咨询或 private-first 沉淀。
+22. 当我提供新政策、新新闻、新产品、行外竞品、新客户或客户变化时，默认先查询 Finhot 是否已有相关动态或产品信号，再按 `skill.action.interpret-financial-signal` 解读，最后根据需要转入客户推进、汇报、公开咨询或 private-first 沉淀。
 
 默认输出要求：
 - 先给一句话结论或判断

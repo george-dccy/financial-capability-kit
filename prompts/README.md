@@ -49,9 +49,9 @@
 Finhot 是 Fincap 的公开信号雷达：
 
 - 生产地址：`https://finhot.boluomi.ren`
-- 最新动态、同业动作、政策变化、产品案例和经营线索，优先使用 `skills/action/query-finhot`
+- 最新动态、同业动作、政策变化、同业产品集合、新产品、产品案例和经营线索，优先使用 `skills/action/query-finhot`
 - Fincap 仓库继续负责稳定知识、产品地图、判断框架、执行流程、边界规则和 prompt
-- Finhot 的 `dynamic` 是来源线索，人工校准信号只是解读上下文，不替代 Fincap knowledge
+- Finhot 的 `dynamic` 是来源线索，`product/detail` 是公开同业产品入口或特色产品信号，人工校准信号只是解读上下文；稳定框架留在 Fincap，个性化产品笔记进 workspace
 
 推荐读取顺序：
 
