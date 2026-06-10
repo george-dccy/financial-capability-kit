@@ -10,7 +10,7 @@
 
 不是所有聊天类大模型应用都能真正读取仓库内容。
 
-基于 2026-04-16 的当前实测：
+基于 2026-06-10 的当前实测：
 
 - `MiniMax 全能模式`：当前优先推荐，可克隆仓库并读取内容
 - `豆包电脑版超能模式`：可读取仓库；普通聊天模式不保证生效
@@ -38,13 +38,15 @@
 
 共同约定：
 
-1. 先读取 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`
-2. 先判断更需要 `skills/reference`、`skills/action`、`skills/action/query-finhot` 还是 `knowledge`
-3. 这套仓库约束适用于整个对话，不只第一轮
-4. 默认优先使用仓库和 Finhot，不要拿外部搜索替代仓库
-5. 对用户呈现时，优先直接给结论、判断或可执行结果
-6. 每个入口末尾都保留问题占位，方便直接复制使用
-7. 覆盖不足时明确写出“当前仓库未覆盖”
+1. 先读取 `README.md`、`docs/capability-map.md`、`skills/action/fincap-router/SKILL.md`
+2. 再读取 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`
+3. 先判断问题属于客户经营、客户资料研判、动态信号、产品与方案边界、汇报与拍板、跟进复盘，还是能力成长与沉淀
+4. 再判断更需要 `skills/reference`、`skills/action`、`skills/action/query-finhot` 还是 `knowledge`
+5. 这套仓库约束适用于整个对话，不只第一轮
+6. 默认优先使用仓库和 Finhot，不要拿外部搜索替代仓库
+7. 对用户呈现时，优先直接给结论、判断或可执行结果
+8. 每个入口末尾都保留问题占位，方便直接复制使用
+9. 覆盖不足时明确写出“当前仓库未覆盖”
 
 Finhot 是 Fincap 的公开信号雷达：
 
@@ -55,7 +57,7 @@ Finhot 是 Fincap 的公开信号雷达：
 
 推荐读取顺序：
 
-`question -> Finhot if latest signal needed -> reference/action/knowledge -> answer -> private distill if valuable`
+`README -> capability-map -> fincap-router -> registry -> Finhot if latest signal needed -> reference/action/knowledge -> answer -> private distill if valuable`
 
 其中：
 

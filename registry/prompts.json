@@ -7,9 +7,12 @@
     "path": "prompts/entrypoints/chat/financial-capability.md",
     "summary": "面向想系统提升金融能力的个人，优先调用 reference skill、action skill 和 knowledge 形成更专业的视角与结果。",
     "relations": [
+      "skill.action.fincap-router",
       "skill.reference.problem-opportunity-framework",
       "skill.reference.client-advance-framework",
       "skill.reference.decision-brief-framework",
+      "skill.action.customer-analysis-for-trade-finance",
+      "skill.action.query-finhot",
       "skill.action.interpret-financial-signal",
       "skill.action.report-decision-brief",
       "knowledge.common.economics.business-basics",
@@ -24,6 +27,7 @@
     "path": "prompts/entrypoints/chat/auto.md",
     "summary": "自动识别问题更接近能力成长、公开咨询还是业务推进，并自然调用仓库资产。",
     "relations": [
+      "skill.action.fincap-router",
       "skill.reference.corporate-client-coverage-lens",
       "skill.reference.problem-opportunity-framework",
       "skill.reference.client-advance-framework",
@@ -31,7 +35,11 @@
       "skill.reference.team-followup-framework",
       "skill.action.market-corporate-client",
       "skill.action.accompany-corporate-client",
+      "skill.action.customer-analysis-for-trade-finance",
+      "skill.action.product-matching-boundary",
       "skill.action.report-decision-brief",
+      "skill.action.management-news-brief",
+      "skill.action.client-followup-systematic",
       "skill.action.interpret-financial-signal",
       "skill.action.query-finhot",
       "skill.action.distill-and-curate"
@@ -45,6 +53,8 @@
     "path": "prompts/entrypoints/chat/public-consulting.md",
     "summary": "面向公开咨询，优先读取 knowledge 并输出简明结论与公开依据。",
     "relations": [
+      "skill.action.fincap-router",
+      "skill.action.query-finhot",
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
       "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
       "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate"
@@ -58,13 +68,18 @@
     "path": "prompts/entrypoints/chat/bank-staff.md",
     "summary": "面向银行员工，优先调用行动型 skill 和专业视角型 skill，输出判断与推进建议。",
     "relations": [
+      "skill.action.fincap-router",
       "skill.reference.corporate-client-coverage-lens",
       "skill.reference.problem-opportunity-framework",
       "skill.reference.client-advance-framework",
       "skill.reference.decision-brief-framework",
       "skill.action.market-corporate-client",
       "skill.action.accompany-corporate-client",
+      "skill.action.customer-analysis-for-trade-finance",
+      "skill.action.query-finhot",
       "skill.action.interpret-financial-signal",
+      "skill.action.product-matching-boundary",
+      "skill.action.client-followup-systematic",
       "skill.action.report-decision-brief"
     ]
   },
@@ -76,9 +91,13 @@
     "path": "prompts/entrypoints/chat/frontline-manager.md",
     "summary": "面向基层管理者，优先调用团队跟进和拍板简报类 skill。",
     "relations": [
+      "skill.action.fincap-router",
       "skill.reference.decision-brief-framework",
       "skill.reference.team-followup-framework",
       "skill.action.report-decision-brief",
+      "skill.action.management-news-brief",
+      "skill.action.client-followup-systematic",
+      "skill.action.query-finhot",
       "skill.action.accompany-corporate-client"
     ]
   },
@@ -90,9 +109,12 @@
     "path": "prompts/entrypoints/chat/head-office-leadership.md",
     "summary": "面向领导层，强调一句话判断、关键变量、风险边界与拍板动作。",
     "relations": [
+      "skill.action.fincap-router",
       "skill.reference.decision-brief-framework",
       "skill.reference.team-followup-framework",
       "skill.action.report-decision-brief",
+      "skill.action.management-news-brief",
+      "skill.action.query-finhot",
       "knowledge.common.banker-thinking.top-performer"
     ]
   },
@@ -104,6 +126,7 @@
     "path": "prompts/entrypoints/agent/general.md",
     "summary": "面向通用 Agent，优先解题，再把高价值经验沉淀到 private growth layer。",
     "relations": [
+      "skill.action.fincap-router",
       "skill.reference.corporate-client-coverage-lens",
       "skill.reference.problem-opportunity-framework",
       "skill.reference.client-advance-framework",
@@ -111,7 +134,11 @@
       "skill.reference.team-followup-framework",
       "skill.action.market-corporate-client",
       "skill.action.accompany-corporate-client",
+      "skill.action.customer-analysis-for-trade-finance",
+      "skill.action.product-matching-boundary",
       "skill.action.report-decision-brief",
+      "skill.action.management-news-brief",
+      "skill.action.client-followup-systematic",
       "skill.action.interpret-financial-signal",
       "skill.action.query-finhot",
       "skill.action.distill-and-curate"
@@ -125,8 +152,10 @@
     "path": "prompts/entrypoints/agent/finhot-aware.md",
     "summary": "面向需要把 Finhot 最新公开信号与 Fincap 专业 skill 联动使用的 Agent。",
     "relations": [
+      "skill.action.fincap-router",
       "skill.action.query-finhot",
       "skill.action.interpret-financial-signal",
+      "skill.action.management-news-brief",
       "skill.action.distill-and-curate",
       "skill.action.market-corporate-client",
       "skill.action.report-decision-brief"

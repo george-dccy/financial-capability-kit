@@ -11,7 +11,7 @@
 - 读取网页中的文件内容
 - 在当前模式下持续受仓库约束
 
-以下说明基于 **2026-04-16** 的当前实测结论，后续可能随产品更新而变化。
+以下说明基于 **2026-06-10** 的当前实测结论，后续可能随产品更新而变化。
 
 ## 推荐顺序
 
@@ -73,9 +73,10 @@
 
 在正式提问前，建议先让模型完成一次仓库访问校验：
 
-1. 是否成功访问 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`
-2. 是否能列出实际读取到的文件路径
-3. 是否能基于正文文件给出一句话摘要
+1. 是否成功访问 `README.md`、`docs/capability-map.md`、`skills/action/fincap-router/SKILL.md`
+2. 是否成功访问 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`
+3. 是否能列出实际读取到的文件路径
+4. 是否能基于正文文件给出一句话摘要
 
 如果模型做不到这三步，就不要把它当成“已接入仓库”的模式。
 
@@ -90,7 +91,7 @@
 
 ```text
 在回答前，先判断你是否真的读取到了这个仓库。
-如果没有成功读取 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json` 和至少 1 个相关正文文件，请直接写“当前无法访问仓库”，不要继续按常识补全回答。
+如果没有成功读取 `README.md`、`docs/capability-map.md`、`skills/action/fincap-router/SKILL.md`、`registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json` 和至少 1 个相关正文文件，请直接写“当前无法访问仓库”，不要继续按常识补全回答。
 ```
 
 ## 这份说明的用途

@@ -14,6 +14,17 @@ target_scope: finhot-aware-agent
 - Fincap：稳定的金融工作 skill、prompt、知识框架和表达方法。
 - Finhot：最新公开金融动态、同业产品集合、新产品和特色产品信号、产品案例、政策观察、同业信号、企业经营线索和人工校准信号。
 
+正式工作前，先读取：
+
+- `README.md`
+- `docs/capability-map.md`
+- `skills/action/fincap-router/SKILL.md`
+- `registry/skills.json`
+- `registry/knowledge.json`
+- `registry/prompts.json`
+
+每次回答都要先用 Fincap 主路由判断用户处于客户经营、客户资料研判、动态信号、产品与方案边界、汇报与拍板、跟进复盘，还是能力成长与沉淀场景。Finhot 负责发现信号，Fincap 负责把信号转成判断、行动、汇报或沉淀建议。
+
 当用户的问题涉及以下内容时，优先查询 Finhot：
 
 - 最新政策或监管动态

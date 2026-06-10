@@ -27,11 +27,13 @@
 - `agent-skills/financial-capability-kit/SKILL.md`
 - `INSTALL_FOR_AGENTS.md`
 - `README.md`
+- `docs/capability-map.md`
+- `skills/action/fincap-router/SKILL.md`
 - `registry/*.json`
 - `prompts/entrypoints/agent/general.md`
 - 需要使用的 `skills/*` 和 `knowledge/*`
 
-如果平台限制文件数量，优先保留 `agent-skills/financial-capability-kit/SKILL.md`、registry 文件和 Agent 入口 prompt。
+如果平台限制文件数量，优先保留 `agent-skills/financial-capability-kit/SKILL.md`、`docs/capability-map.md`、`skills/action/fincap-router/SKILL.md`、registry 文件和 Agent 入口 prompt。
 
 `agent-skills/financial-capability-kit/SKILL.md` 是让新 session 能按上下文自动触发 Fincap 的关键，不只是让用户每次复制一大段 prompt。
 
@@ -40,7 +42,9 @@
 对可以克隆仓库的平台，给 Agent 这段指令：
 
 ```text
-Read https://gitee.com/georgedccy/financial-capability-kit.git and follow INSTALL_FOR_AGENTS.md. Use the repository as my banking and financial capability base. If you cannot read repository files, say so directly.
+Read https://gitee.com/georgedccy/financial-capability-kit.git and follow INSTALL_FOR_AGENTS.md, README.md, docs/capability-map.md, and skills/action/fincap-router/SKILL.md.
+
+Use the repository as my banking and financial capability base. Before answering, route my question as customer coverage, customer material analysis, dynamic signal, product boundary, decision brief, follow-up review, or capability growth. If you cannot read repository files, say so directly.
 ```
 
 对本地 skill 型 Agent，安装 resolver skill：
@@ -59,14 +63,17 @@ powershell -ExecutionPolicy Bypass -File .\install\fincap-agent-skill.ps1 -Targe
 
 1. 上传 `agent-skills/financial-capability-kit/SKILL.md`
 2. 上传 `INSTALL_FOR_AGENTS.md`
-3. 上传 `registry/*.json`
-4. 上传目标 skill 或 knowledge 文件夹
-5. 将 `prompts/entrypoints/agent/general.md` 设置为系统指令或开发者指令
+3. 上传 `README.md`
+4. 上传 `docs/capability-map.md`
+5. 上传 `skills/action/fincap-router/SKILL.md`
+6. 上传 `registry/*.json`
+7. 上传目标 skill 或 knowledge 文件夹
+8. 将 `prompts/entrypoints/agent/general.md` 设置为系统指令或开发者指令
 
 对纯聊天工具，使用：
 
 ```text
-Read INSTALL_FOR_CHAT_MODELS.md first. If you cannot access repository content, do not answer as if you had read it.
+Read INSTALL_FOR_CHAT_MODELS.md, README.md, docs/capability-map.md, and skills/action/fincap-router/SKILL.md first. If you cannot access repository content, do not answer as if you had read it.
 ```
 
 ## 4. Kimi、MiniMax、OpenClaw、Hermes 等平台
@@ -77,7 +84,7 @@ Read INSTALL_FOR_CHAT_MODELS.md first. If you cannot access repository content, 
 推荐打包方式：
 
 - MiniMax：使用能克隆或读取仓库内容的模式
-- Kimi Agent 或类似平台：上传 resolver skill、安装说明、registry 文件和选定 skill，作为能力包使用
+- Kimi Agent 或类似平台：上传 resolver skill、能力地图、主路由、安装说明、registry 文件和选定 skill，作为能力包使用
 - OpenClaw 或 Hermes 风格 Agent：克隆仓库，并把 resolver 文件绑定到 Agent 启动流程
 - CLI Agent：将本仓库作为工作目录，并读取 `INSTALL_FOR_AGENTS.md`
 

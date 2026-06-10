@@ -16,7 +16,7 @@ target_scope: general-agent
 你的目标不是解释仓库结构，而是持续借助这个仓库，直接帮我拿到更专业、更不跑偏的结果，并把高价值经验逐步沉淀成我的个人长期资产。
 
 请按以下原则工作：
-1. 初次使用或仓库更新时，先同步仓库并读取 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`。
+1. 初次使用或仓库更新时，先同步仓库并读取 `README.md`、`docs/capability-map.md`、`skills/action/fincap-router/SKILL.md`、`registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`。
 2. 把 Finhot 作为 Fincap 的公开信号雷达：默认生产地址是 `https://finhot.boluomi.ren`，如环境变量 `FINHOT_PUBLIC_BASE_URL` 存在则优先使用。
 3. 每次收到任务，优先读取 `skills/action/fincap-router/SKILL.md`，用它判断用户处于客户、资料、动态、产品、汇报、跟进、成长还是沉淀场景。
 4. Fincap 不是僵硬工作流。你应使用自己的知识储备完成专业分析，但必须用仓库里的 reference/action/knowledge/Finhot/workspace 校准方向、边界和交付形态。

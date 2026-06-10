@@ -52,12 +52,14 @@ Fincap 是能力，workspace 是个人沉淀，Finhot 是雷达。
 - 新项目案例
 - 新同业动作
 - 企业经营线索
-- 公开来源、摘要、标签、推荐理由、产品信号归属、价值标签
+- 同业交易银行产品集合、新产品和特色产品公开入口
+- 公开来源、摘要、标签、推荐理由、业务领域、价值标签
 
 不放：
 
 - Fincap 稳定 knowledge 的副本
 - 完整产品百科
+- 同业产品静态知识库副本
 - 个人私有资料
 - 重型 CMS
 - 长期方法论沉淀
@@ -65,7 +67,8 @@ Fincap 是能力，workspace 是个人沉淀，Finhot 是雷达。
 ## 流转规则
 
 ```text
-Finhot 发现信号
+Finhot 发现动态或公开产品入口
+-> Fincap 主路由判断场景
 -> Fincap 解读和组织行动
 -> workspace 记录个人经验
 -> 稳定后再回流 Fincap public candidate
@@ -79,7 +82,8 @@ Finhot 发现信号
 | 对政策的解读框架 | Fincap skill | 稳定方法进入 `skills/action` 或 `skills/reference` |
 | 某客户受政策影响的复盘 | workspace | 含个人和客户上下文，默认 private |
 | 银行基础产品说明 | Fincap knowledge | 需要公开来源和边界 |
-| 同业产品案例 | Finhot -> Fincap | Finhot 发现，Fincap 沉淀可复用结构 |
+| 同业产品集合或新产品公开入口 | Finhot | 保留来源链接，供人点击、Agent 继续读取 |
+| 同业产品比较、解读方法和客户经营启发 | Fincap skill | 不复制产品库，只沉淀可复用判断框架、边界和表达模板 |
 | 个人常用汇报话术 | workspace | 稳定后可去敏感转 public candidate |
 
 ## 开发约束

@@ -14,7 +14,7 @@
 - 如果在豆包中使用，建议使用 **豆包电脑版超能模式**
 
 如果只是普通聊天模式，不要默认它已经成功读取仓库正文。
-基于 2026-04-16 的当前实测，不少普通聊天模式存在“看起来像用了仓库，实际仍在自由发挥”的风险。
+基于 2026-06-10 的当前实测，不少普通聊天模式存在“看起来像用了仓库，实际仍在自由发挥”的风险。
 
 如需看不同模型和模式的适配情况，见：
 
@@ -22,7 +22,7 @@
 
 这类 prompt 的关键是同时满足两点：
 
-- 对模型内部要求足够明确：先读 registry，再读 skill 或 knowledge 正文，默认不要绕开仓库去外搜
+- 对模型内部要求足够明确：先读 README、能力地图和 Fincap 主路由，再读 registry、skill 或 knowledge 正文，默认不要绕开仓库去外搜
 - 对最终回答保持足够自然：用户看到的是专业结论、判断和建议，而不是一串技术过程
 
 另外还要满足两条：
@@ -72,9 +72,13 @@
 
 所有聊天模型入口都要求模型：
 
-- 先读取 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`
-- 先判断更需要 `skills/reference`、`skills/action` 还是 `knowledge`
-- 遇到产品或公开知识问题，优先依据对应 `knowledge/*`
+- 先读取 `README.md`、`docs/capability-map.md`、`skills/action/fincap-router/SKILL.md`
+- 再读取 `registry/skills.json`、`registry/knowledge.json`、`registry/prompts.json`
+- 先判断问题属于客户经营、客户资料研判、动态信号、产品与方案边界、汇报与拍板、跟进复盘，还是能力成长与沉淀
+- 再判断更需要 `skills/reference`、`skills/action`、`skills/action/query-finhot` 还是 `knowledge`
+- 遇到最新政策、同业产品、新产品、案例或公开动态，先查询 Finhot，再用 Fincap skill 解读
+- 遇到客户资料、报表、经营数据、贸易融资、供应链金融、单证或跨境业务，优先走客户资料研判链路
+- 遇到产品或公开知识问题，优先依据对应 `knowledge/*` 或 Finhot `product/detail`
 - 默认不要用外部搜索替代仓库内容
 - 这套仓库约束适用于整个对话，不是只第一轮生效
 - 先直接给结论、判断或下一步动作
