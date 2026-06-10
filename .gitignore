@@ -22,3 +22,5 @@ workspace/
 docs/superpowers/
 AGENTS.md
 finhot/
+output/
+tests/
