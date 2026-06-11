@@ -3,7 +3,10 @@ id: prompt.skill.action.online-credit-approval-solution-drafting
 kind: skill
 display_name_zh: 线上授信自动化审批业务方案辅助撰写 Prompt
 target_skill: skill.action.online-credit-approval-solution-drafting
-summary: 通过问答收集信息，输出缺口清单、追问问题和“授信方案”章节草稿。
+summary: 通过问答收集信息，输出缺口清单、追问问题和”授信方案”章节草稿。
+relations:
+  - skill.reference.online-credit-solution-lens
+  - skill.reference.executive-briefing-decision-support
 ---
 
 请按“线上授信自动化审批业务方案辅助撰写”方式处理我接下来提供的信息。

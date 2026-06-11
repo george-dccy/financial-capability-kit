@@ -4,6 +4,13 @@ kind: skill
 display_name_zh: 金融信息解读与落地 Prompt
 target_skill: skill.action.interpret-financial-signal
 summary: 将政策、新闻、产品、竞品、客户变化等新信息解读成影响路径和落地参考方向。
+relations:
+  - skill.reference.problem-opportunity-framework
+  - skill.reference.corporate-client-coverage-lens
+  - skill.reference.client-advance-framework
+  - skill.action.distill-and-curate
+  - knowledge.common.banker-thinking.top-performer
+  - knowledge.common.economics.business-basics
 ---
 
 请把我接下来提供的新信息，按“金融信息解读与落地”方式处理。

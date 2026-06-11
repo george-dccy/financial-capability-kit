@@ -125,31 +125,10 @@ def queue_status_check(status: str) -> GuardResult:
 
 
 def registry_json_parse_check(root: Path) -> GuardResult:
-    """Validate all registry JSON files parse correctly.
+    """Legacy guard - registry JSON files have been removed.
 
-    Stop condition: any registry JSON fails to parse.
+    Skill metadata is now in SKILL.md frontmatter. This guard is a no-op.
     """
-    registry_files = [
-        "registry/skills.json",
-        "registry/knowledge.json",
-        "registry/prompts.json",
-    ]
-    errors: list[str] = []
-    for rel_path in registry_files:
-        path = root / rel_path
-        if not path.exists():
-            continue
-        try:
-            json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as exc:
-            errors.append(f"{rel_path}: {exc}")
-
-    if errors:
-        return GuardResult(
-            passed=False,
-            guard_name="registry_json_parse_check",
-            reason="Registry JSON parse errors:\n" + "\n".join(errors),
-        )
     return GuardResult(passed=True, guard_name="registry_json_parse_check")
 
 

@@ -4,6 +4,14 @@ kind: entrypoint
 display_name_zh: Finhot-aware Agent 入口
 summary: 面向需要把 Finhot 最新公开信号与 Fincap 专业 skill 联动使用的 Agent。
 target_scope: finhot-aware-agent
+relations:
+  - skill.action.fincap-router
+  - skill.action.query-finhot
+  - skill.action.interpret-financial-signal
+  - skill.action.management-news-brief
+  - skill.action.distill-and-curate
+  - skill.action.market-corporate-client
+  - skill.action.report-decision-brief
 ---
 
 # 可直接复制给 Agent 的提示词

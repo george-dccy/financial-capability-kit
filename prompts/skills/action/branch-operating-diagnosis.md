@@ -4,6 +4,10 @@ kind: skill
 display_name_zh: 经营分析 Prompt
 target_skill: skill.action.branch-operating-diagnosis
 summary: 通过对话补充经营目标、关键数据和自我评价，输出结构化经营分析初判。
+relations:
+  - skill.reference.branch-operating-diagnosis-lens
+  - skill.action.report-decision-brief
+  - skill.action.interpret-financial-signal
 ---
 
 请按“经营分析”方式处理我接下来提供的信息。

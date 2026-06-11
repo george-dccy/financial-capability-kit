@@ -4,6 +4,10 @@ kind: skill
 display_name_zh: 向领导汇报与拍板 Prompt
 target_skill: skill.action.report-decision-brief
 summary: 帮助快速形成可拍板的口头和书面汇报。
+relations:
+  - knowledge.banks.ceb.corporate-settlement.basic-settlement
+  - knowledge.banks.ceb.transaction-banking.e-fu-tong
+  - knowledge.banks.ceb.trade-finance.dian-fei-tong
 ---
 
 请把我接下来提供的信息整理成一版适合向领导汇报的内容。

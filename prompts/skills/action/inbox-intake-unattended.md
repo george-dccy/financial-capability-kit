@@ -1,3 +1,16 @@
+---
+id: prompt.skill.action.inbox-intake-unattended
+kind: skill
+display_name_zh: Inbox 素材摄入与蒸馏（无人值守）
+summary: 无人值守 agent loop 专用：自动扫描 inbox、解读素材、自主判断类别并执行蒸馏，全流程无需用户确认。
+target_skill: skill.action.interpret-financial-signal
+relations:
+  - skill.action.interpret-financial-signal
+  - skill.action.distill-and-curate
+  - knowledge.common.banker-thinking.top-performer
+  - knowledge.common.economics.business-basics
+---
+
 # Inbox 素材摄入与蒸馏 — 无人值守模式
 
 > 此 prompt 供无人值守 agent loop 自动调用，全流程无需用户确认。

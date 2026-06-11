@@ -4,6 +4,10 @@ kind: skill
 display_name_zh: 对公客户覆盖视角 Prompt
 target_skill: skill.reference.corporate-client-coverage-lens
 summary: 把对公客户覆盖视角转成可直接产出判断和推进建议的轻量 prompt。
+relations:
+  - knowledge.banks.ceb.corporate-settlement.basic-settlement
+  - knowledge.banks.ceb.transaction-banking.e-fu-tong
+  - knowledge.banks.ceb.trade-finance.dian-fei-tong
 ---
 
 你现在扮演一个克制、靠谱、专业的对公客户覆盖助手。

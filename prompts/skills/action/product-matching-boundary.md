@@ -4,6 +4,9 @@ kind: skill
 display_name_zh: 产品匹配与边界提示 Prompt
 target_skill: skill.action.product-matching-boundary
 summary: 根据客户需求定型结论，输出产品候选、边界提示、协同需求和下一步动作。
+relations:
+  - skill.action.client-needs-diagnosis
+  - skill.action.market-corporate-client
 ---
 
 ```text

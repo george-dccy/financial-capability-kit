@@ -1,6 +1,6 @@
 ---
-name: online-credit-solution-lens
-description: Use when you need a judgment framework for drafting or reviewing an online credit automated approval business proposal, especially the credit-solution section and admission strategy.
+name: skill.reference.online-credit-solution-lens
+description: 线上授信自动化审批方案的判断框架。用于起草或审阅这类方案时，先看场景、客群、授信方案主干和边界，识别信息缺口。
 license: MIT
 compatibility:
   agents: [openclaw, claude-code, codex]
@@ -9,22 +9,30 @@ metadata:
   capability: analyze
   display_name_zh: 线上授信自动化审批方案视角
   audience: [bank-practitioner, manager]
-  support_files:
-    - README.md
-    - frameworks.md
-    - examples.md
-    - anti-patterns.md
-    - related-assets.md
   related_skills:
     - skill.reference.online-credit-admission-strategy-patterns
     - skill.action.online-credit-approval-solution-drafting
     - skill.action.product-matching-boundary
     - skill.action.client-needs-diagnosis
   related_prompts: []
+  task_patterns:
+    - 线上授信方案怎么写
+    - 自动化审批业务方案
+    - 授信方案章节
+    - 准入策略怎么想
+    - 还缺什么资料
+    - 场景金融方案草拟
+  when_to_use: 起草或审阅线上授信自动化审批业务方案前，需要先判断场景、客群、授信方案主干和边界时。
+  not_for: 直接给审批结论、内部制度口径、定价或时效承诺，或在没有基础事实时硬写完整方案。
+  inputs: [展业场景, 目标客群, 核心企业或平台情况, 已知风控和管理要求]
+  outputs: [判断框架, 信息缺口清单方向, 授信方案主干提醒, 人工确认边界]
   boundary:
     - "本 skill 提供判断框架，不替代内部审批、授信政策、定价和最终结论"
     - "缺少用户补数或公开依据时，必须写明待人工确认"
     - "涉及内部制度原文、敏感参数或审批口径时，当前仓库未覆盖"
+    - vs.online-credit-approval-solution-drafting: 判断框架 vs. 问答补数和章节草拟
+    - vs.online-credit-admission-strategy-patterns: 总框架 vs. 准入策略专项建议
+  source_frameworks: []
 ---
 
 # 线上授信自动化审批方案视角 Skill
@@ -32,22 +40,14 @@ metadata:
 ## Scope
 
 这是一个 reference skill。
-它聚焦“线上授信自动化审批业务方案”的判断框架，尤其是“授信方案”章节怎么拆、怎么补信息、怎么区分可先草拟内容和必须人工确认内容。
+它聚焦"线上授信自动化审批业务方案"的判断框架，尤其是"授信方案"章节怎么拆、怎么补信息、怎么区分可先草拟内容和必须人工确认内容。
 
 ## When To Use
 
 - 需要起草或审阅线上授信自动化审批业务方案
 - 需要先判断这类方案还缺什么信息
-- 需要识别“授信方案”章节的重点和边界
+- 需要识别"授信方案"章节的重点和边界
 - 需要为后续 action skill 提供稳定的判断框架
-
-## Required Reads
-
-1. `README.md`
-2. `frameworks.md`
-3. `examples.md`
-4. `anti-patterns.md`
-5. `related-assets.md`
 
 ## Core Output Rule
 
@@ -63,19 +63,92 @@ metadata:
 
 - 直接给出审批结论、授信政策、额度结论或定价承诺
 - 替代内部授信制度
-- 在没有基础事实时硬写“看起来完整”的方案
+- 在没有基础事实时硬写"看起来完整"的方案
 
 ## Quality Gate
 
 - 是否先判断场景、客群、还款来源，而不是直接堆章节
-- 是否把“授信方案”章节作为主轴
+- 是否把"授信方案"章节作为主轴
 - 是否区分了可草拟内容和待人工确认内容
 - 是否明确写出了边界
 
-## Boundary With Related Assets
+## 判断框架
 
-| 资产 | 做什么 | 使用时机 |
-|------|--------|----------|
-| `skill.reference.online-credit-solution-lens`（本 skill） | 判断框架：先看什么、先补什么、先分什么边界 | 刚开始写方案或审方案 |
-| `skill.reference.online-credit-admission-strategy-patterns` | 准入策略建议：从业务模式、场景、上下游、数据和风控角度给可参考建议 | 需要单独推敲准入策略 |
-| `skill.action.online-credit-approval-solution-drafting` | 执行脚本：问答补数、拉缺口清单、生成章节草稿 | 需要直接开始起草 |
+### 1. 先看场景，不先写章节
+
+优先判断：
+
+1. 交易发生在什么场景
+2. 谁组织流量、交易、结算或履约
+3. 核心企业或平台在闭环里扮演什么角色
+4. 借款主体是谁
+5. 真实还款来源是什么
+
+如果这五个问题没讲清楚，后面"授信方案"容易写成空壳。
+
+### 2. 授信方案主干
+
+"授信方案"章节建议按以下顺序判断：
+
+1. 审批模式
+2. 准入策略
+3. 贷款额度
+4. 授信期限
+5. 贷款期限
+6. 贷款用途
+7. 还款方式
+8. 风险缓释
+9. 场景价值评估
+
+### 3. 准入策略建议的主要维度
+
+- 业务模式是否清晰
+- 场景是否稳定、可持续
+- 上下游关系是否真实、可核验
+- 还款来源是否可解释
+- 核心企业或平台是否具备稳定支撑作用
+- 数据是否足以覆盖准入和贷后关键环节
+- 是否有欺诈、洗钱、消保或贷后方面的明显短板
+- 风险缓释是否只是口头安排，还是有可执行抓手
+
+### 4. 三类内容分层
+
+#### 可以先由 Agent 草拟
+
+- 方案结构、信息缺口清单、追问问题清单、一般性章节草稿、准入策略的结构化建议
+
+#### 需要用户补数后再写
+
+- 核心企业或平台分析、客群还款能力判断、数据字段核验链路和风控能力说明、场景价值评估的量化表述
+
+#### 必须人工确认
+
+- 实际审批模式最终口径、准入标准最终边界、额度定价期限的最终政策、内部制度和合规要求的最终适配
+
+### 5. 最小交付物
+
+即使资料不全，也应至少交付：已掌握信息、缺口清单、需追问问题、"授信方案"章节草稿、待人工确认项。
+
+## 示例
+
+### 示例 1：先做信息分层
+
+输入：围绕某平台商户的线上小额融资，平台有交易数据和结算记录，但额度逻辑、准入条件、贷后管理安排未知。
+
+输出方向：先列缺口清单，再追问核心企业或平台角色、还款来源、数据可核验能力，最后只草拟"授信方案"骨架，不直接下额度结论。
+
+### 示例 2：准入策略不要写成内部政策
+
+不好的写法："准入标准为月流水大于 X、逾期率低于 Y"。
+更稳的写法："准入策略建议围绕真实交易稳定性、历史履约、还款来源可解释性、数据覆盖度和欺诈风险信号分层设计，具体阈值待内部政策确认"。
+
+### 示例 3：补数不足时的输出
+
+推荐输出：当前已知 / 当前缺口 / 暂可草拟部分 / 必须待人工确认部分。
+
+## 常见误区
+
+1. **一上来就写完整方案** -- 没有先判断业务模式、还款来源和数据闭环，后面章节容易都变成套话。
+2. **把准入策略写成最终政策** -- Agent 可以给结构化建议，不能冒充内部最终口径。
+3. **把额度、期限和用途写成确定结论** -- 这类内容通常依赖内部制度、历史表现和审批策略，不能在公开 skill 里硬定。
+4. **不写待人工确认项** -- 这会让输出看起来完整，但实际不能进入真实流程。

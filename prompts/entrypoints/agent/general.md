@@ -4,6 +4,23 @@ kind: entrypoint
 display_name_zh: 通用 Agent 入口
 summary: 面向通用 Agent，优先解题，再把高价值经验沉淀到 private growth layer。
 target_scope: general-agent
+relations:
+  - skill.action.fincap-router
+  - skill.reference.corporate-client-coverage-lens
+  - skill.reference.problem-opportunity-framework
+  - skill.reference.client-advance-framework
+  - skill.reference.decision-brief-framework
+  - skill.reference.team-followup-framework
+  - skill.action.market-corporate-client
+  - skill.action.accompany-corporate-client
+  - skill.action.customer-analysis-for-trade-finance
+  - skill.action.product-matching-boundary
+  - skill.action.report-decision-brief
+  - skill.action.management-news-brief
+  - skill.action.client-followup-systematic
+  - skill.action.interpret-financial-signal
+  - skill.action.query-finhot
+  - skill.action.distill-and-curate
 ---
 
 # 可直接复制给 Agent 的提示词

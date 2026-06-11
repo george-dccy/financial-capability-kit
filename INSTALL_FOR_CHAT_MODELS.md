@@ -44,9 +44,6 @@ https://gitee.com/georgedccy/financial-capability-kit.git
 - `README.md`
 - `docs/capability-map.md`
 - `skills/action/fincap-router/SKILL.md`
-- `registry/skills.json`
-- `registry/knowledge.json`
-- `registry/prompts.json`
 - 与问题最相关的 1 个 `skills/*/SKILL.md`、`knowledge/*/README.md` 或 prompt 正文
 
 如果做不到，必须回答：

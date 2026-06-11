@@ -1,3 +1,16 @@
+---
+id: prompt.skill.action.inbox-intake
+kind: skill
+display_name_zh: Inbox 素材摄入与蒸馏 Prompt
+summary: 引导 agent 处理 inbox 中的待解读素材，逐条解读并给出蒸馏建议，等待用户确认后执行蒸馏。
+target_skill: skill.action.interpret-financial-signal
+relations:
+  - skill.action.interpret-financial-signal
+  - skill.action.distill-and-curate
+  - knowledge.common.banker-thinking.top-performer
+  - knowledge.common.economics.business-basics
+---
+
 # Inbox 素材摄入与蒸馏 Prompt
 
 > 将此 prompt 粘贴到对话中，引导 agent 处理 inbox 中的待处理素材。

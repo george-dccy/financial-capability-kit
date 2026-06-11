@@ -4,6 +4,9 @@ kind: skill
 display_name_zh: 客户事项系统跟进 Prompt
 target_skill: skill.action.client-followup-systematic
 summary: 把客户事项拆成状态、优先级、推动动作和风险信号。
+relations:
+  - skill.reference.client-advance-framework
+  - skill.reference.team-followup-framework
 ---
 
 ```text

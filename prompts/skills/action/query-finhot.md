@@ -4,6 +4,10 @@ kind: skill
 display_name_zh: 查询 Finhot 信号雷达 Prompt
 target_skill: skill.action.query-finhot
 summary: 查询 Finhot 最新动态、产品案例、政策变化、同业动作和经营线索，并结合 Fincap 输出解读。
+relations:
+  - skill.action.query-finhot
+  - skill.action.interpret-financial-signal
+  - skill.action.distill-and-curate
 ---
 
 ```text

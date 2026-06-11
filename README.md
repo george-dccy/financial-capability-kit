@@ -79,15 +79,15 @@ Fincap 由几类资产共同组成：
 
 ## 你现在就可以这样用
 
-### 0) 一句话接入
+### 一句话接入
 
-给支持读取仓库的 Agent：
+聊天大模型和本地 Agent 走同一条路——读取仓库后遵循 fincap-router 路由。
 
 ```text
 请读取并遵循 Financial Capability Kit 安装说明：
 https://gitee.com/georgedccy/financial-capability-kit/raw/main/INSTALL_FOR_AGENTS.md
 
-如果能读取仓库，请简单确认已接入，然后等我提出具体问题；如果不能读取，请直接说“当前无法访问仓库”。
+如果能读取仓库，请简单确认已接入，然后等我提出具体问题；如果不能读取，请直接说”当前无法访问仓库”。
 ```
 
 如果是在本地 Agent 中，希望新会话也能自动触发，可安装 resolver skill：
@@ -97,66 +97,24 @@ git clone https://gitee.com/georgedccy/financial-capability-kit.git fincap
 python .\fincap\install\fincap_agent_skill.py --target all
 ```
 
-给支持读取仓库的聊天模型：
+**聊天大模型注意事项**（豆包/千问/DeepSeek/MiniMax）：
 
-```text
-请读取 Financial Capability Kit：
-https://gitee.com/georgedccy/financial-capability-kit.git
+- 不是所有聊天应用都能真的读取仓库内容，使用前先确认
+- `MiniMax 全能模式`：当前优先推荐，整体效果最好
+- `豆包电脑版超能模式`：可以读取仓库内容
+- `DeepSeek`：建议开启 `深度思考`，并关闭 `智能搜索`
+- `千问等普通聊天模式`：容易不受仓库约束，不建议作为主入口
+- 详细见 [模型与模式兼容性说明](./docs/prompts/model-compatibility.md)
 
-请先按仓库中的 INSTALL_FOR_CHAT_MODELS.md 工作。如果能读取仓库，请简单确认已接入，然后等我提出具体问题；如果不能读取，请直接说“当前无法访问仓库”。
-```
-
-详细见：
+详细安装说明：
 
 - [Agent 安装说明](./INSTALL_FOR_AGENTS.md)
 - [聊天模型接入说明](./INSTALL_FOR_CHAT_MODELS.md)
 - [个人代理发布说明](./docs/agent-publishing.md)
-- [三仓操作模型](./docs/operating-model.md)
 
-### 1) 面向支持读取仓库的聊天应用
+### 先沉淀到 private growth layer
 
-不是所有聊天类大模型应用都能真的读取仓库内容。推荐顺序是：
-
-- `MiniMax 全能模式`：当前优先推荐，可克隆仓库后读取内容并回答，整体效果最好。
-- `豆包电脑版超能模式`：可以读取仓库内容；普通聊天模式不保证能读取正文。
-- `DeepSeek`：建议开启 `深度思考`，并关闭 `智能搜索`，否则容易绕开仓库直接泛化回答。
-- `千问等普通聊天模式`：容易不受仓库约束而自由发挥，不建议作为主入口。
-- `本地 Agent / 可读本地仓库的 Agent`：如果能直接 clone 或读取本地文件，通常最稳定。
-
-详细见：
-
-- [模型与模式兼容性说明](./docs/prompts/model-compatibility.md)
-
-复制 [prompts/entrypoints/chat/](prompts/entrypoints/chat/) 下的入口提示词，再附上仓库地址和你的问题即可。
-
-使用前先确认你当前应用真的支持仓库读取，尤其不要默认把普通聊天模式当成“可按仓库回答”的模式。
-
-- 想系统提升金融能力 → [点这里](prompts/entrypoints/chat/financial-capability.md)
-- 公开咨询用户 → [点这里](prompts/entrypoints/chat/public-consulting.md)
-- 银行员工 → [点这里](prompts/entrypoints/chat/bank-staff.md)
-- 基层管理者 → [点这里](prompts/entrypoints/chat/frontline-manager.md)
-- 领导层 / 决策层 → [点这里](prompts/entrypoints/chat/head-office-leadership.md)
-- 不确定用哪个 → [点这里](prompts/entrypoints/chat/auto.md)
-
-### 2) 面向 Hermes / OpenClaw / Workbuddy 等 Agent
-
-如果你有自己的 Agent，建议直接使用这个独立入口文件：
-
-- 通用 Agent 入口 → [点这里](prompts/entrypoints/agent/general.md)
-- Finhot 联动入口 → [点这里](prompts/entrypoints/agent/finhot-aware.md)
-
-它会让你的 Agent：
-
-- 遇到类似问题时优先复用仓库里的专业视角、行动 skill 和公开知识
-- 遇到最新公开动态、同业动作、产品案例和经营线索时，先查询 Finhot 雷达
-- 默认先解当前问题，再判断是否值得沉淀
-- 把你确认过的经验、偏好、案例和复盘优先写进 `workspace/private/`
-
-### 3) 先沉淀到 private growth layer
-
-如果你提供的是经验、偏好、失败教训、案例、公开材料或专题资料，推荐优先使用：
-
-- [点这里](skills/action/distill-and-curate/SKILL.md)
+如果你提供的是经验、偏好、失败教训、案例、公开材料或专题资料，推荐优先使用 [distill-and-curate](skills/action/distill-and-curate/SKILL.md)。
 
 ---
 
@@ -176,13 +134,12 @@ https://gitee.com/georgedccy/financial-capability-kit.git
 
 ## 仓库地图
 
-- `skills/reference/`：专业视角、判断框架、表达结构
+- `skills/reference/`：专业视角、判断框架、表达结构（每个 skill 一个 SKILL.md）
 - `skills/action/`：首访推进、持续跟进、汇报拍板、提炼整理等任务型 skill
 - `knowledge/`：公开知识、公开产品资料、FAQ、来源
 - `inbox/`：公共素材摄入层，接收文件/链接/文本，经解读后提炼为 knowledge 或 skill
 - `prompts/`：给支持读取仓库的聊天模型 / Agent 直接复制使用
-- `workspace/private/`：你的私有增长层，包含 private skills、knowledge、memories、case-notes、registry
-- `registry/`：让 Agent 知道该读什么、何时触发、怎么关联
+- `workspace/private/`：你的私有增长层，包含 private skills、knowledge、memories、case-notes
 - `docs/`：架构、贡献与使用说明
 
 ---
@@ -209,8 +166,7 @@ workspace/private/
 │  └─ action/
 ├─ knowledge/
 ├─ memories/
-├─ case-notes/
-└─ registry/
+└─ case-notes/
 ```
 
 这样可以保证：
@@ -263,7 +219,6 @@ workspace/private/
 
 - 官网与公开报道的持续提炼
 - private 的长期记忆与偏好沉淀
-- 触发条件更明确的 registry
 - 更贴近个人 LLM Wiki 的增长体验
 - inbox 素材摄入与提炼流水线
 

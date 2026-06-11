@@ -7,7 +7,7 @@
 - 新增或改进 `skills/reference/*`
 - 新增或改进 `skills/action/*`
 - 新增或改进 `knowledge/*`
-- 改进 prompts、registry、docs、模板与路由说明
+- 改进 prompts、docs、模板与路由说明
 
 ## 推荐贡献路径
 
@@ -39,7 +39,7 @@
 3. 默认先生成到 `workspace/private/*`
 4. 做增量补全，而不是每次全量重写
 5. 确认可以公开后，再整理为 public candidate
-6. 同步更新对应 `registry/*.json`
+6. 确保 SKILL.md frontmatter 中的元数据准确（task_patterns、when_to_use、related_skills 等）
 
 ## 如何使用 distill-and-curate 做贡献
 
@@ -50,7 +50,7 @@
 - 判断内容属于 reference skill、action skill 还是 knowledge
 - 推荐应该放到 public 还是 `workspace/private/*`
 - 基于仓库已有内容做增量更新
-- 自动整理 README、sources、faq、modules、registry 变更建议和 PR 摘要
+- 自动整理 README、sources、faq、modules 变更建议和 PR 摘要
 
 常用指令示例：
 
@@ -62,7 +62,7 @@
 
 - 资产类型归类正确，没有混层
 - `skills/reference`、`skills/action`、`knowledge` 的边界清楚
-- registry path 与真实目录一致
+- SKILL.md frontmatter 中的路径与真实目录一致
 - 不包含真实敏感信息与内部材料
 - 公开知识类资产补齐来源
 - 公开贡献前明确边界，不输出审批、授信、定价、时效承诺
@@ -71,24 +71,18 @@
 
 ### Reference Skill
 
-- `SKILL.md`
-- `skill.json`（如适用）
-- `references/*`
-- `scripts/*.py`
+- `SKILL.md`（自包含：frontmatter + 判断框架 + 示例 + 反模式）
 
 ### Action Skill
 
 - `SKILL.md`
-- `references/*`
-- `scripts/*.py`
+- `references/*`（可选，轻量参考数据）
+- `scripts/*.py`（可选，自动化脚本）
 
 ### Knowledge
 
-- `README.md`
-- `faq.md`
-- `sources.md`
-- `modules/*`
-- `pack.json`（如适用）
+- `README.md`（含 frontmatter、常见问题、来源）
+- 内容 .md 文件（原 modules/ 下的文件已提升到知识包根目录）
 
 ## 推荐参考
 

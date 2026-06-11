@@ -4,6 +4,10 @@ kind: skill
 display_name_zh: 对公客户持续推进 Prompt
 target_skill: skill.action.accompany-corporate-client
 summary: 帮助持续跟进客户、组织问题闭环并安排后续推进。
+relations:
+  - knowledge.banks.ceb.corporate-settlement.basic-settlement
+  - knowledge.banks.ceb.transaction-banking.e-fu-tong
+  - knowledge.banks.ceb.trade-finance.dian-fei-tong
 ---
 
 请把我接下来提供的信息整理成一版客户持续推进方案。

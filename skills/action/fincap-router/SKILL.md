@@ -1,6 +1,9 @@
 ---
 name: skill.action.fincap-router
-description: Use as the main Fincap entrypoint when a user brings a banking, finance, corporate client, product, policy, peer signal, report, follow-up, or capability-growth problem and needs the agent to choose the right working path.
+description: |
+  Fincap 工具箱主入口。当用户提出银行、金融、对公客户、产品、政策、同业、汇报、跟进或能力成长问题时，自动路由到合适的 skill。
+  聊天大模型和本地 Agent 统一走这个入口。
+  触发方式：fincap、帮我看看、不知道从哪入手、客户问题、产品政策动态、领导汇报、客户跟进、金融能力成长
 license: MIT
 compatibility:
   agents: [openclaw, claude-code, codex]

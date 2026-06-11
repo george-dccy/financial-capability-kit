@@ -1,6 +1,6 @@
 ---
-name: problem-opportunity-framework
-description: Use when you need a reusable banking or finance analysis frame to identify the most urgent problem, the most plausible opportunity hypothesis, and the next validation move.
+name: skill.reference.problem-opportunity-framework
+description: 当你需要判断问题是否成立、机会值不值得跟、下一步该验证什么时触发。提供四格扫描和输出规则，帮助先识别真实问题，再形成最值得验证的机会假设。
 license: MIT
 compatibility:
   agents: [openclaw, claude-code, codex]
@@ -9,15 +9,18 @@ metadata:
   capability: analyze
   display_name_zh: 问题-机会框架
   audience: [finance-learner, bank-practitioner]
-  support_files:
-    - README.md
-    - frameworks.md
-    - examples.md
-    - anti-patterns.md
-    - related-assets.md
+  task_patterns: ["问题分析", "机会判断", "切入口判断", "客户卡点", "优先级"]
+  when_to_use: "需要先判断问题是否成立、机会是否值得验证、下一步应该验证什么时。"
+  not_for: "需要直接输出完整行动方案或最新外部数据结论时。"
+  inputs: ["当前场景", "已知问题", "初步线索"]
+  outputs: ["问题扫描", "机会假设", "下一步验证动作"]
+  boundary:
+    - "本 skill 提供问题识别和机会假设框架，不直接产出完整行动方案"
+    - "行动方案由 skill.action.market-corporate-client 等 action skill 编排"
+  source_frameworks: ["四格扫描框架"]
 ---
 
-# 问题-机会框架 Skill
+# 问题-机会框架
 
 ## Scope
 
@@ -28,15 +31,7 @@ metadata:
 
 - 还不确定问题是否成立
 - 需要判断哪条机会线索更值得跟
-- 需要从“聊得很多”收束为“下一步先验证什么”
-
-## Required Reads
-
-1. `README.md`
-2. `frameworks.md`
-3. `examples.md`
-4. `anti-patterns.md`
-5. `related-assets.md`
+- 需要从"聊得很多"收束为"下一步先验证什么"
 
 ## Core Output Rule
 
@@ -51,3 +46,76 @@ metadata:
 - 直接代替 action skill 产出完整方案
 - 直接下产品结论
 - 替代最新事实核验
+
+## 判断框架
+
+### 四格扫描
+
+先按四类问题扫一遍：
+
+1. 经营问题
+   - 回款慢
+   - 账期紧
+   - 资金安排被动
+2. 交易问题
+   - 收付流程长
+   - 对账效率低
+   - 系统协同差
+3. 协同问题
+   - 订单、开票、财务割裂
+   - 多角色沟通成本高
+4. 决策问题
+   - 谁拍板不清楚
+   - 对方没有明确下一步
+
+### 输出规则
+
+每次扫描后只输出三样东西：
+
+- 当前最痛的 1 个问题
+- 最值得验证的 1 个机会假设
+- 下一次沟通该验证的 1 个动作
+
+### 复用提醒
+
+- 在 `skill.action.market-corporate-client` 中，它常用于首访前诊断和首次会谈切入口判断
+- 如果换成别的场景，也可以只复用"四格扫描"和"输出规则"，不用继承整套营销编排
+
+## 示例
+
+### 示例 1：制造业客户首次拜访
+
+客户现象：
+
+- 订单、开票、财务分别由不同团队处理
+- 财务每月对账很耗时
+
+扫描结论：
+
+- 先不要急着讲产品全貌
+- 优先把问题定性为"交易协同 + 对账效率"问题
+- 再验证是否适合引到 e 付通相关公开场景
+
+### 示例 2：集团客户电费场景
+
+客户现象：
+
+- 每月电费金额较大
+- 账期偶尔紧张
+
+扫描结论：
+
+- 先判断这是临时性资金波动，还是稳定存在的账期压力
+- 如果是稳定问题，再结合电费证公开知识判断是否存在推进价值
+
+## 常见误区
+
+- 一上来就报产品名，没先识别客户卡点
+- 把客户的抱怨直接等同为产品需求
+- 一次性给太多机会假设，导致推进失焦
+
+## Quality Gate
+
+- 是否先做四格扫描再给假设
+- 输出是否恰好三样（问题 + 假设 + 动作）
+- 是否避免了直接下产品结论

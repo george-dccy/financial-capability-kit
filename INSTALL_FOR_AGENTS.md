@@ -37,16 +37,13 @@ cd fincap
 - `README.md`
 - `docs/capability-map.md`
 - `skills/action/fincap-router/SKILL.md`
-- `registry/skills.json`
-- `registry/knowledge.json`
-- `registry/prompts.json`
 - `prompts/entrypoints/agent/general.md`
 
 ## 第 2 步：安装常驻 resolver skill
 
 最佳安装方式是把 Fincap 安装成一个“路由型 skill”。
 
-这样即使新开对话 session，只要用户问题进入银行、金融、客户推进、产品理解、政策新闻解读、竞品分析、汇报表达等上下文，Agent 也能自动触发 Fincap，并按仓库 registry 找到合适的正文内容。
+这样即使新开对话 session，只要用户问题进入银行、金融、客户推进、产品理解、政策新闻解读、竞品分析、汇报表达等上下文，Agent 也能自动触发 Fincap，按 fincap-router 路由表找到合适的 skill 和知识包。
 
 跨平台推荐使用 Python 安装器：
 
@@ -88,21 +85,7 @@ agent-skills/financial-capability-kit/SKILL.md
 - `docs/capability-map.md`
 - `skills/action/fincap-router/SKILL.md`
 
-Fincap 的默认工作方式不是直接按关键词搜索文件，而是先判断用户处于哪条工作链路：
-
-- 客户经营
-- 客户资料研判
-- 动态信号
-- 产品与方案边界
-- 汇报与拍板
-- 跟进复盘
-- 能力成长与沉淀
-
-然后再用三个 registry 文件找到对应正文：
-
-- `registry/skills.json`：判断要读取哪个 reference skill 或 action skill
-- `registry/knowledge.json`：判断要读取哪个公开知识包
-- `registry/prompts.json`：判断是否可复用某个入口 prompt 或轻量 prompt
+Fincap 的默认工作方式不是直接按关键词搜索文件，而是先按 `skills/action/fincap-router/SKILL.md` 的路由表判断用户处于哪条工作链路，再读取对应的 SKILL.md 或知识包。
 
 如果仓库中已有相关 skill 或 knowledge，不要绕开仓库直接用泛化金融常识回答。
 
@@ -126,7 +109,7 @@ skills/action/fincap-router/SKILL.md
 
 正式回答用户第一个真实问题前，先确认：
 
-- 能读取全部三个 `registry/*.json`
+- 能读取 `skills/action/fincap-router/SKILL.md`
 - 能列出至少一个相关的 `skills/*/SKILL.md` 或 `knowledge/*/README.md`
 - 能说明本轮将使用哪个文件，但最终回答不要展示冗长技术路由过程
 

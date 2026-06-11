@@ -4,6 +4,9 @@ kind: skill
 display_name_zh: 向上汇报与决策支持判断框架 Prompt
 target_skill: skill.reference.executive-briefing-decision-support
 summary: 帮助判断汇报类型、决策点、风险和表达结构。
+relations:
+  - skill.action.report-decision-brief
+  - skill.reference.decision-brief-framework
 ---
 
 ```text
