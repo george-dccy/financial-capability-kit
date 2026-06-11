@@ -10,18 +10,18 @@
 
 ### 基本信息
 
-- **ID**: knowledge.banks.ceb.transaction-banking.yangguang-e-pay
-- **路径**: knowledge/banks/ceb/transaction-banking/yangguang-e-pay/
+- **ID**: knowledge.banks.ceb.transaction-banking.e-fu-tong
+- **路径**: knowledge/banks/ceb/transaction-banking/e-fu-tong/
 - **定位**: 核心企业-供应商场景下的 1+N 保理线上化模式
 
 ### 与阳光供应链的关系
 
-e付通 建立在阳光供应链的两个基础产品之上：
+e付通 与以下供应链能力相关：
 
-1. **阳光保理** — e付通 的核心是 1+N 保理模式，由核心企业授信支持供应商融资
-2. **阳光供应链云平台** — e付通 通过网银、第三方平台或银企直连实现线上化
+1. **1+N 保理相关产品** — e付通 的核心是 1+N 保理模式，由核心企业授信支持供应商融资
+2. **阳光供应链云平台** — 对客服务平台/线上化渠道能力，支持供应链业务线上化承载
 
-因此，e付通 可以理解为"阳光保理 + 阳光供应链云平台线上化能力"在核心企业-供应商场景的具体落地。
+因此，e付通 可以理解为 1+N 保理场景与供应链线上化承载能力在核心企业-供应商场景下的具体产品表达。
 
 ### 何时使用 e付通 知识包
 
@@ -41,8 +41,8 @@ e付通 建立在阳光供应链的两个基础产品之上：
 
 ### 基本信息
 
-- **ID**: knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate
-- **路径**: knowledge/banks/ceb/trade-finance/yangguang-electricity-certificate/
+- **ID**: knowledge.banks.ceb.trade-finance.dian-fei-tong
+- **路径**: knowledge/banks/ceb/trade-finance/dian-fei-tong/
 - **定位**: 电费缴纳场景下的国内证+福费廷组合
 
 ### 与阳光供应链的关系
@@ -74,10 +74,10 @@ e付通 建立在阳光供应链的两个基础产品之上：
     ├─ 国内贸易
     │   ├─ 核心企业-供应商 → 查看 e付通 知识包
     │   ├─ 电费缴纳场景 → 查看 电费通 知识包
-    │   └─ 其他 → 阳光保理、阳光资财
+    │   └─ 其他 → 回到产品目录核验保理、订单贷、保兑仓等方向
     ├─ 跨境贸易
-    │   ├─ 自贸区企业 → 阳光自贸通
-    │   └─ 一般跨境 → 阳光国际结算
+    │   ├─ 自贸区企业 → 回到产品目录核验跨境资金池、结售汇等方向
+    │   └─ 一般跨境 → 回到产品目录核验跨境汇款、托收、信用证等方向
     └─ 担保需求 → 阳光保函
 ```
 

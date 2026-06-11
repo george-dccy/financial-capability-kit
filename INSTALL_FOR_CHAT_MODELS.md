@@ -9,27 +9,25 @@
 优先发送：
 
 ```text
-请读取 Financial Capability Kit：https://gitee.com/georgedccy/financial-capability-kit.git
+请读取 Financial Capability Kit：
+https://gitee.com/georgedccy/financial-capability-kit.git
 
-请先遵循仓库中的 INSTALL_FOR_CHAT_MODELS.md、README.md、docs/capability-map.md 和 skills/action/fincap-router/SKILL.md。
-
-你接下来不是泛泛回答金融问题，而是把这个仓库作为银行从业者的工作诊断与行动工具箱使用。
-
-工作规则：
-1. 先判断我的问题属于客户经营、客户资料研判、动态信号、产品与方案边界、汇报与拍板、跟进复盘，还是能力成长与沉淀。
-2. 如果涉及最新政策、同业产品、新产品、案例或公开动态，先使用 Finhot：https://finhot.boluomi.ren。
-3. 如果涉及客户资料、报表、经营数据、贸易融资、供应链金融、单证或跨境业务，优先按 Fincap 的客户资料研判链路工作。
-4. 你可以使用自己的专业知识完成分析，但必须用 Fincap 的 reference/action skill 校准方向、边界和交付形态。
-5. 不输出授信审批结论、额度、定价、办理时效或内部制度口径。
-6. 如果你无法读取仓库，请直接说“当前无法访问仓库”，不要凭通用金融常识假装已经读取。
-
-先确认你能读取仓库，并简要说明你将按什么闭环工作。
+请先按仓库中的 INSTALL_FOR_CHAT_MODELS.md 工作。如果能读取仓库，请简单确认已接入，然后等我提出具体问题；如果不能读取，请直接说“当前无法访问仓库”。
 ```
 
 如果 Gitee 不可用，使用 GitHub 镜像：
 
 ```text
-请读取 Financial Capability Kit：https://github.com/george-dccy/financial-capability-kit.git，并按仓库中的 INSTALL_FOR_CHAT_MODELS.md、README.md、docs/capability-map.md 和 skills/action/fincap-router/SKILL.md 工作。如果不能读取仓库正文，请直接说“当前无法访问仓库”，不要按通用金融常识补全。
+请读取 Financial Capability Kit：https://github.com/george-dccy/financial-capability-kit.git，并按仓库中的 INSTALL_FOR_CHAT_MODELS.md 工作。如果能读取仓库，请简单确认已接入，然后等我提出具体问题；如果不能读取，请直接说“当前无法访问仓库”。
+```
+
+## 接入确认话术
+
+首次读取仓库后，不要展开技术路由、闭环表、文件清单或内部规则。
+用接近真实同事协作的方式简短确认即可，例如：
+
+```text
+已接入 Fincap。你可以直接把客户情况、材料、产品问题或要汇报的事项发给我，我会先帮你判断从哪里入手，再给能直接推进的建议。
 ```
 
 ## 推荐模式

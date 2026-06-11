@@ -56,8 +56,8 @@
       "skill.action.fincap-router",
       "skill.action.query-finhot",
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate"
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong"
     ]
   },
   {
@@ -171,8 +171,8 @@
     "target_skill": "skill.reference.corporate-client-coverage-lens",
     "relations": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate"
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong"
     ]
   },
   {
@@ -185,8 +185,8 @@
     "target_skill": "skill.action.market-corporate-client",
     "relations": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate"
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong"
     ]
   },
   {
@@ -199,8 +199,8 @@
     "target_skill": "skill.action.accompany-corporate-client",
     "relations": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate"
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong"
     ]
   },
   {
@@ -213,8 +213,8 @@
     "target_skill": "skill.action.report-decision-brief",
     "relations": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate"
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong"
     ]
   },
   {
@@ -245,23 +245,23 @@
     "relations": []
   },
   {
-    "id": "prompt.knowledge.ceb-yangguang-e-pay",
+    "id": "prompt.knowledge.ceb-e-fu-tong",
     "kind": "knowledge",
-    "title": "CEB Yangguang E-Pay Prompt",
+    "title": "CEB e付通 Prompt",
     "display_name_zh": "光大银行 e付通 Prompt",
-    "path": "prompts/knowledge/ceb-yangguang-e-pay.md",
+    "path": "prompts/knowledge/ceb-e-fu-tong.md",
     "summary": "只基于 e付通相关公开知识回答。",
-    "target_knowledge": "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
+    "target_knowledge": "knowledge.banks.ceb.transaction-banking.e-fu-tong",
     "relations": []
   },
   {
-    "id": "prompt.knowledge.ceb-yangguang-electricity-certificate",
+    "id": "prompt.knowledge.ceb-dian-fei-tong",
     "kind": "knowledge",
-    "title": "CEB Yangguang Electricity Certificate Prompt",
+    "title": "CEB 电费通 Prompt",
     "display_name_zh": "光大银行电费通（电费证） Prompt",
-    "path": "prompts/knowledge/ceb-yangguang-electricity-certificate.md",
+    "path": "prompts/knowledge/ceb-dian-fei-tong.md",
     "summary": "只基于电费通（电费证）相关公开知识回答。",
-    "target_knowledge": "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+    "target_knowledge": "knowledge.banks.ceb.trade-finance.dian-fei-tong",
     "relations": []
   },
   {

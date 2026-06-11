@@ -15,8 +15,8 @@ metadata:
     - skill.reference.corporate-client-coverage-lens
   related_knowledge:
     - knowledge.banks.ceb.corporate-settlement.basic-settlement
-    - knowledge.banks.ceb.transaction-banking.yangguang-e-pay
-    - knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate
+    - knowledge.banks.ceb.transaction-banking.e-fu-tong
+    - knowledge.banks.ceb.trade-finance.dian-fei-tong
     - knowledge.common.banker-thinking.top-performer
     - knowledge.common.sales.consultative-b2b
     - knowledge.common.psychology.business-communication

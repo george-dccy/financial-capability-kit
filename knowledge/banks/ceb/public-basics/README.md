@@ -5,5 +5,5 @@
 请改用以下按业务线拆分的知识包：
 
 - `knowledge/banks/ceb/corporate-settlement/basic-settlement`
-- `knowledge/banks/ceb/transaction-banking/yangguang-e-pay`
-- `knowledge/banks/ceb/trade-finance/yangguang-electricity-certificate`
+- `knowledge/banks/ceb/transaction-banking/e-fu-tong`
+- `knowledge/banks/ceb/trade-finance/dian-fei-tong`

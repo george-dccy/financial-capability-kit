@@ -15,10 +15,10 @@ metadata:
     - skill.reference.problem-opportunity-framework
     - skill.reference.corporate-client-coverage-lens
   related_knowledge:
-    - knowledge.banks.ceb.inclusive-finance.scenario-map
-    - knowledge.banks.ceb.inclusive-finance.scenario-map.modules.policy-background
-    - knowledge.banks.ceb.inclusive-finance.scenario-map.modules.scenario-overview
-    - knowledge.banks.ceb.inclusive-finance.scenario-map.modules.key-products
+    - knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map
+    - knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map
+    - knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map
+    - knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map
   related_prompts: []
   references_dir: references
   scripts_dir: scripts
@@ -49,9 +49,9 @@ metadata:
 
 1. `references/scenario-identification.md`
 2. `references/policy-boundary.md`
-3. `knowledge.banks.ceb.inclusive-finance.scenario-map.modules.policy-background`
-4. `knowledge.banks.ceb.inclusive-finance.scenario-map.modules.scenario-overview`
-5. `knowledge.banks.ceb.inclusive-finance.scenario-map.modules.key-products`
+3. `knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map`
+4. `knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map`
+5. `knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map`
 
 ## Execution Rule
 
@@ -123,8 +123,8 @@ metadata:
 
 本 skill 依赖以下知识包模块：
 
-- `knowledge.banks.ceb.inclusive-finance.scenario-map.modules.scenario-overview`：阳光普惠/阳光兴农产品分类框架
-- `knowledge.banks.ceb.inclusive-finance.scenario-map.modules.key-products`：具体产品和场景分类（灵工通、安居通等）
-- `knowledge.banks.ceb.inclusive-finance.scenario-map.modules.policy-background`："五篇大文章"、百链百户百亿等监管导向
+- `knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map`：阳光普惠/阳光兴农产品分类框架
+- `knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map`：具体产品和场景分类（灵工通、安居通等）
+- `knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map`："五篇大文章"、百链百户百亿等监管导向
 
 本 skill 专注于"判断是否属于普惠场景"，产品细节和场景产品功能不在本 skill 范围内，由 `product-matching-boundary` 承接后续产品匹配。

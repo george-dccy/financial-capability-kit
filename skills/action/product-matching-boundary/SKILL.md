@@ -15,11 +15,12 @@ metadata:
     - skill.action.market-corporate-client
     - skill.action.client-followup-systematic
   related_knowledge:
+    - knowledge.banks.ceb.transaction-banking.product-catalog
     - knowledge.banks.ceb.corporate-settlement.basic-settlement
-    - knowledge.banks.ceb.transaction-banking.yangguang-e-pay
-    - knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate
-    - knowledge.banks.ceb.supply-chain.yangguang-supply-chain
-    - knowledge.banks.ceb.inclusive-finance.scenario-map
+    - knowledge.banks.ceb.transaction-banking.e-fu-tong
+    - knowledge.banks.ceb.trade-finance.dian-fei-tong
+    - knowledge.banks.ceb.transaction-banking.yangguang-supply-chain
+    - knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map
     - knowledge.common.sales.consultative-b2b
   related_prompts:
     - prompt.skill.action.product-matching-boundary
@@ -50,19 +51,23 @@ metadata:
 
 ## Required Reads
 
-1. `references/product-candidate-matrix.md`
-2. `references/boundary-checklist.md`
-3. `references/knowledge-routing.md`
-4. `skill.reference.corporate-client-coverage-lens`
-5. 命中 knowledge 后，读取对应 `README.md`、`modules/*`、`faq.md`、`sources.md`
+1. `knowledge/banks/ceb/transaction-banking/product-catalog/products.md`
+2. `references/product-candidate-matrix.md`
+3. `references/boundary-checklist.md`
+4. `references/knowledge-routing.md`
+5. `skill.reference.corporate-client-coverage-lens`
+6. 命中 knowledge 后，读取对应 `README.md`、`modules/*`、`faq.md`、`sources.md`
 
 ## Execution Rule
 
-1. 先用 `references/product-candidate-matrix.md` 根据需求类型生成产品候选列表
-2. 再用 `references/boundary-checklist.md` 对每个候选产品核查边界
-3. 然后按 `references/knowledge-routing.md` 调用对应产品知识包确认适配判断
-4. 如涉及跨条线产品，用 boundary-checklist 判断协同边界
-5. 最后汇总：主推产品 + 边界提示 + 协同需求
+1. 先用 `product-catalog/products.md` 核验产品范围；不在白名单内的名称不得作为候选产品输出。
+2. 再用 `references/product-candidate-matrix.md` 根据需求类型生成产品候选列表。
+3. 对每个候选产品做白名单二次核验，过滤掉未列入目录的名称；`阳光e支付` 不得输出。
+4. `阳光供应链云平台` 只作为对客服务平台/线上化渠道能力说明，不作为候选产品排序。
+5. 再用 `references/boundary-checklist.md` 对每个候选产品核查边界。
+6. 然后按 `references/knowledge-routing.md` 调用对应产品知识包确认适配判断。
+7. 如涉及跨条线产品，用 boundary-checklist 判断协同边界。
+8. 最后汇总：产品方向 + 白名单内候选产品 + 平台/渠道能力（如适用）+ 边界提示 + 协同需求。
 
 ## Input Contract
 
@@ -94,6 +99,10 @@ metadata:
 - 写入授信准入具体数值
 - 写内部审批口径
 - 超出"是否可能"层级的边界判断
+- 输出不在 `product-catalog/products.md` 中的光大交易银行产品名
+- 把 `阳光e支付` 写成光大交易银行产品
+- 把 `阳光供应链云平台` 当作具体融资、结算或贸易金融产品排序推荐
+- 在产品详情待补充时编造功能、准入、费率、时效或办理条件
 
 ## Quality Gate
 

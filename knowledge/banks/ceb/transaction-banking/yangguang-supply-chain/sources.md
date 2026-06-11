@@ -12,9 +12,9 @@
    - 用途：支持阳光供应链在光大公司业务产品体系中的定位，以及与阳光金管家现金管理产品族的并列关系。
 
 3. 已有知识包引用
-   - e付通知识包：knowledge/banks/ceb/transaction-banking/yangguang-e-pay/
+   - e付通知识包：knowledge/banks/ceb/transaction-banking/e-fu-tong/
      - 支持 e付通 与阳光保理、阳光供应链云平台的关系描述
-   - 电费通知识包：knowledge/banks/ceb/trade-finance/yangguang-electricity-certificate/
+   - 电费通知识包：knowledge/banks/ceb/trade-finance/dian-fei-tong/
      - 支持 电费通 与国内信用证、福费廷的关系描述
 
 ## 公开覆盖评估

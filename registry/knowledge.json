@@ -1,5 +1,24 @@
 [
   {
+    "id": "knowledge.banks.ceb.transaction-banking.product-catalog",
+    "institution": "ceb",
+    "category": "transaction-banking",
+    "title": "CEB Transaction Banking Product Catalog",
+    "display_name_zh": "光大交易银行产品目录",
+    "path": "knowledge/banks/ceb/transaction-banking/product-catalog",
+    "summary": "光大交易银行产品白名单与待补详情入口，用于约束产品推荐、比较和客户经营建议的产品范围。",
+    "audience": ["finance-learner", "bank-practitioner"],
+    "when_to_use": "涉及光大交易银行产品推荐、产品比较、产品名核验、产品适配或客户经营切入口时，必须先读取本目录确认产品名称是否在允许范围内。",
+    "related_skills": [
+      "skill.action.fincap-router",
+      "skill.action.market-corporate-client",
+      "skill.action.client-needs-diagnosis",
+      "skill.action.product-matching-boundary",
+      "skill.action.customer-analysis-for-trade-finance",
+      "skill.action.report-decision-brief"
+    ]
+  },
+  {
     "id": "knowledge.banks.ceb.corporate-settlement.basic-settlement",
     "institution": "ceb",
     "category": "corporate-settlement",
@@ -17,12 +36,12 @@
     ]
   },
   {
-    "id": "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
+    "id": "knowledge.banks.ceb.transaction-banking.e-fu-tong",
     "institution": "ceb",
     "category": "transaction-banking",
-    "title": "CEB Yangguang E-Pay",
+    "title": "CEB e付通",
     "display_name_zh": "光大银行-e付通",
-    "path": "knowledge/banks/ceb/transaction-banking/yangguang-e-pay",
+    "path": "knowledge/banks/ceb/transaction-banking/e-fu-tong",
     "summary": "e付通与 1+N 保理线上化场景相关公开知识。",
     "audience": ["finance-learner", "bank-practitioner"],
     "when_to_use": "需要解释核心企业-供应商场景下的 e付通、1+N 保理线上化、应收账款转让与交易协同时。",
@@ -34,12 +53,12 @@
     ]
   },
   {
-    "id": "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+    "id": "knowledge.banks.ceb.trade-finance.dian-fei-tong",
     "institution": "ceb",
     "category": "trade-finance",
-    "title": "CEB Yangguang Electricity Certificate",
+    "title": "CEB 电费通",
     "display_name_zh": "光大银行-电费通（电费证）",
-    "path": "knowledge/banks/ceb/trade-finance/yangguang-electricity-certificate",
+    "path": "knowledge/banks/ceb/trade-finance/dian-fei-tong",
     "summary": "电费通（电费证）及电费缴纳场景结构相关公开知识。",
     "audience": ["finance-learner", "bank-practitioner"],
     "when_to_use": "需要解释电费缴纳场景下的国内证、福费廷组合、电费结算与融资结构时。",
@@ -163,9 +182,9 @@
     "title": "CEB Yangguang Supply Chain",
     "display_name_zh": "光大银行-阳光供应链",
     "path": "knowledge/banks/ceb/transaction-banking/yangguang-supply-chain",
-    "summary": "阳光供应链产品族（阳光资财、供应链云平台、阳光保理、阳光自贸通、阳光保函、阳光国际结算）及与 e付通、电费通关联的公开知识。",
+    "summary": "光大银行阳光供应链相关品牌、阳光供应链云平台对客服务平台能力，以及与 e付通、电费通等目录内产品相关的公开背景知识。",
     "audience": ["finance-learner", "bank-practitioner"],
-    "when_to_use": "需要解释光大银行阳光供应链产品族、各子产品定位、场景匹配、e付通与电费通关联时。",
+    "when_to_use": "需要解释阳光供应链云平台、供应链金融线上化承载、e付通与电费通等目录内产品的场景关系时；具体产品推荐必须先读产品目录。",
     "related_skills": [
       "skill.reference.corporate-client-coverage-lens",
       "skill.action.market-corporate-client",

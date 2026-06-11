@@ -54,8 +54,8 @@
     ],
     "related_knowledge": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong",
       "knowledge.common.banker-thinking.top-performer",
       "knowledge.common.economics.business-basics",
       "knowledge.common.sales.consultative-b2b",
@@ -87,8 +87,8 @@
     ],
     "related_knowledge": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate"
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong"
     ],
     "related_prompts": []
   },
@@ -214,8 +214,8 @@
     ],
     "related_knowledge": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong",
       "knowledge.common.sales.consultative-b2b",
       "knowledge.common.psychology.business-communication"
     ],
@@ -245,8 +245,8 @@
     ],
     "related_knowledge": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong",
       "knowledge.common.sales.consultative-b2b",
       "knowledge.common.psychology.business-communication"
     ],
@@ -275,8 +275,8 @@
     ],
     "related_knowledge": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong",
       "knowledge.common.banker-thinking.top-performer",
       "knowledge.common.economics.business-basics",
       "knowledge.common.psychology.business-communication"
@@ -313,8 +313,8 @@
     ],
     "related_knowledge": [
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong",
       "knowledge.common.banker-thinking.top-performer",
       "knowledge.common.economics.business-basics",
       "knowledge.common.sales.consultative-b2b",
@@ -476,11 +476,12 @@
       "skill.action.client-followup-systematic"
     ],
     "related_knowledge": [
+      "knowledge.banks.ceb.transaction-banking.product-catalog",
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
-      "knowledge.banks.ceb.supply-chain.yangguang-supply-chain",
-      "knowledge.banks.ceb.inclusive-finance.scenario-map",
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong",
+      "knowledge.banks.ceb.transaction-banking.yangguang-supply-chain",
+      "knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map",
       "knowledge.common.sales.consultative-b2b"
     ],
     "related_prompts": [
@@ -512,8 +513,8 @@
     "related_knowledge": [
       "knowledge.common.economics.business-basics",
       "knowledge.banks.ceb.corporate-settlement.yangguang-cash-management",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay"
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong",
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong"
     ],
     "related_prompts": []
   },
@@ -566,11 +567,12 @@
       "skill.action.product-matching-boundary"
     ],
     "related_knowledge": [
+      "knowledge.banks.ceb.transaction-banking.product-catalog",
       "knowledge.banks.ceb.corporate-settlement.basic-settlement",
-      "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-      "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+      "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+      "knowledge.banks.ceb.trade-finance.dian-fei-tong",
       "knowledge.banks.ceb.transaction-banking.yangguang-supply-chain",
-      "knowledge.banks.ceb.inclusive-finance.scenario-map",
+      "knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map",
       "knowledge.common.sales.consultative-b2b",
       "knowledge.common.economics.business-basics"
     ],
@@ -603,6 +605,7 @@
       "skill.action.client-followup-systematic"
     ],
     "related_knowledge": [
+      "knowledge.banks.ceb.transaction-banking.product-catalog",
       "knowledge.common.economics.business-basics",
       "knowledge.common.sales.consultative-b2b"
     ],
@@ -630,10 +633,10 @@
       "skill.reference.corporate-client-coverage-lens"
     ],
     "related_knowledge": [
-      "knowledge.banks.ceb.inclusive-finance.scenario-map",
-      "knowledge.banks.ceb.inclusive-finance.scenario-map.modules.policy-background",
-      "knowledge.banks.ceb.inclusive-finance.scenario-map.modules.scenario-overview",
-      "knowledge.banks.ceb.inclusive-finance.scenario-map.modules.key-products"
+      "knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map",
+      "knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map",
+      "knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map",
+      "knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map"
     ],
     "related_prompts": []
   },

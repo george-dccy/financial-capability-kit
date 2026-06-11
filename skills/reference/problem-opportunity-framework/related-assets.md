@@ -2,5 +2,5 @@
 
 - `skill.reference.corporate-client-coverage-lens`
 - `skill.action.market-corporate-client`
-- `pack.banks.ceb.transaction-banking.yangguang-e-pay`
-- `pack.banks.ceb.trade-finance.yangguang-electricity-certificate`
+- `pack.banks.ceb.transaction-banking.e-fu-tong`
+- `pack.banks.ceb.trade-finance.dian-fei-tong`

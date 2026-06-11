@@ -19,7 +19,8 @@ metadata:
     - skill.action.management-news-brief
     - skill.action.client-followup-systematic
     - skill.action.distill-and-curate
-  related_knowledge: []
+  related_knowledge:
+    - knowledge.banks.ceb.transaction-banking.product-catalog
   related_prompts:
     - prompt.entrypoint.agent.general
 ---
@@ -36,9 +37,10 @@ Fincap 是银行从业者的工作诊断与行动工具箱。
 
 1. 先诊断问题处境，不急着回答。
 2. 先用 Agent 自身能力完成专业分析，再用 Fincap 校准方向、边界和交付形态。
-3. 需要最新公开信号时先查 Finhot；稳定方法论回到 Fincap；个人材料和客户档案进入 workspace。
-4. 不把每个任务机械流程化。Fincap 提供能力闭环、判断重点和交付边界，具体分析由 Agent 结合材料完成。
-5. 不输出授信审批结论、额度、定价、办理时效或内部制度口径。
+3. 涉及光大交易银行产品时，先读取 `knowledge/banks/ceb/transaction-banking/product-catalog/` 做产品名白名单核验。
+4. 需要最新公开信号时先查 Finhot；稳定方法论回到 Fincap；个人材料和客户档案进入 workspace。
+5. 不把每个任务机械流程化。Fincap 提供能力闭环、判断重点和交付边界，具体分析由 Agent 结合材料完成。
+6. 不输出授信审批结论、额度、定价、办理时效或内部制度口径。
 
 ## 路由表
 
@@ -76,6 +78,18 @@ Fincap 是银行从业者的工作诊断与行动工具箱。
 ```
 
 不要连续追问。信息不足时，先给“当前能判断什么 + 不能判断什么 + 最小下一步”。
+
+## 产品名核验
+
+当用户问题涉及光大交易银行产品、产品推荐、产品比较或客户适配时：
+
+1. 先读 `knowledge/banks/ceb/transaction-banking/product-catalog/products.md`。
+2. 只能使用该目录白名单中的产品名称。
+3. 如果模型想到的产品名不在白名单中，不得输出为光大交易银行产品。
+4. `阳光e支付` 不在当前产品目录中，不得提及为光大交易银行产品；如用户问到，应回答“当前产品目录未覆盖，需要核验”。
+5. `阳光供应链云平台` 可以作为对客服务平台/线上化渠道能力说明，但不能替代具体产品名做推荐。
+6. 如果白名单内产品详情尚未补充，只能输出方向性判断和待核验项，不能编造功能、准入、费率、时效或办理条件。
+7. `e付通` 是白名单内产品，但不能因为“供应链”泛泛命中就默认首推；只有当问题明确涉及 `e付通`、`1+N 保理`、核心企业与供应商应收账款融资、线上化确权或已有公开材料时才进入 e付通知识包。
 
 ## 默认输出
 

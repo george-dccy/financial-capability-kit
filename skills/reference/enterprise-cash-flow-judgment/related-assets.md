@@ -25,10 +25,10 @@
 - `knowledge.banks.ceb.corporate-settlement.yangguang-cash-management`
   光大银行现金管理产品家族，现金流状态是匹配现金管理产品的核心依据
 
-- `knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate`
+- `knowledge.banks.ceb.trade-finance.dian-fei-tong`
   电费证等贸易融资产品与特定行业的现金流场景相关
 
-- `knowledge.banks.ceb.transaction-banking.yangguang-e-pay`
+- `knowledge.banks.ceb.transaction-banking.e-fu-tong`
   e付通类产品与经营现金流的收款环节直接挂钩
 
 ## 待建立 Asset（不在当前仓库）

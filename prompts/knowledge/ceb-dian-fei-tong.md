@@ -1,12 +1,12 @@
 ---
-id: prompt.knowledge.ceb-yangguang-electricity-certificate
+id: prompt.knowledge.ceb-dian-fei-tong
 kind: knowledge
 display_name_zh: 光大银行电费通（电费证） Prompt
-target_knowledge: knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate
+target_knowledge: knowledge.banks.ceb.trade-finance.dian-fei-tong
 summary: 让模型只基于电费通（电费证）相关公开知识回答。
 ---
 
-请只基于 `knowledge/banks/ceb/trade-finance/yangguang-electricity-certificate/` 回答。
+请只基于 `knowledge/banks/ceb/trade-finance/dian-fei-tong/` 回答。
 
 要求：
 

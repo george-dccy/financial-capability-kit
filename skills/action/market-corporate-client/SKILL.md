@@ -14,9 +14,10 @@ metadata:
     - skill.reference.client-advance-framework
     - skill.reference.corporate-client-coverage-lens
   related_knowledge:
+    - knowledge.banks.ceb.transaction-banking.product-catalog
     - knowledge.banks.ceb.corporate-settlement.basic-settlement
-    - knowledge.banks.ceb.transaction-banking.yangguang-e-pay
-    - knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate
+    - knowledge.banks.ceb.transaction-banking.e-fu-tong
+    - knowledge.banks.ceb.trade-finance.dian-fei-tong
     - knowledge.common.banker-thinking.top-performer
     - knowledge.common.economics.business-basics
     - knowledge.common.sales.consultative-b2b
@@ -47,13 +48,15 @@ metadata:
 3. `references/knowledge-routing.md`
 4. `skill.reference.problem-opportunity-framework`
 5. `skill.reference.client-advance-framework`
-6. 命中 knowledge 后，读取对应 `README.md`、`modules/*`、`faq.md`、`sources.md`
+6. 涉及光大交易银行产品名时，先读 `knowledge/banks/ceb/transaction-banking/product-catalog/products.md`
+7. 命中 knowledge 后，读取对应 `README.md`、`modules/*`、`faq.md`、`sources.md`
 
 ## Execution Rule
 
 1. 先用 `skill.reference.problem-opportunity-framework` 判断客户卡点与机会
 2. 再用 `skill.reference.client-advance-framework` 明确首次会谈目标和最小推进动作
-3. 最后按 `references/knowledge-routing.md` 补相应公开知识
+3. 如涉及光大交易银行产品，先用产品目录核验产品名称；未在目录内的名称不得输出
+4. 最后按 `references/knowledge-routing.md` 补相应公开知识
 
 ## Input Contract
 

@@ -9,7 +9,7 @@
 路由到：
 
 - `knowledge/banks/ceb/corporate-settlement/basic-settlement`
-- `knowledge/banks/ceb/transaction-banking/yangguang-e-pay`
+- `knowledge/banks/ceb/transaction-banking/e-fu-tong`
 
 适用场景：
 
@@ -21,7 +21,7 @@
 
 路由到：
 
-- `knowledge/banks/ceb/trade-finance/yangguang-electricity-certificate`
+- `knowledge/banks/ceb/trade-finance/dian-fei-tong`
 - 相关信用证、保函知识包
 
 适用场景：
@@ -80,8 +80,8 @@
 ```
 事项涉及的产品或话题是？
 │
-├─ 结算/支付 → ceb/corporate-settlement, yangguang-e-pay
-├─ 贸易金融 → ceb/trade-finance, yangguang-electricity-certificate
+├─ 结算/支付 → corporate-settlement / product-catalog / e-fu-tong（仅明确命中 e付通时）
+├─ 贸易金融 → product-catalog / dian-fei-tong（仅明确命中电费通或电费证时）
 ├─ 信贷/授信 → consultative-b2b objection-handling, top-performer
 ├─ 沟通技巧 → business-communication, discovery-questions
 ├─ 市场背景 → business-basics

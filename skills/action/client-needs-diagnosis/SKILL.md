@@ -15,11 +15,12 @@ metadata:
     - skill.action.market-corporate-client
     - skill.action.product-matching-boundary
   related_knowledge:
+    - knowledge.banks.ceb.transaction-banking.product-catalog
     - knowledge.banks.ceb.corporate-settlement.basic-settlement
-    - knowledge.banks.ceb.transaction-banking.yangguang-e-pay
-    - knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate
+    - knowledge.banks.ceb.transaction-banking.e-fu-tong
+    - knowledge.banks.ceb.trade-finance.dian-fei-tong
     - knowledge.banks.ceb.transaction-banking.yangguang-supply-chain
-    - knowledge.banks.ceb.inclusive-finance.scenario-map
+    - knowledge.banks.ceb.inclusive-finance.inclusive-finance-scenario-map
     - knowledge.common.sales.consultative-b2b
     - knowledge.common.economics.business-basics
   related_prompts: []
@@ -55,13 +56,15 @@ metadata:
 3. `references/knowledge-routing.md`
 4. `skill.reference.problem-opportunity-framework`
 5. `skill.reference.corporate-client-coverage-lens`
+6. 涉及光大交易银行产品名时，先读 `knowledge/banks/ceb/transaction-banking/product-catalog/products.md`
 
 ## Execution Rule
 
 1. 先用 `references/diagnosis-framework.md` 梳理已知信号
 2. 再用 `references/need-type-matrix.md` 对齐需求类型
-3. 然后按 `references/knowledge-routing.md` 调用相关 knowledge 包补充背景
-4. 最后输出需求类型结论和置信度
+3. 如涉及光大交易银行产品，先用产品目录核验产品名称；未在目录内的名称不得作为需求方向输出
+4. 然后按 `references/knowledge-routing.md` 调用相关 knowledge 包补充背景
+5. 最后输出需求类型结论和置信度
 
 ## Input Contract
 

@@ -42,8 +42,8 @@ RULES = [
         related_assets=[
             "skill.reference.corporate-client-coverage-lens",
             "skill.action.market-corporate-client",
-            "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-            "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+            "knowledge.banks.ceb.transaction-banking.e-fu-tong",
+            "knowledge.banks.ceb.trade-finance.dian-fei-tong",
         ],
         reason="命中产品或服务方案",
     ),

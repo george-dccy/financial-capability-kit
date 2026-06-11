@@ -17,20 +17,38 @@ class KnowledgeRule:
 
 KNOWLEDGE_RULES = [
     KnowledgeRule(
+        pattern=r"光大交易银行|交易银行产品|产品推荐|产品比较|产品适配|产品目录|产品清单|阳光e支付|阳光 e支付|阳光E支付|阳光供应链云平台",
+        knowledge_id="knowledge.banks.ceb.transaction-banking.product-catalog",
+        priority=130,
+        reason="涉及光大交易银行产品范围，先核验产品目录白名单",
+    ),
+    KnowledgeRule(
+        pattern=r"阳光供应链云平台|供应链线上化平台|对客服务平台|线上确权|平台承载",
+        knowledge_id="knowledge.banks.ceb.transaction-banking.yangguang-supply-chain",
+        priority=115,
+        reason="涉及供应链线上化承载平台，作为平台/渠道能力说明，不替代具体产品推荐",
+    ),
+    KnowledgeRule(
         pattern=r"结算|账户|收付|回单|对账|付款流程|授权管理",
         knowledge_id="knowledge.banks.ceb.corporate-settlement.basic-settlement",
         priority=95,
         reason="命中基础结算场景关键词",
     ),
     KnowledgeRule(
-        pattern=r"e付通|订单|账单|开票|协同|供应链|融e链|1\+N|保理|应收账款|账期|交易链|线上化确认|线上化融资",
-        knowledge_id="knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
+        pattern=r"e付通|1\+N|1＋N|融e链|线上化确认|线上化融资",
+        knowledge_id="knowledge.banks.ceb.transaction-banking.e-fu-tong",
         priority=120,
-        reason="命中交易协同场景关键词",
+        reason="明确命中 e付通或 1+N 保理线上化场景关键词",
+    ),
+    KnowledgeRule(
+        pattern=r"订单|账单|开票|协同|供应链|保理|应收账款|账期|交易链|供应商|核心企业",
+        knowledge_id="knowledge.banks.ceb.transaction-banking.product-catalog",
+        priority=100,
+        reason="命中供应链或保理方向，需先核验产品目录白名单",
     ),
     KnowledgeRule(
         pattern=r"电费证|电费|电网|国内证|福费廷|电费缴纳|电费结算|月度缴费|缴费优化|电费支付",
-        knowledge_id="knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
+        knowledge_id="knowledge.banks.ceb.trade-finance.dian-fei-tong",
         priority=120,
         reason="命中电费场景融资关键词",
     ),
@@ -101,13 +119,13 @@ def route_knowledge(question: str) -> list[dict[str, object]]:
 def _infer_fallback(question: str) -> dict[str, str]:
     if INDUSTRY_SUPPLY_CHAIN.search(question):
         return {
-            "knowledge_id": "knowledge.banks.ceb.transaction-banking.yangguang-e-pay",
-            "reason": "行业特征匹配供应链场景，默认走 e付通",
+            "knowledge_id": "knowledge.banks.ceb.transaction-banking.product-catalog",
+            "reason": "行业特征可能涉及供应链方向，先核验产品目录，不默认推荐具体产品",
         }
     if INDUSTRY_ENERGY.search(question):
         return {
-            "knowledge_id": "knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate",
-            "reason": "行业特征匹配能源缴费场景，默认走电费通",
+            "knowledge_id": "knowledge.banks.ceb.trade-finance.dian-fei-tong",
+            "reason": "行业特征匹配能源缴费场景，进入电费通/电费证场景核验",
         }
     return {
         "knowledge_id": DEFAULT_PRIMARY_KNOWLEDGE,

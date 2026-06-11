@@ -1,8 +1,8 @@
 {
-  "id": "pack.banks.ceb.transaction-banking.yangguang-e-pay",
+  "id": "pack.banks.ceb.transaction-banking.e-fu-tong",
   "institution": "ceb",
   "category": "transaction-banking",
-  "title": "CEB Yangguang E-Pay",
+  "title": "CEB e付通",
   "display_name_zh": "光大银行-e付通知识包",
   "visibility": "public",
   "summary": "覆盖 e付通与 1+N 保理线上化场景的公开定位、适用场景与前期判断项。",

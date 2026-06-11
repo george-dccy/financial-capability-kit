@@ -3,8 +3,8 @@
 ## 1. 公共知识优先级
 
 - 光大银行对公基础结算 -> `knowledge.banks.ceb.corporate-settlement.basic-settlement`
-- 光大银行 e付通 -> `knowledge.banks.ceb.transaction-banking.yangguang-e-pay`
-- 光大银行电费通（电费证） -> `knowledge.banks.ceb.trade-finance.yangguang-electricity-certificate`
+- 光大银行 e付通 -> `knowledge.banks.ceb.transaction-banking.e-fu-tong`
+- 光大银行电费通（电费证） -> `knowledge.banks.ceb.trade-finance.dian-fei-tong`
 - 银行人专业思维 -> `knowledge.common.banker-thinking.top-performer`
 - 经济金融基础 -> `knowledge.common.economics.business-basics`
 - 顾问式 B2B 销售 -> `knowledge.common.sales.consultative-b2b`

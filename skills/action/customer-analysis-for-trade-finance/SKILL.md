@@ -20,6 +20,7 @@ metadata:
     - skill.action.report-decision-brief
     - skill.action.client-followup-systematic
   related_knowledge:
+    - knowledge.banks.ceb.transaction-banking.product-catalog
     - knowledge.common.economics.business-basics
     - knowledge.common.sales.consultative-b2b
   related_prompts: []
@@ -63,6 +64,7 @@ metadata:
 8. 需要汇报表达时，读取 `skill.action.report-decision-brief`
 9. 需要持续推进时，读取 `skill.action.client-followup-systematic`
 10. 涉及最新政策、同业产品、公开动态或案例时，先通过 `skill.action.query-finhot` 查 Finhot
+11. 涉及光大交易银行产品名时，先读 `knowledge/banks/ceb/transaction-banking/product-catalog/products.md`
 
 ## Input Contract
 

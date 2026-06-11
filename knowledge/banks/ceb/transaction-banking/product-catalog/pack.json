@@ -1,0 +1,13 @@
+{
+  "id": "pack.banks.ceb.transaction-banking.product-catalog",
+  "kind": "knowledge_pack",
+  "title": "CEB Transaction Banking Product Catalog",
+  "display_name_zh": "光大交易银行产品目录",
+  "summary": "光大交易银行产品白名单与待补详情入口，用于约束产品推荐、比较和客户经营建议的产品范围。",
+  "version": "0.1.0",
+  "audience": ["finance-learner", "bank-practitioner"],
+  "modules": [
+    "products.md",
+    "sources.md"
+  ]
+}
